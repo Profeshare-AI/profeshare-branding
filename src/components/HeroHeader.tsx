@@ -6,7 +6,7 @@ const HeroHeader = () => {
       <div className="font-logo text-hero-text text-lg font-bold">
         Profeshare AI
       </div>
-      <Button variant="glass" size="md">
+      <Button variant="glass" size="sm">
         Schedule a demo
       </Button>
     </header>
