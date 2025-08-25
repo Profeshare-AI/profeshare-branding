@@ -9,7 +9,7 @@ const IntroductionSection = () => {
         <div className="order-2 lg:order-1 flex justify-center">
           <div className="relative rounded-2xl overflow-hidden max-w-md">
             <img 
-              src="/lovable-uploads/2784d252-c1b6-4ff9-ae34-370f82b38bb8.png" 
+              src="/lovable-uploads/082aa3e9-45fa-4106-8126-575aeeb1b153.png" 
               alt="Professional walking on steps representing career growth" 
               className="w-full h-auto rounded-lg"
             />
@@ -19,7 +19,7 @@ const IntroductionSection = () => {
         {/* Right side - Content */}
         <div className="order-1 lg:order-2 space-y-6">
           {/* Glassmorphism Chip */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-medium">
+          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-dm-sans font-medium">
             About Profeshare AI
           </div>
 

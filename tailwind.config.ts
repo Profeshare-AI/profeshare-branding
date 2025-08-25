@@ -81,7 +81,8 @@ export default {
 				logo: 'var(--font-logo)',
 				heading: 'var(--font-heading)',
 				body: 'var(--font-body)',
-				'instrument': ['Instrument Serif', 'serif']
+				'instrument': ['Instrument Serif', 'serif'],
+				'dm-sans': ['DM Sans', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
