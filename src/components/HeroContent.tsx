@@ -16,7 +16,7 @@ const HeroContent = () => {
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Button variant="hero" size="hero">
+        <Button variant="glass" size="hero">
           Schedule A Demo
         </Button>
         <Button variant="hero-outline" size="hero">
