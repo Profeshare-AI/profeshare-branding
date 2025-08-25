@@ -47,8 +47,8 @@ All colors MUST be HSL.
 
     /* Typography */
     --font-logo: 'Source Serif 4', serif;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Source Serif 4', serif;
+    --font-body: 'DM Sans', sans-serif;
 
     --sidebar-background: 0 0% 98%;
 
