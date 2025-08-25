@@ -7,7 +7,7 @@ const IntroductionSection = () => {
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left side - Image */}
         <div className="order-2 lg:order-1 flex justify-center">
-          <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-8 max-w-md">
+          <div className="relative rounded-2xl overflow-hidden max-w-md">
             <img 
               src="/lovable-uploads/2784d252-c1b6-4ff9-ae34-370f82b38bb8.png" 
               alt="Professional walking on steps representing career growth" 
