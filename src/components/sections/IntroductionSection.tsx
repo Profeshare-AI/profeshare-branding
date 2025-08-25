@@ -25,7 +25,8 @@ const IntroductionSection = () => {
 
           {/* Heading */}
           <h2 className="font-instrument text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
-            One Trusted Space for Your Professional Journey
+            One Trusted Space for<br />
+            Your Professional Journey
           </h2>
 
           {/* Content */}
