@@ -70,6 +70,11 @@ export default {
 					bg: 'hsl(var(--glass-bg))',
 					border: 'hsl(var(--glass-border))',
 					text: 'hsl(var(--glass-text))'
+				},
+				'section-bg': {
+					primary: 'hsl(var(--section-bg-primary))',
+					secondary: 'hsl(var(--section-bg-secondary))',
+					accent: 'hsl(var(--section-bg-accent))'
 				}
 			},
 			fontFamily: {
