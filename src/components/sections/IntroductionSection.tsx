@@ -1,18 +1,62 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const IntroductionSection = () => {
   return (
-    <Section background="transparent" className="text-center">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-8">
-          One Trusted Space for Your Professional Journey
-        </h2>
-        <GlassCard className="max-w-3xl mx-auto">
-          <p className="font-body text-lg leading-relaxed text-white/90">
-            Profeshare AI is a verified professional networking ecosystem that unites education, industry, and research in one trusted space. It understands natural language and context, so people can search, publish, collaborate, and hire without friction or noise.
-          </p>
-        </GlassCard>
+    <Section background="transparent" className="bg-black">
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* Left side - Image */}
+        <div className="order-2 lg:order-1">
+          <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-8">
+            <img 
+              src="/lovable-uploads/48b2351b-f50a-453d-9afe-4b23e7e8a597.png" 
+              alt="Professional walking on steps representing career growth" 
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+
+        {/* Right side - Content */}
+        <div className="order-1 lg:order-2 space-y-6">
+          {/* Glassmorphism Chip */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-sm font-medium">
+            About Profeshare AI
+          </div>
+
+          {/* Heading */}
+          <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
+            One Trusted Space for Your Professional Journey
+          </h2>
+
+          {/* Content */}
+          <div className="space-y-4 text-white/90 font-body text-lg leading-relaxed">
+            <p>
+              Profeshare AI is a verified public professional networking ecosystem that brings education, industry, and research into one trusted space. It serves students and graduates, early to senior professionals, experts and researchers, recruiters and employers, and institutes and cohorts that value credible profiles, real people, and relevant opportunities.
+            </p>
+            <p>
+              The platform understands natural language and context. Users express intent in plain words and receive curated roles, mentors, collaborators, courses, events, communities, and candidates. The network supports credible profiles, Papers for structured work, career matching, learning paths, and recruiter tools. It reduces spam, elevates proof, and advances each professional journey.
+            </p>
+          </div>
+
+          {/* Building for users section */}
+          <div className="flex items-center gap-3 pt-4">
+            <div className="flex -space-x-2">
+              <Avatar className="w-8 h-8 border-2 border-white">
+                <AvatarImage src="/lovable-uploads/08e527f0-3e20-4103-9e34-24e0167b01c1.png" />
+                <AvatarFallback>U1</AvatarFallback>
+              </Avatar>
+              <Avatar className="w-8 h-8 border-2 border-white">
+                <AvatarImage src="/lovable-uploads/5f43cc85-57e6-40ba-b89e-dfda252b9e8d.png" />
+                <AvatarFallback>U2</AvatarFallback>
+              </Avatar>
+              <Avatar className="w-8 h-8 border-2 border-white">
+                <AvatarImage src="/lovable-uploads/d091240a-a92c-451f-87f1-6c8d2770d714.png" />
+                <AvatarFallback>U3</AvatarFallback>
+              </Avatar>
+            </div>
+            <span className="text-white font-medium">Building for 100k+ users</span>
+          </div>
+        </div>
       </div>
     </Section>
   );
