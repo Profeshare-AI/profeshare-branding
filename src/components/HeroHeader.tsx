@@ -12,7 +12,7 @@ const HeroHeader = () => {
         />
       </Link>
       <Button variant="glass" size="md">
-        Schedule a demo
+        Get Early Access
       </Button>
     </header>
   );

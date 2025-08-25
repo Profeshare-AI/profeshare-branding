@@ -17,7 +17,7 @@ const HeroContent = () => {
       
       <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
         <Button variant="glass" size="md">
-          Schedule A Demo
+          Get Early Access
         </Button>
         <Button variant="hero-outline" size="md">
           Learn more
