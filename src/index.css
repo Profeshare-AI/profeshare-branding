@@ -119,21 +119,19 @@ All colors MUST be HSL.
 @layer utilities {
   @keyframes border-glow {
     0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
+      transform: rotate(0deg);
     }
     100% {
-      background-position: 0% 50%;
+      transform: rotate(360deg);
     }
   }
 
   .animate-border-glow {
     position: relative;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    background-size: 200% 100%;
-    animation: border-glow 2s ease-in-out infinite;
+    border-radius: 9999px;
+    padding: 1px;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.6), transparent, transparent);
+    animation: border-glow 3s linear infinite;
   }
 
   .animate-border-glow::before {
