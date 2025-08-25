@@ -9,7 +9,7 @@ const HeroContent = () => {
         <span className="block">verified professional networking ecosystem</span>
       </h1>
       
-      <p className="font-body text-hero-text text-base md:text-lg leading-relaxed mb-6 max-w-3xl opacity-90">
+      <p className="font-body text-hero-text text-base md:text-lg leading-relaxed mb-6 max-w-2xl opacity-90">
         Designed for students, institutes, graduates, employers, experts, and researchers.
         <br />
         Built for context and communicates in natural language!
