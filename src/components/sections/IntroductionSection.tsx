@@ -9,7 +9,7 @@ const IntroductionSection = () => {
         <div className="order-2 lg:order-1 flex justify-center">
           <div className="relative rounded-2xl overflow-hidden max-w-md">
             <img 
-              src="/lovable-uploads/082aa3e9-45fa-4106-8126-575aeeb1b153.png" 
+              src="/lovable-uploads/44412060-0f72-491c-b0a4-f2f0fece5ad8.png" 
               alt="Professional walking on steps representing career growth" 
               className="w-full h-auto rounded-lg"
             />
