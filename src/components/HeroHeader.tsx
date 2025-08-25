@@ -12,9 +12,9 @@ const HeroHeader = () => {
           className="h-auto w-24 sm:w-28 md:w-32 lg:w-[150px]"
         />
       </Link>
-      <Button variant="glass" size="md" className="group overflow-hidden">
+      <Button variant="glass" size="md" className="group transition-all duration-300 hover:pr-10">
         <span className="transition-transform duration-300 group-hover:-translate-x-1">Get Early Access</span>
-        <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+        <ArrowRight className="w-4 h-4 absolute right-3 opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
       </Button>
     </header>
   );
