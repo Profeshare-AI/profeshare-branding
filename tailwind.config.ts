@@ -61,7 +61,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				hero: {
+					text: 'hsl(var(--hero-text))',
+					overlay: 'hsl(var(--hero-overlay))'
+				},
+				glass: {
+					bg: 'hsl(var(--glass-bg))',
+					border: 'hsl(var(--glass-border))',
+					text: 'hsl(var(--glass-text))'
 				}
+			},
+			fontFamily: {
+				logo: 'var(--font-logo)',
+				heading: 'var(--font-heading)',
+				body: 'var(--font-body)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
