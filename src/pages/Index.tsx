@@ -6,7 +6,7 @@ const Index = () => {
     <div 
       className="min-h-screen w-full relative flex flex-col"
       style={{
-        backgroundImage: `url(/lovable-uploads/5f43cc85-57e6-40ba-b89e-dfda252b9e8d.png)`,
+        backgroundImage: `url(/lovable-uploads/d091240a-a92c-451f-87f1-6c8d2770d714.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
