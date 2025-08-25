@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import GlassmorphismChip from "./GlassmorphismChip";
+import { ArrowRight } from "lucide-react";
 const HeroContent = () => {
   return <div className="flex flex-col items-center text-center px-4 relative z-10">
       <GlassmorphismChip />
@@ -16,8 +17,9 @@ const HeroContent = () => {
       </p>
       
       <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <Button variant="glass" size="md">
-          Get Early Access
+        <Button variant="glass" size="md" className="group overflow-hidden">
+          <span className="transition-transform duration-300 group-hover:-translate-x-1">Get Early Access</span>
+          <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
         </Button>
         <Button variant="hero-outline" size="md">
           Learn more

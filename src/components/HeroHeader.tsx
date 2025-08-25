@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const HeroHeader = () => {
   return (
@@ -11,8 +12,9 @@ const HeroHeader = () => {
           className="h-auto w-24 sm:w-28 md:w-32 lg:w-[150px]"
         />
       </Link>
-      <Button variant="glass" size="md">
-        Get Early Access
+      <Button variant="glass" size="md" className="group overflow-hidden">
+        <span className="transition-transform duration-300 group-hover:-translate-x-1">Get Early Access</span>
+        <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
       </Button>
     </header>
   );
