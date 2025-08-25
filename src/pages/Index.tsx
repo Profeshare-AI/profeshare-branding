@@ -12,6 +12,9 @@ const Index = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      {/* Animated stars field */}
+      <div className="stars-field z-0"></div>
+      
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-hero-overlay/40 z-0"></div>
       
