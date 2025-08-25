@@ -1,5 +1,5 @@
 import Section from "../Section";
-import Card from "../Card";
+import GlassCard from "../GlassCard";
 import { MessageSquare, Search, CheckCircle } from "lucide-react";
 
 const steps = [
@@ -38,8 +38,8 @@ const HowItWorksSection = () => {
       
       <div className="grid md:grid-cols-3 gap-8">
         {steps.map((step, index) => (
-          <Card key={index} hoverable className="relative">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 border border-gray-600 mb-6 mx-auto">
+          <GlassCard key={index} hoverable className="relative">
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 border border-white/30 mb-6 mx-auto">
               <span className="text-xl font-bold text-white">{index + 1}</span>
             </div>
             
@@ -71,7 +71,7 @@ const HowItWorksSection = () => {
                 {step.description}
               </p>
             )}
-          </Card>
+          </GlassCard>
         ))}
       </div>
     </Section>

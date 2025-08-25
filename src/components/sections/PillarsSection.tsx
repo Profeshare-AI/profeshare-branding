@@ -1,5 +1,5 @@
 import Section from "../Section";
-import Card from "../Card";
+import GlassCard from "../GlassCard";
 import { Shield, Target, Network } from "lucide-react";
 
 const pillars = [
@@ -31,9 +31,9 @@ const PillarsSection = () => {
       
       <div className="grid md:grid-cols-3 gap-8">
         {pillars.map((pillar, index) => (
-          <Card key={index} hoverable className="text-center">
+          <GlassCard key={index} hoverable className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="p-4 rounded-full bg-gray-800 border border-gray-600">
+              <div className="p-4 rounded-full bg-white/10 border border-white/20">
                 <pillar.icon className="w-8 h-8 text-white" />
               </div>
             </div>
@@ -43,7 +43,7 @@ const PillarsSection = () => {
             <p className="font-body text-white/80 leading-relaxed">
               {pillar.description}
             </p>
-          </Card>
+          </GlassCard>
         ))}
       </div>
     </Section>

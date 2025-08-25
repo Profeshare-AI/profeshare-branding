@@ -1,5 +1,5 @@
 import Section from "../Section";
-import Card from "../Card";
+import GlassCard from "../GlassCard";
 import { Shield, Users, Lock } from "lucide-react";
 
 const trustTopics = [
@@ -31,9 +31,9 @@ const TrustDataSection = () => {
       
       <div className="grid md:grid-cols-3 gap-8">
         {trustTopics.map((topic, index) => (
-          <Card key={index} hoverable className="text-center">
+          <GlassCard key={index} hoverable className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="p-4 rounded-full bg-gray-800 border border-gray-600">
+              <div className="p-4 rounded-full bg-white/10 border border-white/20">
                 <topic.icon className="w-8 h-8 text-white" />
               </div>
             </div>
@@ -43,7 +43,7 @@ const TrustDataSection = () => {
             <p className="font-body text-white/80 leading-relaxed">
               {topic.description}
             </p>
-          </Card>
+          </GlassCard>
         ))}
       </div>
     </Section>
