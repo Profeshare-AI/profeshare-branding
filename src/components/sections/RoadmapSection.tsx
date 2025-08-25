@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import Card from "../Card";
 import { CheckCircle, Clock } from "lucide-react";
 
 const betaFeatures = [
@@ -28,7 +28,7 @@ const RoadmapSection = () => {
       </div>
       
       <div className="grid md:grid-cols-2 gap-8">
-        <GlassCard hoverable>
+        <Card hoverable>
           <div className="flex items-center mb-6">
             <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
             <h3 className="font-instrument text-2xl font-medium text-white">
@@ -43,9 +43,9 @@ const RoadmapSection = () => {
               </li>
             ))}
           </ul>
-        </GlassCard>
+        </Card>
         
-        <GlassCard hoverable>
+        <Card hoverable>
           <div className="flex items-center mb-6">
             <Clock className="w-6 h-6 text-blue-400 mr-3" />
             <h3 className="font-instrument text-2xl font-medium text-white">
@@ -60,7 +60,7 @@ const RoadmapSection = () => {
               </li>
             ))}
           </ul>
-        </GlassCard>
+        </Card>
       </div>
     </Section>
   );

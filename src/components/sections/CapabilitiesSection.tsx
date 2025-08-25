@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import Card from "../Card";
 import { User, FileText, Search, GraduationCap, Users, Building, MessageCircle, Download } from "lucide-react";
 
 const capabilities = [
@@ -56,13 +56,13 @@ const CapabilitiesSection = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {capabilities.map((capability, index) => (
-          <GlassCard 
+          <Card 
             key={index} 
             hoverable 
             className="group cursor-pointer transform transition-all duration-300 hover:scale-105"
           >
             <div className="flex items-start space-x-4">
-              <div className="p-3 rounded-lg bg-white/10 border border-white/20 group-hover:bg-white/20 transition-colors duration-300">
+              <div className="p-3 rounded-lg bg-gray-800 border border-gray-600 group-hover:bg-gray-700 transition-colors duration-300">
                 <capability.icon className="w-6 h-6 text-white" />
               </div>
               <div className="flex-1">
@@ -74,7 +74,7 @@ const CapabilitiesSection = () => {
                 </p>
               </div>
             </div>
-          </GlassCard>
+          </Card>
         ))}
       </div>
     </Section>

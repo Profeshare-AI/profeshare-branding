@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import Card from "../Card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
@@ -11,7 +11,7 @@ const SurveySection = () => {
           Help Shape the Future of Professional Networking
         </h2>
         
-        <GlassCard className="max-w-3xl mx-auto mb-8">
+        <Card className="max-w-3xl mx-auto mb-8">
           <p className="font-body text-lg text-white/90 mb-6">
             Your input helps prioritise what ships next and grants priority access to the beta.
           </p>
@@ -31,11 +31,11 @@ const SurveySection = () => {
               </p>
             </div>
           </div>
-        </GlassCard>
+        </Card>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
-            variant="glass" 
+            variant="default" 
             size="lg" 
             className="group"
             onClick={() => window.open('#', '_blank')}
@@ -44,7 +44,7 @@ const SurveySection = () => {
             <ExternalLink className="w-4 h-4 ml-2 opacity-60 group-hover:opacity-100 transition-opacity" />
           </Button>
           <Button 
-            variant="hero-outline" 
+            variant="outline" 
             size="lg"
             onClick={() => window.open('#', '_blank')}
           >

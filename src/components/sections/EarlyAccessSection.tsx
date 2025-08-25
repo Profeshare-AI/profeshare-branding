@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import Card from "../Card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -11,7 +11,7 @@ const EarlyAccessSection = () => {
           Be Among the First to Experience Profeshare AI
         </h2>
         
-        <GlassCard className="max-w-3xl mx-auto mb-8">
+        <Card className="max-w-3xl mx-auto mb-8">
           <div className="space-y-6">
             <div>
               <h3 className="font-instrument text-xl font-medium text-white mb-3">
@@ -31,11 +31,11 @@ const EarlyAccessSection = () => {
               </p>
             </div>
           </div>
-        </GlassCard>
+        </Card>
         
-        <Button variant="glass" size="hero" className="group transition-all duration-300 hover:pr-10">
+        <Button variant="default" size="lg" className="group transition-all duration-300 hover:pr-10">
           <span className="transition-transform duration-300 group-hover:-translate-x-1">Request Early Access</span>
-          <ArrowRight className="w-5 h-5 absolute right-6 opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+          <ArrowRight className="w-5 h-5 ml-2 opacity-60 transition-all duration-300 group-hover:opacity-100" />
         </Button>
       </div>
     </Section>

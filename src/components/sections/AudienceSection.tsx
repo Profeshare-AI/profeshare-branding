@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import Card from "../Card";
 import { GraduationCap, Briefcase, UserCheck, Building2, TestTube } from "lucide-react";
 
 const audiences = [
@@ -41,9 +41,9 @@ const AudienceSection = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {audiences.map((audience, index) => (
-          <GlassCard key={index} hoverable className="text-center">
+          <Card key={index} hoverable className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="p-4 rounded-full bg-white/10 border border-white/20">
+              <div className="p-4 rounded-full bg-gray-800 border border-gray-600">
                 <audience.icon className="w-8 h-8 text-white" />
               </div>
             </div>
@@ -53,7 +53,7 @@ const AudienceSection = () => {
             <p className="font-body text-white/80 leading-relaxed">
               {audience.description}
             </p>
-          </GlassCard>
+          </Card>
         ))}
       </div>
     </Section>

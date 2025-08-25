@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import Card from "../Card";
 import { ExternalLink, Mail } from "lucide-react";
 
 const FounderSection = () => {
@@ -11,10 +11,10 @@ const FounderSection = () => {
         </h2>
       </div>
       
-      <GlassCard className="max-w-4xl mx-auto">
+      <Card className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <div className="md:col-span-1 flex justify-center">
-            <div className="w-48 h-48 rounded-full bg-white/20 border border-white/30 flex items-center justify-center">
+            <div className="w-48 h-48 rounded-full bg-gray-800 border border-gray-600 flex items-center justify-center">
               {/* Placeholder for founder photo - will need to be updated with actual image */}
               <div className="text-white/60 text-center">
                 <div className="text-4xl mb-2">👤</div>
@@ -33,7 +33,7 @@ const FounderSection = () => {
                 href="https://www.linkedin.com/in/mohan-aditya-sadhanala/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 rounded-full text-white transition-all duration-300 backdrop-blur-md"
+                className="inline-flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-full text-white transition-all duration-300"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Connect on LinkedIn
@@ -41,7 +41,7 @@ const FounderSection = () => {
               
               <a 
                 href="mailto:arikax.dev@outlook.com"
-                className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 rounded-full text-white transition-all duration-300 backdrop-blur-md"
+                className="inline-flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-full text-white transition-all duration-300"
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Email
@@ -49,7 +49,7 @@ const FounderSection = () => {
             </div>
           </div>
         </div>
-      </GlassCard>
+      </Card>
     </Section>
   );
 };

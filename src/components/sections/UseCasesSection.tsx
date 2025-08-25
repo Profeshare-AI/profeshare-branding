@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassCard from "../GlassCard";
+import Card from "../Card";
 import { GraduationCap, RotateCcw, UserCheck, Building, Users } from "lucide-react";
 
 const journeys = [
@@ -42,8 +42,8 @@ const UseCasesSection = () => {
       <div className="space-y-6">
         {journeys.map((journey, index) => (
           <div key={index} className="relative">
-            <GlassCard hoverable className="flex items-start space-x-6 p-8">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/20 border border-white/30 flex-shrink-0">
+            <Card hoverable className="flex items-start space-x-6 p-8">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-800 border border-gray-600 flex-shrink-0">
                 <journey.icon className="w-8 h-8 text-white" />
               </div>
               <div className="flex-1">
@@ -54,7 +54,7 @@ const UseCasesSection = () => {
                   {journey.description}
                 </p>
               </div>
-            </GlassCard>
+            </Card>
             
             {index < journeys.length - 1 && (
               <div className="flex justify-center py-4">

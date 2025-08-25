@@ -38,7 +38,7 @@ const FAQSection = () => {
       </div>
       
       <div className="max-w-3xl mx-auto">
-        <div className="backdrop-blur-md bg-glass-bg/10 border border-glass-border/20 rounded-2xl p-6 shadow-lg">
+        <div className="bg-gray-900/90 border border-gray-700 rounded-2xl p-6 shadow-lg">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-white/20">
