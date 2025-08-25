@@ -45,10 +45,10 @@ All colors MUST be HSL.
     --glass-border: 0 0% 100%;
     --glass-text: 0 0% 100%;
 
-    /* Section backgrounds from space image colors */
-    --section-bg-primary: 26 35% 49%; /* Dark blue #1a237e */
-    --section-bg-secondary: 40 53% 58%; /* Medium blue #283593 */
-    --section-bg-accent: 57 73% 67%; /* Lighter blue #3949ab */
+    /* Section backgrounds - slate black variants */
+    --section-bg-primary: 203 23% 14%; /* slate-800 */
+    --section-bg-secondary: 210 24% 10%; /* slate-900 */
+    --section-bg-accent: 215 28% 7%; /* slate-950 */
 
     /* Typography */
     --font-logo: 'Source Serif 4', serif;
