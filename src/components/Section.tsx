@@ -20,7 +20,7 @@ const Section = ({ children, className, background = "primary", id }: SectionPro
     <section 
       id={id}
       className={cn(
-        "relative pt-16 md:pt-20 lg:pt-24",
+        "relative py-16 md:py-20 lg:py-24",
         backgroundClasses[background],
         className
       )}
