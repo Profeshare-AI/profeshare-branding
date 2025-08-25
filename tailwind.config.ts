@@ -75,7 +75,8 @@ export default {
 			fontFamily: {
 				logo: 'var(--font-logo)',
 				heading: 'var(--font-heading)',
-				body: 'var(--font-body)'
+				body: 'var(--font-body)',
+				'instrument': ['Instrument Serif', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
