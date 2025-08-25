@@ -6,7 +6,7 @@ const HeroContent = () => {
       
       <h1 className="font-heading text-hero-text text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
         <span className="block">The world's only</span>
-        <span className="block">verified professional networking ecosystem</span>
+        <span className="block">verified professional ecosystem</span>
       </h1>
       
       <p className="font-body text-hero-text text-base md:text-lg leading-relaxed mb-6 max-w-2xl opacity-90">
