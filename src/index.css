@@ -45,10 +45,10 @@ All colors MUST be HSL.
     --glass-border: 0 0% 100%;
     --glass-text: 0 0% 100%;
 
-    /* Section backgrounds - slate black variants */
-    --section-bg-primary: 203 23% 14%; /* slate-800 */
-    --section-bg-secondary: 210 24% 10%; /* slate-900 */
-    --section-bg-accent: 215 28% 7%; /* slate-950 */
+    /* Section backgrounds - pure black */
+    --section-bg-primary: 0 0% 0%; /* black */
+    --section-bg-secondary: 0 0% 0%; /* black */
+    --section-bg-accent: 0 0% 0%; /* black */
 
     /* Typography */
     --font-logo: 'Source Serif 4', serif;
