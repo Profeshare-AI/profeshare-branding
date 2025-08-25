@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import GlassmorphismChip from "./GlassmorphismChip";
 const HeroContent = () => {
-  return <div className="flex flex-col items-center text-center max-w-3xl mx-auto px-4 relative z-10">
+  return <div className="flex flex-col items-start text-left max-w-3xl px-4 relative z-10">
       <GlassmorphismChip />
       
       <h1 className="font-heading text-hero-text text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
