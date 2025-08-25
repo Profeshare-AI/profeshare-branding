@@ -119,27 +119,33 @@ All colors MUST be HSL.
 @layer utilities {
   @keyframes border-glow {
     0% {
-      transform: rotate(0deg);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
+                  5px 0 10px rgba(255, 255, 255, 0.3),
+                  0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    25% {
+      box-shadow: 0 -5px 5px rgba(255, 255, 255, 0.6), 
+                  0 -5px 10px rgba(255, 255, 255, 0.3),
+                  0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      box-shadow: -5px 0 5px rgba(255, 255, 255, 0.6), 
+                  -5px 0 10px rgba(255, 255, 255, 0.3),
+                  0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    75% {
+      box-shadow: 0 5px 5px rgba(255, 255, 255, 0.6), 
+                  0 5px 10px rgba(255, 255, 255, 0.3),
+                  0 0 15px rgba(255, 255, 255, 0.1);
     }
     100% {
-      transform: rotate(360deg);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
+                  5px 0 10px rgba(255, 255, 255, 0.3),
+                  0 0 15px rgba(255, 255, 255, 0.1);
     }
   }
 
   .animate-border-glow {
-    position: relative;
-    display: inline-flex;
-  }
-
-  .animate-border-glow::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: 9999px;
-    padding: 1px;
-    background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    animation: border-glow 3s linear infinite;
+    animation: border-glow 3s ease-in-out infinite;
   }
 }
