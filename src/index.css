@@ -128,18 +128,18 @@ All colors MUST be HSL.
 
   .animate-border-glow {
     position: relative;
-    border-radius: 9999px;
-    padding: 1px;
-    background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.6), transparent, transparent);
-    animation: border-glow 3s linear infinite;
+    display: inline-flex;
   }
 
   .animate-border-glow::before {
     content: '';
     position: absolute;
-    inset: 1px;
-    border-radius: inherit;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
+    inset: -1px;
+    border-radius: 9999px;
+    padding: 1px;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: border-glow 3s linear infinite;
   }
 }
