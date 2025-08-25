@@ -6,10 +6,10 @@ const IntroductionSection = () => {
     <Section background="transparent" className="bg-black">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left side - Image */}
-        <div className="order-2 lg:order-1">
-          <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-8">
+        <div className="order-2 lg:order-1 flex justify-center">
+          <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-8 max-w-md">
             <img 
-              src="/lovable-uploads/48b2351b-f50a-453d-9afe-4b23e7e8a597.png" 
+              src="/lovable-uploads/2784d252-c1b6-4ff9-ae34-370f82b38bb8.png" 
               alt="Professional walking on steps representing career growth" 
               className="w-full h-auto rounded-lg"
             />
@@ -19,17 +19,17 @@ const IntroductionSection = () => {
         {/* Right side - Content */}
         <div className="order-1 lg:order-2 space-y-6">
           {/* Glassmorphism Chip */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-sm font-medium">
+          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-medium">
             About Profeshare AI
           </div>
 
           {/* Heading */}
-          <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
+          <h2 className="font-instrument text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
             One Trusted Space for Your Professional Journey
           </h2>
 
           {/* Content */}
-          <div className="space-y-4 text-white/90 font-body text-lg leading-relaxed">
+          <div className="space-y-4 text-white/90 font-body text-base leading-relaxed">
             <p>
               Profeshare AI is a verified public professional networking ecosystem that brings education, industry, and research into one trusted space. It serves students and graduates, early to senior professionals, experts and researchers, recruiters and employers, and institutes and cohorts that value credible profiles, real people, and relevant opportunities.
             </p>
