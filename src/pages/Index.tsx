@@ -13,7 +13,7 @@ const Index = () => {
       }}
     >
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-hero-overlay/40 z-0"></div>
+      <div className="absolute inset-4 bg-hero-overlay/40 z-0"></div>
       
       {/* Header */}
       <HeroHeader />
