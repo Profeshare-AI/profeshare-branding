@@ -16,10 +16,10 @@ const HeroContent = () => {
       </p>
       
       <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <Button variant="glass" size="hero">
+        <Button variant="glass" size="lg">
           Schedule A Demo
         </Button>
-        <Button variant="hero-outline" size="hero">
+        <Button variant="hero-outline" size="lg">
           Learn more
         </Button>
       </div>
