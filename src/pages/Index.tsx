@@ -19,7 +19,7 @@ const Index = () => {
       <HeroHeader />
       
       {/* Main content - centered vertically and horizontally */}
-      <main className="flex-1 flex items-end justify-center py-16">
+      <main className="flex-1 flex items-center justify-center py-16">
         <HeroContent />
       </main>
     </div>
