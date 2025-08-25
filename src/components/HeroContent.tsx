@@ -4,7 +4,7 @@ const HeroContent = () => {
   return <div className="flex flex-col items-center text-center max-w-4xl mx-auto px-8 relative z-10">
       <GlassmorphismChip />
       
-      <h1 className="font-heading text-hero-text text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+      <h1 className="font-heading text-hero-text text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
         <span className="block">The world's only</span>
         <span className="block">verified professional ecosystem</span>
       </h1>
