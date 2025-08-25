@@ -9,8 +9,11 @@ const HeroContent = () => {
         <span className="block">verified professional ecosystem</span>
       </h1>
       
-      <p className="font-body text-hero-text text-base md:text-lg leading-relaxed mb-8 max-w-3xl opacity-90">Designed for students, institutes, graduates, employers, experts, and researchers. 
-Built for context and communicates in natural language!</p>
+      <p className="font-body text-hero-text text-base md:text-lg leading-relaxed mb-8 max-w-3xl opacity-90">
+        Designed for students, institutes, graduates, employers, experts, and researchers.
+        <br />
+        Built for context and communicates in natural language!
+      </p>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <Button variant="hero" size="hero">
