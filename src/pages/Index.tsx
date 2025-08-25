@@ -1,13 +1,12 @@
 import HeroHeader from "@/components/HeroHeader";
 import HeroContent from "@/components/HeroContent";
-import heroBackground from "@/assets/hero-background.jpg";
 
 const Index = () => {
   return (
     <div 
       className="min-h-screen w-full relative flex flex-col"
       style={{
-        backgroundImage: `url(${heroBackground})`,
+        backgroundImage: `url(/lovable-uploads/5f43cc85-57e6-40ba-b89e-dfda252b9e8d.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
