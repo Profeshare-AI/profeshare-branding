@@ -58,7 +58,7 @@ const PillarsSection = () => {
             Try these features
           </Button>
           <Button variant="hero-outline" size="md">
-            Learn more about this
+            Understand more
           </Button>
         </div>
       </div>
