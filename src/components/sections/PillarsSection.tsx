@@ -54,13 +54,17 @@ const PillarsSection = () => {
         </div>
         
         <div className="flex flex-row gap-4 justify-center items-center flex-wrap">
-          <Button variant="glass" size="md" className="group transition-all duration-300 hover:pr-10 relative">
-            <span className="transition-transform duration-300 group-hover:-translate-x-1">Try these features</span>
-            <span className="absolute right-3 opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">🡥</span>
+          <Button variant="glass" size="md" className="group transition-all duration-300 relative overflow-hidden">
+            <span className="relative inline-flex items-center">
+              <span className="transition-transform duration-300 group-hover:-translate-x-1">Try these features</span>
+              <span className="opacity-0 transition-all duration-300 group-hover:opacity-100 translate-x-2 group-hover:translate-x-1">🡥</span>
+            </span>
           </Button>
-          <Button variant="hero-outline" size="md" className="group transition-all duration-300 hover:pr-10 relative">
-            <span className="transition-transform duration-300 group-hover:-translate-x-1">Understand more</span>
-            <span className="absolute right-3 opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">🡦</span>
+          <Button variant="hero-outline" size="md" className="group transition-all duration-300 relative overflow-hidden">
+            <span className="relative inline-flex items-center">
+              <span className="transition-transform duration-300 group-hover:-translate-x-1">Understand more</span>
+              <span className="opacity-0 transition-all duration-300 group-hover:opacity-100 translate-x-2 group-hover:translate-x-1">🡦</span>
+            </span>
           </Button>
         </div>
       </div>
