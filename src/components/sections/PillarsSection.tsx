@@ -6,18 +6,18 @@ import { Button } from "@/components/ui/button";
 const pillars = [
   {
     icon: Shield,
-    title: "Seamless Integration",
-    description: "Easily integrate with your existing systems and workflows, reducing downtime and ensuring a smooth transition."
+    title: "Verified Identities",
+    description: "A verified ecosystem that removes doubt from the first interaction. No bots. No fake profiles. Clear affiliations for people and organisations so relationships begin with confidence."
   },
   {
     icon: Target,
-    title: "Enhanced Productivity", 
-    description: "Automate repetitive tasks and streamline processes to help you get the most out of your growing business."
+    title: "Credible Signals",
+    description: "No spam. No engagement tricks. Projects, publications, and contributions appear in structured formats that reflect real capability and make comparison easier for peers and hiring teams."
   },
   {
     icon: Network,
-    title: "Superior Support",
-    description: "Access our dedicated support team 24/7 to resolve any issues quickly and keep your operations running smoothly."
+    title: "Multi-sided Value",
+    description: "One network that serves every participant with practical features. Career Matching for discovery, Papers for structured publishing, Learning Space for job-linked growth, and Recruiter Tools for efficient shortlisting."
   }
 ];
 
@@ -31,12 +31,8 @@ const PillarsSection = () => {
           </div>
           
           <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
-            Unlock the Full Potential of <span className="italic">Your Business</span>
+            A Network Built on Confidence, Clarity, and Value
           </h2>
-          
-          <p className="font-body text-white/70 text-lg leading-relaxed max-w-2xl mx-auto mb-12">
-            Our SaaS solution is designed to provide you with the tools and insights you need to drive growth and efficiency. Here's how we can help you achieve your business goals.
-          </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-12">
