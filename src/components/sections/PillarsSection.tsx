@@ -54,11 +54,11 @@ const PillarsSection = () => {
         </div>
         
         <div className="flex flex-row gap-4 justify-center items-center flex-wrap">
-          <Button variant="default" size="md" className="bg-white text-black hover:bg-white/90">
-            Start your free trial
+          <Button variant="glass" size="md">
+            Try these features
           </Button>
-          <Button variant="outline" size="md" className="border-white/20 text-white hover:bg-white/5">
-            More about our features →
+          <Button variant="hero-outline" size="md">
+            Learn more about this
           </Button>
         </div>
       </div>
