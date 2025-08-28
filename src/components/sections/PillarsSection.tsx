@@ -35,7 +35,8 @@ const secondRowFeatures = [
   "Communities",
   "Events",
   "Collaborations and Messaging",
-  "Integrations and Portability"
+  "Integrations",
+  "Analytics & more..."
 ];
 
 const PillarsSection = () => {
