@@ -25,7 +25,7 @@ const Section = ({ children, className, background = "primary", id }: SectionPro
         className
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
         {children}
       </div>
     </section>
