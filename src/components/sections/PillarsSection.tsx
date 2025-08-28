@@ -39,6 +39,15 @@ const secondRowFeatures = [
   "Analytics & more..."
 ];
 
+// Mobile layout arrays
+const mobileFeatures = [
+  ["Profiles", "Career Matching", "Talent Discovery"],
+  ["Learning Space", "Recruiter Studio"],
+  ["Papers", "Projects Space", "Communities"],
+  ["Events", "Collaborations and Messaging"],
+  ["Integrations", "Analytics & more..."]
+];
+
 const PillarsSection = () => {
   return (
     <section className="relative py-16 md:py-20 lg:py-24 bg-black">
@@ -72,24 +81,41 @@ const PillarsSection = () => {
         </div>
         
         <div className="flex flex-col items-center gap-3">
-          {/* First row for large screens, all features for small screens */}
-          <div className="flex flex-wrap justify-center gap-3">
-            {firstRowFeatures.map((feature, index) => (
-              <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
-                <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
-                {feature}
+          {/* Mobile layout */}
+          <div className="md:hidden flex flex-col items-center gap-3">
+            {mobileFeatures.map((row, rowIndex) => (
+              <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
+                {row.map((feature, index) => (
+                  <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
+                    <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
+                    {feature}
+                  </div>
+                ))}
               </div>
             ))}
           </div>
-          
-          {/* Second row for large screens */}
-          <div className="flex flex-wrap justify-center gap-3">
-            {secondRowFeatures.map((feature, index) => (
-              <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
-                <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
-                {feature}
-              </div>
-            ))}
+
+          {/* Desktop layout */}
+          <div className="hidden md:flex flex-col items-center gap-3">
+            {/* First row for large screens */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {firstRowFeatures.map((feature, index) => (
+                <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
+                  <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
+                  {feature}
+                </div>
+              ))}
+            </div>
+            
+            {/* Second row for large screens */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {secondRowFeatures.map((feature, index) => (
+                <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
+                  <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
+                  {feature}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
