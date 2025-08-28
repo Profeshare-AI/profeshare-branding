@@ -21,13 +21,16 @@ const pillars = [
   }
 ];
 
-const features = [
+const firstRowFeatures = [
   "Profiles",
   "Career Matching",
   "Talent Discovery", 
   "Learning Space",
   "Recruiter Studio",
-  "Projects",
+  "Projects Space"
+];
+
+const secondRowFeatures = [
   "Papers",
   "Communities",
   "Events",
@@ -67,13 +70,26 @@ const PillarsSection = () => {
           ))}
         </div>
         
-        <div className="flex flex-wrap justify-center gap-3">
-          {features.map((feature, index) => (
-            <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
-              <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
-              {feature}
-            </div>
-          ))}
+        <div className="flex flex-col items-center gap-3">
+          {/* First row for large screens, all features for small screens */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {firstRowFeatures.map((feature, index) => (
+              <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
+                <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
+                {feature}
+              </div>
+            ))}
+          </div>
+          
+          {/* Second row for large screens */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {secondRowFeatures.map((feature, index) => (
+              <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
+                <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
+                {feature}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
