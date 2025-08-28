@@ -23,13 +23,15 @@ const pillars = [
 
 const features = [
   "Profiles",
-  "Papers", 
-  "Career Matching and Discovery",
+  "Career Matching",
+  "Talent Discovery", 
   "Learning Space",
   "Recruiter Studio",
-  "Projects Space",
-  "Communities and Events",
-  "Collaboration and Messaging",
+  "Projects",
+  "Papers",
+  "Communities",
+  "Events",
+  "Collaborations and Messaging",
   "Integrations and Portability"
 ];
 
