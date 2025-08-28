@@ -54,7 +54,7 @@ const PillarsSection = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium mb-6">
-            Why it actually matters?
+            Why it actually matter?
           </div>
           
           <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
