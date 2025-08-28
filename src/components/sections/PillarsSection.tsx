@@ -1,6 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
-import { Shield, Target, Network, Diamond } from "lucide-react";
+import { Shield, Target, Network, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const pillars = [
@@ -68,7 +68,7 @@ const PillarsSection = () => {
         <div className="flex flex-wrap justify-center gap-3">
           {features.map((feature, index) => (
             <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
-              <Diamond className="w-3 h-3 mr-2 text-blue-400" />
+              <Circle className="w-3 h-3 mr-2 text-blue-400 fill-current" />
               {feature}
             </div>
           ))}
