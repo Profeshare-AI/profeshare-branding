@@ -1,6 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
-import { Shield, Target, Network } from "lucide-react";
+import { Shield, Target, Network, Diamond } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const pillars = [
@@ -21,13 +21,25 @@ const pillars = [
   }
 ];
 
+const features = [
+  "Profiles",
+  "Papers", 
+  "Career Matching and Discovery",
+  "Learning Space",
+  "Recruiter Studio",
+  "Projects Space",
+  "Communities and Events",
+  "Collaboration and Messaging",
+  "Integrations and Portability"
+];
+
 const PillarsSection = () => {
   return (
     <section className="relative py-16 md:py-20 lg:py-24 bg-black">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium mb-6">
-            Our Core Pillars
+            What you will get inside
           </div>
           
           <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
@@ -37,8 +49,8 @@ const PillarsSection = () => {
         
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {pillars.map((pillar, index) => (
-            <div key={index} className="bg-gradient-to-br from-blue-900/20 to-blue-800/10 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-left hover:border-blue-400/30 transition-all duration-300">
-              <div className="mb-6">
+            <div key={index} className="bg-gradient-to-br from-blue-900/20 to-blue-800/10 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-center hover:border-blue-400/30 transition-all duration-300">
+              <div className="mb-6 flex justify-center">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
                   <pillar.icon className="w-6 h-6 text-white" />
                 </div>
@@ -53,15 +65,13 @@ const PillarsSection = () => {
           ))}
         </div>
         
-        <div className="flex flex-row gap-4 justify-center items-center flex-wrap">
-          <Button variant="glass" size="md" className="group transition-all duration-300 hover:pr-8 relative">
-            <span className="transition-transform duration-300 group-hover:-translate-x-1">Try these features</span>
-            <span className="absolute opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" style={{left: 'calc(100% - 2rem)'}}>🡥</span>
-          </Button>
-          <Button variant="hero-outline" size="md" className="group transition-all duration-300 hover:pr-8 relative">
-            <span className="transition-transform duration-300 group-hover:-translate-x-1">Understand more</span>
-            <span className="absolute opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" style={{left: 'calc(100% - 2rem)'}}>🡦</span>
-          </Button>
+        <div className="flex flex-wrap justify-center gap-3">
+          {features.map((feature, index) => (
+            <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
+              <Diamond className="w-3 h-3 mr-2 text-blue-400" />
+              {feature}
+            </div>
+          ))}
         </div>
       </div>
     </section>
