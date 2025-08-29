@@ -22,30 +22,47 @@ const pillars = [
 ];
 
 const firstRowFeatures = [
-  "Profiles",
-  "Career Matching",
-  "Talent Discovery", 
-  "Learning Space",
-  "Recruiter Studio",
-  "Projects Space"
+  { name: "Profiles", color: "bg-gradient-to-r from-cyan-500 to-cyan-600" },
+  { name: "Career Matching", color: "bg-gradient-to-r from-blue-500 to-blue-600" },
+  { name: "Talent Discovery", color: "bg-gradient-to-r from-amber-500 to-amber-600" }, 
+  { name: "Learning Space", color: "bg-gradient-to-r from-purple-500 to-purple-600" },
+  { name: "Recruiter Studio", color: "bg-gradient-to-r from-green-500 to-green-600" },
+  { name: "Projects Space", color: "bg-gradient-to-r from-rose-500 to-rose-600" }
 ];
 
 const secondRowFeatures = [
-  "Papers",
-  "Communities",
-  "Events",
-  "Collaborations and Messaging",
-  "Integrations",
-  "Analytics & more..."
+  { name: "Papers", color: "bg-gradient-to-r from-indigo-500 to-indigo-600" },
+  { name: "Communities", color: "bg-gradient-to-r from-emerald-500 to-emerald-600" },
+  { name: "Events", color: "bg-gradient-to-r from-orange-500 to-orange-600" },
+  { name: "Collaborations and Messaging", color: "bg-gradient-to-r from-pink-500 to-pink-600" },
+  { name: "Integrations", color: "bg-gradient-to-r from-teal-500 to-teal-600" },
+  { name: "Analytics & more...", color: "bg-gradient-to-r from-slate-500 to-slate-600" }
 ];
 
 // Mobile layout arrays
 const mobileFeatures = [
-  ["Profiles", "Career Matching", "Talent Discovery"],
-  ["Learning Space", "Recruiter Studio"],
-  ["Papers", "Projects Space", "Communities"],
-  ["Events", "Collaborations and Messaging"],
-  ["Integrations", "Analytics & more..."]
+  [
+    { name: "Profiles", color: "bg-gradient-to-r from-cyan-500 to-cyan-600" },
+    { name: "Career Matching", color: "bg-gradient-to-r from-blue-500 to-blue-600" },
+    { name: "Talent Discovery", color: "bg-gradient-to-r from-amber-500 to-amber-600" }
+  ],
+  [
+    { name: "Learning Space", color: "bg-gradient-to-r from-purple-500 to-purple-600" },
+    { name: "Recruiter Studio", color: "bg-gradient-to-r from-green-500 to-green-600" }
+  ],
+  [
+    { name: "Papers", color: "bg-gradient-to-r from-indigo-500 to-indigo-600" },
+    { name: "Projects Space", color: "bg-gradient-to-r from-rose-500 to-rose-600" },
+    { name: "Communities", color: "bg-gradient-to-r from-emerald-500 to-emerald-600" }
+  ],
+  [
+    { name: "Events", color: "bg-gradient-to-r from-orange-500 to-orange-600" },
+    { name: "Collaborations and Messaging", color: "bg-gradient-to-r from-pink-500 to-pink-600" }
+  ],
+  [
+    { name: "Integrations", color: "bg-gradient-to-r from-teal-500 to-teal-600" },
+    { name: "Analytics & more...", color: "bg-gradient-to-r from-slate-500 to-slate-600" }
+  ]
 ];
 
 const PillarsSection = () => {
@@ -86,9 +103,9 @@ const PillarsSection = () => {
             {mobileFeatures.map((row, rowIndex) => (
               <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
                 {row.map((feature, index) => (
-                  <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
-                    <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
-                    {feature}
+                  <div key={index} className={`inline-flex items-center px-4 py-2 rounded-full text-white text-xs font-body font-medium shadow-lg ${feature.color}`}>
+                    <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current" />
+                    {feature.name}
                   </div>
                 ))}
               </div>
@@ -100,9 +117,9 @@ const PillarsSection = () => {
             {/* First row for large screens */}
             <div className="flex flex-wrap justify-center gap-3">
               {firstRowFeatures.map((feature, index) => (
-                <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
-                  <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
-                  {feature}
+                <div key={index} className={`inline-flex items-center px-4 py-2 rounded-full text-white text-xs font-body font-medium shadow-lg ${feature.color}`}>
+                  <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current" />
+                  {feature.name}
                 </div>
               ))}
             </div>
@@ -110,9 +127,9 @@ const PillarsSection = () => {
             {/* Second row for large screens */}
             <div className="flex flex-wrap justify-center gap-3">
               {secondRowFeatures.map((feature, index) => (
-                <div key={index} className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/5 border border-white/10 text-white/80 text-xs font-body font-medium">
-                  <Diamond className="w-3 h-3 mr-2 text-blue-400 fill-current" />
-                  {feature}
+                <div key={index} className={`inline-flex items-center px-4 py-2 rounded-full text-white text-xs font-body font-medium shadow-lg ${feature.color}`}>
+                  <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current" />
+                  {feature.name}
                 </div>
               ))}
             </div>
