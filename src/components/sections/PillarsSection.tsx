@@ -22,46 +22,46 @@ const pillars = [
 ];
 
 const firstRowFeatures = [
-  { name: "Profiles", color: "from-transparent via-cyan-500/20 to-cyan-500/60", border: "border-cyan-500/60" },
-  { name: "Career Matching", color: "from-transparent via-blue-500/20 to-blue-500/60", border: "border-blue-500/60" },
-  { name: "Talent Discovery", color: "from-transparent via-amber-500/20 to-amber-500/60", border: "border-amber-500/60" }, 
-  { name: "Learning Space", color: "from-transparent via-purple-500/20 to-purple-500/60", border: "border-purple-500/60" },
-  { name: "Recruiter Studio", color: "from-transparent via-green-500/20 to-green-500/60", border: "border-green-500/60" },
-  { name: "Projects Space", color: "from-transparent via-rose-500/20 to-rose-500/60", border: "border-rose-500/60" }
+  { name: "Profiles", color: "from-cyan-500/20 via-cyan-500/40 to-cyan-500/80", border: "border-cyan-500/60" },
+  { name: "Career Matching", color: "from-blue-500/20 via-blue-500/40 to-blue-500/80", border: "border-blue-500/60" },
+  { name: "Talent Discovery", color: "from-amber-500/20 via-amber-500/40 to-amber-500/80", border: "border-amber-500/60" }, 
+  { name: "Learning Space", color: "from-purple-500/20 via-purple-500/40 to-purple-500/80", border: "border-purple-500/60" },
+  { name: "Recruiter Studio", color: "from-green-500/20 via-green-500/40 to-green-500/80", border: "border-green-500/60" },
+  { name: "Projects Space", color: "from-rose-500/20 via-rose-500/40 to-rose-500/80", border: "border-rose-500/60" }
 ];
 
 const secondRowFeatures = [
-  { name: "Papers", color: "from-transparent via-indigo-500/20 to-indigo-500/60", border: "border-indigo-500/60" },
-  { name: "Communities", color: "from-transparent via-emerald-500/20 to-emerald-500/60", border: "border-emerald-500/60" },
-  { name: "Events", color: "from-transparent via-orange-500/20 to-orange-500/60", border: "border-orange-500/60" },
-  { name: "Collaborations and Messaging", color: "from-transparent via-pink-500/20 to-pink-500/60", border: "border-pink-500/60" },
-  { name: "Integrations", color: "from-transparent via-teal-500/20 to-teal-500/60", border: "border-teal-500/60" },
-  { name: "Analytics & more...", color: "from-transparent via-slate-500/20 to-slate-500/60", border: "border-slate-500/60" }
+  { name: "Papers", color: "from-indigo-500/20 via-indigo-500/40 to-indigo-500/80", border: "border-indigo-500/60" },
+  { name: "Communities", color: "from-emerald-500/20 via-emerald-500/40 to-emerald-500/80", border: "border-emerald-500/60" },
+  { name: "Events", color: "from-orange-500/20 via-orange-500/40 to-orange-500/80", border: "border-orange-500/60" },
+  { name: "Collaborations and Messaging", color: "from-pink-500/20 via-pink-500/40 to-pink-500/80", border: "border-pink-500/60" },
+  { name: "Integrations", color: "from-teal-500/20 via-teal-500/40 to-teal-500/80", border: "border-teal-500/60" },
+  { name: "Analytics & more...", color: "from-slate-500/20 via-slate-500/40 to-slate-500/80", border: "border-slate-500/60" }
 ];
 
 // Mobile layout arrays
 const mobileFeatures = [
   [
-    { name: "Profiles", color: "from-transparent via-cyan-500/20 to-cyan-500/60", border: "border-cyan-500/60" },
-    { name: "Career Matching", color: "from-transparent via-blue-500/20 to-blue-500/60", border: "border-blue-500/60" },
-    { name: "Talent Discovery", color: "from-transparent via-amber-500/20 to-amber-500/60", border: "border-amber-500/60" }
+    { name: "Profiles", color: "from-cyan-500/20 via-cyan-500/40 to-cyan-500/80", border: "border-cyan-500/60" },
+    { name: "Career Matching", color: "from-blue-500/20 via-blue-500/40 to-blue-500/80", border: "border-blue-500/60" },
+    { name: "Talent Discovery", color: "from-amber-500/20 via-amber-500/40 to-amber-500/80", border: "border-amber-500/60" }
   ],
   [
-    { name: "Learning Space", color: "from-transparent via-purple-500/20 to-purple-500/60", border: "border-purple-500/60" },
-    { name: "Recruiter Studio", color: "from-transparent via-green-500/20 to-green-500/60", border: "border-green-500/60" }
+    { name: "Learning Space", color: "from-purple-500/20 via-purple-500/40 to-purple-500/80", border: "border-purple-500/60" },
+    { name: "Recruiter Studio", color: "from-green-500/20 via-green-500/40 to-green-500/80", border: "border-green-500/60" }
   ],
   [
-    { name: "Papers", color: "from-transparent via-indigo-500/20 to-indigo-500/60", border: "border-indigo-500/60" },
-    { name: "Projects Space", color: "from-transparent via-rose-500/20 to-rose-500/60", border: "border-rose-500/60" },
-    { name: "Communities", color: "from-transparent via-emerald-500/20 to-emerald-500/60", border: "border-emerald-500/60" }
+    { name: "Papers", color: "from-indigo-500/20 via-indigo-500/40 to-indigo-500/80", border: "border-indigo-500/60" },
+    { name: "Projects Space", color: "from-rose-500/20 via-rose-500/40 to-rose-500/80", border: "border-rose-500/60" },
+    { name: "Communities", color: "from-emerald-500/20 via-emerald-500/40 to-emerald-500/80", border: "border-emerald-500/60" }
   ],
   [
-    { name: "Events", color: "from-transparent via-orange-500/20 to-orange-500/60", border: "border-orange-500/60" },
-    { name: "Collaborations and Messaging", color: "from-transparent via-pink-500/20 to-pink-500/60", border: "border-pink-500/60" }
+    { name: "Events", color: "from-orange-500/20 via-orange-500/40 to-orange-500/80", border: "border-orange-500/60" },
+    { name: "Collaborations and Messaging", color: "from-pink-500/20 via-pink-500/40 to-pink-500/80", border: "border-pink-500/60" }
   ],
   [
-    { name: "Integrations", color: "from-transparent via-teal-500/20 to-teal-500/60", border: "border-teal-500/60" },
-    { name: "Analytics & more...", color: "from-transparent via-slate-500/20 to-slate-500/60", border: "border-slate-500/60" }
+    { name: "Integrations", color: "from-teal-500/20 via-teal-500/40 to-teal-500/80", border: "border-teal-500/60" },
+    { name: "Analytics & more...", color: "from-slate-500/20 via-slate-500/40 to-slate-500/80", border: "border-slate-500/60" }
   ]
 ];
 
