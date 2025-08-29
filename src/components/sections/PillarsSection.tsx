@@ -22,46 +22,46 @@ const pillars = [
 ];
 
 const firstRowFeatures = [
-  { name: "Profiles", color: "bg-gradient-to-r from-cyan-500 to-cyan-600" },
-  { name: "Career Matching", color: "bg-gradient-to-r from-blue-500 to-blue-600" },
-  { name: "Talent Discovery", color: "bg-gradient-to-r from-amber-500 to-amber-600" }, 
-  { name: "Learning Space", color: "bg-gradient-to-r from-purple-500 to-purple-600" },
-  { name: "Recruiter Studio", color: "bg-gradient-to-r from-green-500 to-green-600" },
-  { name: "Projects Space", color: "bg-gradient-to-r from-rose-500 to-rose-600" }
+  { name: "Profiles", color: "from-transparent to-cyan-500" },
+  { name: "Career Matching", color: "from-transparent to-blue-500" },
+  { name: "Talent Discovery", color: "from-transparent to-amber-500" }, 
+  { name: "Learning Space", color: "from-transparent to-purple-500" },
+  { name: "Recruiter Studio", color: "from-transparent to-green-500" },
+  { name: "Projects Space", color: "from-transparent to-rose-500" }
 ];
 
 const secondRowFeatures = [
-  { name: "Papers", color: "bg-gradient-to-r from-indigo-500 to-indigo-600" },
-  { name: "Communities", color: "bg-gradient-to-r from-emerald-500 to-emerald-600" },
-  { name: "Events", color: "bg-gradient-to-r from-orange-500 to-orange-600" },
-  { name: "Collaborations and Messaging", color: "bg-gradient-to-r from-pink-500 to-pink-600" },
-  { name: "Integrations", color: "bg-gradient-to-r from-teal-500 to-teal-600" },
-  { name: "Analytics & more...", color: "bg-gradient-to-r from-slate-500 to-slate-600" }
+  { name: "Papers", color: "from-transparent to-indigo-500" },
+  { name: "Communities", color: "from-transparent to-emerald-500" },
+  { name: "Events", color: "from-transparent to-orange-500" },
+  { name: "Collaborations and Messaging", color: "from-transparent to-pink-500" },
+  { name: "Integrations", color: "from-transparent to-teal-500" },
+  { name: "Analytics & more...", color: "from-transparent to-slate-500" }
 ];
 
 // Mobile layout arrays
 const mobileFeatures = [
   [
-    { name: "Profiles", color: "bg-gradient-to-r from-cyan-500 to-cyan-600" },
-    { name: "Career Matching", color: "bg-gradient-to-r from-blue-500 to-blue-600" },
-    { name: "Talent Discovery", color: "bg-gradient-to-r from-amber-500 to-amber-600" }
+    { name: "Profiles", color: "from-transparent to-cyan-500" },
+    { name: "Career Matching", color: "from-transparent to-blue-500" },
+    { name: "Talent Discovery", color: "from-transparent to-amber-500" }
   ],
   [
-    { name: "Learning Space", color: "bg-gradient-to-r from-purple-500 to-purple-600" },
-    { name: "Recruiter Studio", color: "bg-gradient-to-r from-green-500 to-green-600" }
+    { name: "Learning Space", color: "from-transparent to-purple-500" },
+    { name: "Recruiter Studio", color: "from-transparent to-green-500" }
   ],
   [
-    { name: "Papers", color: "bg-gradient-to-r from-indigo-500 to-indigo-600" },
-    { name: "Projects Space", color: "bg-gradient-to-r from-rose-500 to-rose-600" },
-    { name: "Communities", color: "bg-gradient-to-r from-emerald-500 to-emerald-600" }
+    { name: "Papers", color: "from-transparent to-indigo-500" },
+    { name: "Projects Space", color: "from-transparent to-rose-500" },
+    { name: "Communities", color: "from-transparent to-emerald-500" }
   ],
   [
-    { name: "Events", color: "bg-gradient-to-r from-orange-500 to-orange-600" },
-    { name: "Collaborations and Messaging", color: "bg-gradient-to-r from-pink-500 to-pink-600" }
+    { name: "Events", color: "from-transparent to-orange-500" },
+    { name: "Collaborations and Messaging", color: "from-transparent to-pink-500" }
   ],
   [
-    { name: "Integrations", color: "bg-gradient-to-r from-teal-500 to-teal-600" },
-    { name: "Analytics & more...", color: "bg-gradient-to-r from-slate-500 to-slate-600" }
+    { name: "Integrations", color: "from-transparent to-teal-500" },
+    { name: "Analytics & more...", color: "from-transparent to-slate-500" }
   ]
 ];
 
@@ -104,7 +104,7 @@ const PillarsSection = () => {
               <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
                 {row.map((feature, index) => (
                   <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
-                    <div className={`absolute inset-0 opacity-20 ${feature.color}`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
                     <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
                     <span className="relative z-10">{feature.name}</span>
                   </div>
@@ -119,7 +119,7 @@ const PillarsSection = () => {
             <div className="flex flex-wrap justify-center gap-3">
               {firstRowFeatures.map((feature, index) => (
                 <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
-                  <div className={`absolute inset-0 opacity-20 ${feature.color}`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
                   <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
                   <span className="relative z-10">{feature.name}</span>
                 </div>
@@ -130,7 +130,7 @@ const PillarsSection = () => {
             <div className="flex flex-wrap justify-center gap-3">
               {secondRowFeatures.map((feature, index) => (
                 <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
-                  <div className={`absolute inset-0 opacity-20 ${feature.color}`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
                   <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
                   <span className="relative z-10">{feature.name}</span>
                 </div>
