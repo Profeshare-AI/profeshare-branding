@@ -103,10 +103,11 @@ const PillarsSection = () => {
             {mobileFeatures.map((row, rowIndex) => (
               <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
                 {row.map((feature, index) => (
-                  <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border ${feature.border} text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
-                    <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
-                    <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
-                    <span className="relative z-10">{feature.name}</span>
+                  <div key={index} className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg`}>
+                    <div className="relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/40 text-white text-xs font-body font-medium overflow-hidden">
+                      <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
+                      <span className="relative z-10">{feature.name}</span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -118,10 +119,11 @@ const PillarsSection = () => {
             {/* First row for large screens */}
             <div className="flex flex-wrap justify-center gap-3">
               {firstRowFeatures.map((feature, index) => (
-                <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border ${feature.border} text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
-                  <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
-                  <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
-                  <span className="relative z-10">{feature.name}</span>
+                <div key={index} className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg`}>
+                  <div className="relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/40 text-white text-xs font-body font-medium overflow-hidden">
+                    <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
+                    <span className="relative z-10">{feature.name}</span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -129,10 +131,11 @@ const PillarsSection = () => {
             {/* Second row for large screens */}
             <div className="flex flex-wrap justify-center gap-3">
               {secondRowFeatures.map((feature, index) => (
-                <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border ${feature.border} text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
-                  <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
-                  <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
-                  <span className="relative z-10">{feature.name}</span>
+                <div key={index} className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg`}>
+                  <div className="relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/40 text-white text-xs font-body font-medium overflow-hidden">
+                    <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
+                    <span className="relative z-10">{feature.name}</span>
+                  </div>
                 </div>
               ))}
             </div>
