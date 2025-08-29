@@ -22,46 +22,46 @@ const pillars = [
 ];
 
 const firstRowFeatures = [
-  { name: "Profiles", color: "from-transparent to-cyan-500" },
-  { name: "Career Matching", color: "from-transparent to-blue-500" },
-  { name: "Talent Discovery", color: "from-transparent to-amber-500" }, 
-  { name: "Learning Space", color: "from-transparent to-purple-500" },
-  { name: "Recruiter Studio", color: "from-transparent to-green-500" },
-  { name: "Projects Space", color: "from-transparent to-rose-500" }
+  { name: "Profiles", color: "from-transparent from-40% to-cyan-500", border: "border-cyan-500/50" },
+  { name: "Career Matching", color: "from-transparent from-40% to-blue-500", border: "border-blue-500/50" },
+  { name: "Talent Discovery", color: "from-transparent from-40% to-amber-500", border: "border-amber-500/50" }, 
+  { name: "Learning Space", color: "from-transparent from-40% to-purple-500", border: "border-purple-500/50" },
+  { name: "Recruiter Studio", color: "from-transparent from-40% to-green-500", border: "border-green-500/50" },
+  { name: "Projects Space", color: "from-transparent from-40% to-rose-500", border: "border-rose-500/50" }
 ];
 
 const secondRowFeatures = [
-  { name: "Papers", color: "from-transparent to-indigo-500" },
-  { name: "Communities", color: "from-transparent to-emerald-500" },
-  { name: "Events", color: "from-transparent to-orange-500" },
-  { name: "Collaborations and Messaging", color: "from-transparent to-pink-500" },
-  { name: "Integrations", color: "from-transparent to-teal-500" },
-  { name: "Analytics & more...", color: "from-transparent to-slate-500" }
+  { name: "Papers", color: "from-transparent from-40% to-indigo-500", border: "border-indigo-500/50" },
+  { name: "Communities", color: "from-transparent from-40% to-emerald-500", border: "border-emerald-500/50" },
+  { name: "Events", color: "from-transparent from-40% to-orange-500", border: "border-orange-500/50" },
+  { name: "Collaborations and Messaging", color: "from-transparent from-40% to-pink-500", border: "border-pink-500/50" },
+  { name: "Integrations", color: "from-transparent from-40% to-teal-500", border: "border-teal-500/50" },
+  { name: "Analytics & more...", color: "from-transparent from-40% to-slate-500", border: "border-slate-500/50" }
 ];
 
 // Mobile layout arrays
 const mobileFeatures = [
   [
-    { name: "Profiles", color: "from-transparent to-cyan-500" },
-    { name: "Career Matching", color: "from-transparent to-blue-500" },
-    { name: "Talent Discovery", color: "from-transparent to-amber-500" }
+    { name: "Profiles", color: "from-transparent from-40% to-cyan-500", border: "border-cyan-500/50" },
+    { name: "Career Matching", color: "from-transparent from-40% to-blue-500", border: "border-blue-500/50" },
+    { name: "Talent Discovery", color: "from-transparent from-40% to-amber-500", border: "border-amber-500/50" }
   ],
   [
-    { name: "Learning Space", color: "from-transparent to-purple-500" },
-    { name: "Recruiter Studio", color: "from-transparent to-green-500" }
+    { name: "Learning Space", color: "from-transparent from-40% to-purple-500", border: "border-purple-500/50" },
+    { name: "Recruiter Studio", color: "from-transparent from-40% to-green-500", border: "border-green-500/50" }
   ],
   [
-    { name: "Papers", color: "from-transparent to-indigo-500" },
-    { name: "Projects Space", color: "from-transparent to-rose-500" },
-    { name: "Communities", color: "from-transparent to-emerald-500" }
+    { name: "Papers", color: "from-transparent from-40% to-indigo-500", border: "border-indigo-500/50" },
+    { name: "Projects Space", color: "from-transparent from-40% to-rose-500", border: "border-rose-500/50" },
+    { name: "Communities", color: "from-transparent from-40% to-emerald-500", border: "border-emerald-500/50" }
   ],
   [
-    { name: "Events", color: "from-transparent to-orange-500" },
-    { name: "Collaborations and Messaging", color: "from-transparent to-pink-500" }
+    { name: "Events", color: "from-transparent from-40% to-orange-500", border: "border-orange-500/50" },
+    { name: "Collaborations and Messaging", color: "from-transparent from-40% to-pink-500", border: "border-pink-500/50" }
   ],
   [
-    { name: "Integrations", color: "from-transparent to-teal-500" },
-    { name: "Analytics & more...", color: "from-transparent to-slate-500" }
+    { name: "Integrations", color: "from-transparent from-40% to-teal-500", border: "border-teal-500/50" },
+    { name: "Analytics & more...", color: "from-transparent from-40% to-slate-500", border: "border-slate-500/50" }
   ]
 ];
 
@@ -103,7 +103,7 @@ const PillarsSection = () => {
             {mobileFeatures.map((row, rowIndex) => (
               <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
                 {row.map((feature, index) => (
-                  <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
+                  <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 ${feature.border} text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
                     <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
                     <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
                     <span className="relative z-10">{feature.name}</span>
@@ -118,7 +118,7 @@ const PillarsSection = () => {
             {/* First row for large screens */}
             <div className="flex flex-wrap justify-center gap-3">
               {firstRowFeatures.map((feature, index) => (
-                <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
+                <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 ${feature.border} text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
                   <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
                   <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
                   <span className="relative z-10">{feature.name}</span>
@@ -129,7 +129,7 @@ const PillarsSection = () => {
             {/* Second row for large screens */}
             <div className="flex flex-wrap justify-center gap-3">
               {secondRowFeatures.map((feature, index) => (
-                <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
+                <div key={index} className={`relative inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 ${feature.border} text-white text-xs font-body font-medium shadow-lg overflow-hidden`}>
                   <div className={`absolute inset-0 bg-gradient-to-r ${feature.color}`}></div>
                   <Diamond className="w-3 h-3 mr-2 text-white/90 fill-current relative z-10" />
                   <span className="relative z-10">{feature.name}</span>
