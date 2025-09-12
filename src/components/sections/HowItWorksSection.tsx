@@ -25,7 +25,7 @@ const steps = [
 const HowItWorksSection = () => {
   return (
     <Section background="primary" className="bg-black">
-      <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+      <div className="grid lg:grid-cols-4 gap-8 lg:gap-12 items-center">
         {/* Steps Cards - Left Column (3 columns) */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
           {steps.map((step, index) => (
@@ -52,7 +52,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Right Column - Header and CTA */}
-        <div className="lg:col-span-2 lg:mt-8">
+        <div className="lg:col-span-1 flex flex-col justify-center items-center text-center lg:text-left lg:items-start">
           <div className="mb-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-glass-bg/10 border border-glass-border/20 text-glass-text text-xs font-body font-medium mb-6">
               How this works?
