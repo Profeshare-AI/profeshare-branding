@@ -91,7 +91,7 @@ const PillarsSection = () => {
         
         {personaContent && (
           /* Card that appears exactly where the chip was, centered */
-          <div className="tooltip-card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
+          <div className="tooltip-card absolute top-0 left-0 w-full h-full flex items-center justify-center z-20 cursor-pointer">
             <div className={`relative p-[1px] rounded-2xl bg-gradient-to-br ${personaContent.gradientColor}`}>
               <div className={`w-48 h-64 backdrop-blur-md bg-black/70 ${personaContent.borderColor} border rounded-2xl p-4 text-white shadow-xl`}>
                 <div className="h-full flex flex-col justify-between">
