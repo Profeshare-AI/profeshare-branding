@@ -29,15 +29,15 @@ const HowItWorksSection = () => {
         {/* Steps Cards - Left Column (3 columns) */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
           {steps.map((step, index) => (
-            <GlassCard key={index} className="flex flex-col justify-center min-h-[320px] text-center w-full">
-              <div className="flex flex-col items-center space-y-4 mt-16 px-2">
+            <GlassCard key={index} className="flex flex-col justify-start min-h-[320px] w-full p-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300">
+              <div className="flex flex-col items-start space-y-4 mt-4">
                 <div className={`flex items-center justify-center w-16 h-16 rounded-full flex-shrink-0 ${
                   index === 0 ? 'bg-blue-500' : 'bg-white/20'
                 }`}>
                   <step.icon className={`w-8 h-8 ${index === 0 ? 'text-white' : 'text-white/80'}`} />
                 </div>
                 
-                <div className="flex-1 px-4">
+                <div className="flex-1">
                   <h3 className="font-instrument text-lg font-medium text-white mb-4">
                     {step.title}
                   </h3>
