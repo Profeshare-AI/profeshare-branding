@@ -25,9 +25,9 @@ const steps = [
 const HowItWorksSection = () => {
   return (
     <Section background="primary" className="bg-black">
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-        {/* Steps Cards - Left Column */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+      <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+        {/* Steps Cards - Left Column (3 columns) */}
+        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
           {steps.map((step, index) => (
             <GlassCard key={index} className="flex flex-col justify-center min-h-[320px] text-center w-full">
               <div className="flex flex-col items-center space-y-4 mt-16 px-2">
@@ -52,7 +52,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Right Column - Header and CTA */}
-        <div className="lg:mt-8">
+        <div className="lg:col-span-2 lg:mt-8">
           <div className="mb-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-glass-bg/10 border border-glass-border/20 text-glass-text text-xs font-body font-medium mb-6">
               How this works?
