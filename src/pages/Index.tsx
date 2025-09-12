@@ -46,13 +46,13 @@ const Index = () => {
         <PillarsSection />
         <VisualSeparator />
         
-        <HowItWorksSection />
+        <AudienceSection />
         <VisualSeparator />
         
         <PersonasSection />
         <VisualSeparator />
         
-        <AudienceSection />
+        <HowItWorksSection />
         <VisualSeparator />
         
         <UseCasesSection />
