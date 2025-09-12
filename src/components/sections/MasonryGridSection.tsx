@@ -1,6 +1,7 @@
 import Section from "../Section";
 import GlassmorphismChip from "../GlassmorphismChip";
 import { Brain, Users, Target, Lightbulb, Zap, BookOpen, Network, TrendingUp } from "lucide-react";
+import { useState } from "react";
 
 const masonryItems = [
   {
@@ -236,7 +237,13 @@ const masonryItems = [
 ];
 
 const MasonryGridSection = () => {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  
+  const hoverDescription = "Interprets intent and returns curated internships, active mentors, and a learning path with three micro-courses. Sets up Papers for weekly micro-updates with a proof-of-work gallery and recommends relevant hackathons and portfolio review events. Guides the student toward a credible profile, mentor recommendation, and interview opportunities.";
+
   const renderCard = (item: typeof masonryItems[0]) => {
+    const isHovered = hoveredCard === item.id;
+    
     // Get title and subtitle based on card type
     const getCardContent = () => {
       if (item.type === "profile") {
@@ -250,20 +257,32 @@ const MasonryGridSection = () => {
     return (
       <div
         key={item.id}
-        className="backdrop-blur-md bg-white/5 border border-white/10 h-[280px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
+        className="backdrop-blur-md bg-white/5 border border-white/10 h-[280px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden cursor-pointer"
+        onMouseEnter={() => setHoveredCard(item.id)}
+        onMouseLeave={() => setHoveredCard(null)}
       >
-        <div className="text-left">
-          <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight line-clamp-3">
-            {title}
-          </h3>
-        </div>
-        
-        {subtitle && (
-          <div className="text-left">
-            <span className="text-xs text-white/80 font-body block">
-              {subtitle}
-            </span>
+        {isHovered ? (
+          <div className="flex items-center justify-center h-full px-2">
+            <p className="font-body text-sm leading-relaxed text-white/90 text-center">
+              {hoverDescription}
+            </p>
           </div>
+        ) : (
+          <>
+            <div className="text-left">
+              <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight line-clamp-3">
+                {title}
+              </h3>
+            </div>
+            
+            {subtitle && (
+              <div className="text-left">
+                <span className="text-xs text-white/80 font-body block">
+                  {subtitle}
+                </span>
+              </div>
+            )}
+          </>
         )}
       </div>
     );
