@@ -135,18 +135,21 @@ const MasonryGridSection = () => {
     return (
       <div
         key={item.id}
-        className="backdrop-blur-md bg-white/5 border border-white/10 h-[240px] text-white rounded-2xl p-4 flex flex-col justify-center shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
+        className="backdrop-blur-md bg-white/5 border border-white/10 h-[248px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
       >
         <div className="text-left">
-          <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight mb-1 line-clamp-3">
+          <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight line-clamp-3">
             {title}
           </h3>
-          {subtitle && (
-            <span className="text-xs text-white/80 font-body mt-1 block">
+        </div>
+        
+        {subtitle && (
+          <div className="text-left">
+            <span className="text-xs text-white/80 font-body block">
               {subtitle}
             </span>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     );
   };
@@ -163,7 +166,7 @@ const MasonryGridSection = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         {masonryItems.map(renderCard)}
       </div>
     </Section>
