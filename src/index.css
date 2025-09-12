@@ -7,6 +7,37 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* Custom hover behavior for chip transformation */
+  .chip-container {
+    position: relative;
+  }
+  
+  .chip-container .chip-content {
+    transition: opacity 0.3s ease;
+  }
+  
+  .chip-container .tooltip-card {
+    opacity: 0;
+    transform: scale(0.75);
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .chip-container .chip-content:hover ~ .tooltip-card,
+  .chip-container .tooltip-card:hover {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+  
+  .chip-container .chip-content:hover {
+    opacity: 0;
+  }
+  
+  .chip-container:hover .chip-content:hover {
+    opacity: 0;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;

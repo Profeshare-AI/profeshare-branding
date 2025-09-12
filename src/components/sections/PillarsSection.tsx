@@ -80,10 +80,10 @@ const PillarsSection = () => {
     const personaContent = chipToPersonaMapping[feature.name];
     
     return (
-      <div key={index} className="relative">
+      <div key={index} className="chip-container">
         {/* Chip - visible by default, hidden on hover */}
-        <div className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg transition-all duration-300 group-hover:opacity-0 cursor-pointer z-10`}>
-          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium group">
+        <div className={`chip-content relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg cursor-pointer z-10`}>
+          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium">
             <Diamond className={`w-3 h-3 mr-2 ${feature.fillColor} fill-current`} />
             <span>{feature.name}</span>
           </div>
@@ -91,7 +91,7 @@ const PillarsSection = () => {
         
         {personaContent && (
           /* Card that appears exactly where the chip was, centered */
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-20 cursor-pointer">
+          <div className="tooltip-card absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
             <div className={`relative p-[1px] rounded-2xl bg-gradient-to-br ${personaContent.gradientColor}`}>
               <div className={`w-48 h-64 backdrop-blur-md bg-black/70 ${personaContent.borderColor} border rounded-2xl p-4 text-white shadow-xl`}>
                 <div className="h-full flex flex-col justify-between">
