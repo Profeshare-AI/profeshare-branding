@@ -262,8 +262,8 @@ const MasonryGridSection = () => {
         onMouseLeave={() => setHoveredCard(null)}
       >
         {isHovered ? (
-          <div className="flex items-center justify-center h-full px-2">
-            <p className="font-body text-sm leading-relaxed text-white/90 text-center">
+          <div className="flex items-start justify-start h-full px-2 py-2">
+            <p className="font-body text-xs leading-relaxed text-white/90 text-left">
               {hoverDescription}
             </p>
           </div>
