@@ -330,7 +330,7 @@ const masonryItems = [
   }
 ];
 
-const MasonryGridSection = () => {
+const PersonasSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const renderCard = (item: typeof masonryItems[0]) => {
@@ -406,4 +406,4 @@ const MasonryGridSection = () => {
   );
 };
 
-export default MasonryGridSection;
+export default PersonasSection;
