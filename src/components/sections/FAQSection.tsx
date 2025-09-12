@@ -33,7 +33,7 @@ const FAQSection = () => {
   return (
     <Section background="accent">
       <div className="text-center mb-12">
-        <SectionChip>Support</SectionChip>
+        <SectionChip>Frequently Asked Questions</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           Have Questions? We Have Answers.
         </h2>

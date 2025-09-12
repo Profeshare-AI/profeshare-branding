@@ -8,10 +8,7 @@ import PersonasSection from "@/components/sections/PersonasSection";
 import AudienceSection from "@/components/sections/AudienceSection";
 import UseCasesSection from "@/components/sections/UseCasesSection";
 import TrustDataSection from "@/components/sections/TrustDataSection";
-import RoadmapSection from "@/components/sections/RoadmapSection";
-import SurveySection from "@/components/sections/SurveySection";
 import EarlyAccessSection from "@/components/sections/EarlyAccessSection";
-import FounderSection from "@/components/sections/FounderSection";
 import FAQSection from "@/components/sections/FAQSection";
 import FooterSection from "@/components/sections/FooterSection";
 import VisualSeparator from "@/components/VisualSeparator";
@@ -64,16 +61,7 @@ const Index = () => {
         <TrustDataSection />
         <VisualSeparator />
         
-        <RoadmapSection />
-        <VisualSeparator />
-        
-        <SurveySection />
-        <VisualSeparator />
-        
         <EarlyAccessSection />
-        <VisualSeparator />
-        
-        <FounderSection />
         <VisualSeparator />
         
         <FAQSection />
