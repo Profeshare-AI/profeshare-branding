@@ -8,7 +8,7 @@ const steps = [
   {
     icon: MessageSquare,
     title: "State your intent",
-    description: "Ask in plain language. We understand you better in any way! Example: Find me a Product design internship in Bengaluru with Figma and UX research."
+    description: "Ask in plain language. We understand you better in any way!"
   },
   {
     icon: Search,
