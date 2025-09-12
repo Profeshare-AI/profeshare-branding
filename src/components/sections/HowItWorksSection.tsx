@@ -59,7 +59,7 @@ const HowItWorksSection = () => {
             </div>
             
             <h2 className="font-instrument text-3xl md:text-4xl font-medium text-white mb-8 leading-tight">
-              Achieve Your Goals in<br />Three Simple Steps
+              Achieve Your Goals<br />in Three Simple Steps
             </h2>
             
             <GlassCTAButton size="md">
