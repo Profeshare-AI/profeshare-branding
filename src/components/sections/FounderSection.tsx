@@ -1,11 +1,13 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
+import SectionChip from "../SectionChip";
 import { ExternalLink, Mail } from "lucide-react";
 
 const FounderSection = () => {
   return (
     <Section background="secondary">
       <div className="text-center mb-12">
+        <SectionChip>Leadership</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           From Our Founder
         </h2>

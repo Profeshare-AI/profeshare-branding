@@ -1,5 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
+import SectionChip from "../SectionChip";
 import { GraduationCap, RotateCcw, UserCheck, Building, Users } from "lucide-react";
 
 const journeys = [
@@ -34,6 +35,7 @@ const UseCasesSection = () => {
   return (
     <Section background="accent">
       <div className="text-center mb-12">
+        <SectionChip>Real Examples</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           See It in Action: Common User Journeys
         </h2>

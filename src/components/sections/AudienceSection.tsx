@@ -1,5 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
+import SectionChip from "../SectionChip";
 import { GraduationCap, Briefcase, UserCheck, Building2, TestTube } from "lucide-react";
 
 const audiences = [
@@ -34,6 +35,7 @@ const AudienceSection = () => {
   return (
     <Section background="secondary">
       <div className="text-center mb-12">
+        <SectionChip>Who is this for?</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           Built for Every Part of the Professional World
         </h2>

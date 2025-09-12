@@ -1,4 +1,5 @@
 import Section from "../Section";
+import SectionChip from "../SectionChip";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
@@ -32,6 +33,7 @@ const FAQSection = () => {
   return (
     <Section background="accent">
       <div className="text-center mb-12">
+        <SectionChip>Support</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           Have Questions? We Have Answers.
         </h2>

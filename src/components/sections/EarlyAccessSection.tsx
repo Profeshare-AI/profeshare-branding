@@ -1,11 +1,13 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
+import SectionChip from "../SectionChip";
 import GlassCTAButton from "../ui/glass-cta-button";
 
 const EarlyAccessSection = () => {
   return (
     <Section background="primary">
       <div className="text-center">
+        <SectionChip>Join Beta</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-8">
           Be Among the First to Experience Profeshare AI
         </h2>

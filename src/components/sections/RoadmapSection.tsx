@@ -1,5 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
+import SectionChip from "../SectionChip";
 import { CheckCircle, Clock } from "lucide-react";
 
 const betaFeatures = [
@@ -22,6 +23,7 @@ const RoadmapSection = () => {
   return (
     <Section background="secondary">
       <div className="text-center mb-12">
+        <SectionChip>Product Roadmap</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           What We're Building
         </h2>

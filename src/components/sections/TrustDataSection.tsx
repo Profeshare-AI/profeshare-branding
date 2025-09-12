@@ -1,5 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
+import SectionChip from "../SectionChip";
 import { Shield, Users, Lock } from "lucide-react";
 
 const trustTopics = [
@@ -24,6 +25,7 @@ const TrustDataSection = () => {
   return (
     <Section background="primary">
       <div className="text-center mb-12">
+        <SectionChip>Trust & Security</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           A Foundation of Verification and Privacy
         </h2>

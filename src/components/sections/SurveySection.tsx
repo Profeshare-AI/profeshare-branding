@@ -1,5 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
+import SectionChip from "../SectionChip";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
@@ -7,6 +8,7 @@ const SurveySection = () => {
   return (
     <Section background="accent">
       <div className="text-center">
+        <SectionChip>Get Involved</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-8">
           Help Shape the Future of Professional Networking
         </h2>
