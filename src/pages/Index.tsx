@@ -49,9 +49,6 @@ const Index = () => {
         <PillarsSection />
         <VisualSeparator />
         
-        <AudienceSection />
-        <VisualSeparator />
-        
         <HowItWorksSection />
         <VisualSeparator />
         
@@ -59,6 +56,9 @@ const Index = () => {
         <VisualSeparator />
         
         <CapabilitiesSection />
+        <VisualSeparator />
+        
+        <AudienceSection />
         <VisualSeparator />
         
         <UseCasesSection />
