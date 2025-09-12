@@ -9,7 +9,7 @@ const masonryItems = [
     title: "What shapes professional growth and success?",
     subtitle: "Interview",
     background: "bg-gradient-to-br from-pink-400 to-pink-600",
-    size: "large",
+    size: "medium",
     textColor: "text-white"
   },
   {
@@ -35,15 +35,17 @@ const masonryItems = [
     id: 4,
     type: "feature",
     title: "The collaboration blueprint",
+    subtitle: "Strategic Framework",
     icon: Network,
     background: "bg-gradient-to-br from-indigo-500 to-purple-600",
-    size: "large",
+    size: "medium",
     textColor: "text-white"
   },
   {
     id: 5,
     type: "text",
     title: "Why our networks don't always serve us?",
+    subtitle: "Professional Insight",
     background: "bg-gradient-to-br from-rose-300 to-pink-300",
     size: "medium",
     textColor: "text-gray-800"
@@ -55,7 +57,7 @@ const masonryItems = [
     role: "Engineering Lead",
     image: "/lovable-uploads/48b2351b-f50a-453d-9afe-4b23e7e8a597.png",
     background: "bg-gradient-to-br from-amber-50 to-orange-100",
-    size: "small",
+    size: "medium",
     textColor: "text-gray-800"
   },
   {
@@ -65,7 +67,7 @@ const masonryItems = [
     subtitle: "Take It Out",
     icon: Target,
     background: "bg-gradient-to-br from-emerald-400 to-teal-500",
-    size: "large",
+    size: "medium",
     textColor: "text-white"
   },
   {
@@ -93,13 +95,14 @@ const masonryItems = [
     title: "Breaking down career barriers",
     subtitle: "Achievement unlocked",
     background: "bg-gradient-to-br from-violet-500 to-purple-700",
-    size: "large",
+    size: "medium",
     textColor: "text-white"
   },
   {
     id: 11,
     type: "feature",
     title: "Hacks to boost your career!",
+    subtitle: "Growth Tips",
     icon: Zap,
     background: "bg-gradient-to-br from-orange-200 to-red-300",
     size: "medium",
@@ -112,19 +115,13 @@ const masonryItems = [
     role: "Design Director", 
     image: "/lovable-uploads/5f43cc85-57e6-40ba-b89e-dfda252b9e8d.png",
     background: "bg-gradient-to-br from-emerald-50 to-teal-100",
-    size: "small",
+    size: "medium",
     textColor: "text-gray-800"
   }
 ];
 
 const MasonryGridSection = () => {
   const renderCard = (item: typeof masonryItems[0]) => {
-    const sizeClasses = {
-      small: "row-span-1",
-      medium: "row-span-2", 
-      large: "row-span-3"
-    };
-
     // Get title and subtitle based on card type
     const getCardContent = () => {
       if (item.type === "profile") {
@@ -138,7 +135,7 @@ const MasonryGridSection = () => {
     return (
       <div
         key={item.id}
-        className={`backdrop-blur-md bg-white/5 border border-white/10 ${sizeClasses[item.size]} text-white rounded-2xl p-4 flex flex-col justify-center shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden`}
+        className="backdrop-blur-md bg-white/5 border border-white/10 h-[240px] text-white rounded-2xl p-4 flex flex-col justify-center shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
       >
         <div className="text-left">
           <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight mb-1 line-clamp-3">
@@ -166,7 +163,7 @@ const MasonryGridSection = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[100px] md:auto-rows-[120px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {masonryItems.map(renderCard)}
       </div>
     </Section>
