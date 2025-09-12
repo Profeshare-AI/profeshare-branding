@@ -46,10 +46,7 @@ const secondRowFeatures = [
 const chipToPersonaMapping: Record<string, any> = {
   "Profiles": {
     title: "Student and Learner",
-    subtitle: "Prompt:",
-    description: "Help me find summer internships in product design that accept beginners.",
-    hoverTitle: "What Profeshare AI does:",
-    hoverDescription: "Interprets intent and returns curated internships, active mentors, and a learning path with three micro-courses. Sets up Papers for weekly micro-updates with a proof-of-work gallery and recommends relevant hackathons and portfolio review events. Guides the student toward a credible profile, mentor recommendation, and interview opportunities."
+    description: "Help me find summer internships in product design that accept beginners."
   }
 };
 
