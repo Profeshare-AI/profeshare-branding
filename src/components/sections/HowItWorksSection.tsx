@@ -54,8 +54,9 @@ const HowItWorksSection = () => {
         {/* Right Column - Header and CTA */}
         <div className="lg:col-span-1 flex flex-col justify-center items-center text-center lg:text-left lg:items-start">
           <div className="mb-6">
-            <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-glass-bg/10 border border-glass-border/20 text-glass-text text-xs font-body font-medium mb-6">
-              How this works?
+            {/* Glassmorphism Chip */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-dm-sans font-medium">
+              How does this works?
             </div>
             
             <h2 className="font-instrument text-3xl md:text-4xl font-medium text-white mb-8 leading-tight">
