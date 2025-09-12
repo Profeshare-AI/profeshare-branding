@@ -98,7 +98,7 @@ const PillarsSection = () => {
           <TooltipTrigger asChild>
             {chipElement}
           </TooltipTrigger>
-          <TooltipContent side="top" className="p-0 border-0 bg-transparent shadow-none">
+          <TooltipContent side="top" sideOffset={10} className="p-0 border-0 bg-transparent shadow-none z-50">
             <TooltipCard {...personaContent} />
           </TooltipContent>
         </Tooltip>
@@ -109,7 +109,7 @@ const PillarsSection = () => {
   };
 
   return (
-    <TooltipProvider>
+    <TooltipProvider delayDuration={200}>
       <section className="relative py-16 md:py-20 lg:py-24 bg-black">
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-12">

@@ -21,7 +21,7 @@ const TooltipCard = ({
   return (
     <div 
       className={cn(
-        "w-80 backdrop-blur-md bg-glass-bg/10 border border-glass-border/20 rounded-2xl p-6 text-glass-text shadow-lg",
+        "w-80 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 text-white shadow-lg",
         className
       )}
     >
