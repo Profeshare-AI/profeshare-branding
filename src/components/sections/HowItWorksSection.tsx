@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
         {/* Steps Cards - Left Column (3 columns) */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
           {steps.map((step, index) => (
-            <GlassCard key={index} className="flex flex-col justify-start min-h-[320px] w-full p-6 bg-black/20 hover:bg-white/8 transition-all duration-700 ease-in-out">
+            <GlassCard key={index} hoverable className="flex flex-col justify-start min-h-[320px] w-full p-6 !bg-black/20 hover:!bg-white/8 hover:!scale-100 transition-all duration-700 ease-in-out">
               <div className="flex flex-col items-start space-y-4 mt-12">
                 <div className={`flex items-center justify-center w-16 h-16 rounded-full flex-shrink-0 ${
                   index === 0 ? 'bg-blue-500' : 'bg-white/20'
