@@ -29,8 +29,8 @@ const HowItWorksSection = () => {
         {/* Steps Cards - Left Column (3 columns) */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
           {steps.map((step, index) => (
-            <GlassCard key={index} className="flex flex-col justify-start min-h-[320px] w-full p-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300">
-              <div className="flex flex-col items-start space-y-4 mt-4">
+            <GlassCard key={index} className="flex flex-col justify-start min-h-[320px] w-full p-6 hover:shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300">
+              <div className="flex flex-col items-start space-y-4 mt-12">
                 <div className={`flex items-center justify-center w-16 h-16 rounded-full flex-shrink-0 ${
                   index === 0 ? 'bg-blue-500' : 'bg-white/20'
                 }`}>
