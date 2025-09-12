@@ -7,8 +7,11 @@ const masonryItems = [
   {
     id: 1,
     type: "text",
-    title: "What shapes professional growth and success?",
-    subtitle: "Interview",
+    title: "Student and Learner",
+    subtitle: "Prompt:",
+    description: "Help me find summer internships in product design that accept beginners.",
+    hoverTitle: "What Profeshare AI does:",
+    hoverDescription: "Interprets intent and returns curated internships, active mentors, and a learning path with three micro-courses. Sets up Papers for weekly micro-updates with a proof-of-work gallery and recommends relevant hackathons and portfolio review events. Guides the student toward a credible profile, mentor recommendation, and interview opportunities.",
     background: "bg-gradient-to-br from-pink-400 to-pink-600",
     size: "medium",
     textColor: "text-white"
@@ -238,8 +241,6 @@ const masonryItems = [
 
 const MasonryGridSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  
-  const hoverDescription = "Interprets intent and returns curated internships, active mentors, and a learning path with three micro-courses. Sets up Papers for weekly micro-updates with a proof-of-work gallery and recommends relevant hackathons and portfolio review events. Guides the student toward a credible profile, mentor recommendation, and interview opportunities.";
 
   const renderCard = (item: typeof masonryItems[0]) => {
     const isHovered = hoveredCard === item.id;
@@ -263,9 +264,16 @@ const MasonryGridSection = () => {
       >
         {isHovered ? (
           <div className="flex items-end justify-start h-full">
-            <p className="font-body text-xs leading-relaxed text-white/90 text-left">
-              {hoverDescription}
-            </p>
+            <div className="text-left">
+              {item.hoverTitle && (
+                <p className="font-body text-xs leading-relaxed text-white/90 mb-2">
+                  {item.hoverTitle}
+                </p>
+              )}
+              <p className="font-body text-xs leading-relaxed text-white/90">
+                {item.hoverDescription || "Interprets intent and returns curated internships, active mentors, and a learning path with three micro-courses. Sets up Papers for weekly micro-updates with a proof-of-work gallery and recommends relevant hackathons and portfolio review events. Guides the student toward a credible profile, mentor recommendation, and interview opportunities."}
+              </p>
+            </div>
           </div>
         ) : (
           <>
@@ -275,13 +283,18 @@ const MasonryGridSection = () => {
               </h3>
             </div>
             
-            {subtitle && (
-              <div className="text-left">
-                <span className="text-xs text-white/80 font-body block">
+            <div className="text-left">
+              {subtitle && (
+                <span className="text-xs text-white/80 font-body block mb-1">
                   {subtitle}
                 </span>
-              </div>
-            )}
+              )}
+              {item.description && (
+                <span className="text-xs text-white/80 font-body block">
+                  {item.description}
+                </span>
+              )}
+            </div>
           </>
         )}
       </div>
