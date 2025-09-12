@@ -266,7 +266,7 @@ const MasonryGridSection = () => {
           <div className="flex items-end justify-start h-full">
             <div className="text-left">
               {item.hoverTitle && (
-                <p className="font-body text-xs leading-relaxed text-white/90 mb-2">
+                <p className="font-body text-xs leading-relaxed text-white mb-2">
                   {item.hoverTitle}
                 </p>
               )}
@@ -285,7 +285,7 @@ const MasonryGridSection = () => {
             
             <div className="text-left">
               {subtitle && (
-                <span className="text-xs text-white/80 font-body block mb-1">
+                <span className="text-xs text-white font-body block mb-1">
                   {subtitle}
                 </span>
               )}
