@@ -1,6 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
-import GlassmorphismChip from "../GlassmorphismChip";
+import SectionChip from "../SectionChip";
 import GlassCTAButton from "../ui/glass-cta-button";
 import { MessageSquare, Search, CheckCircle } from "lucide-react";
 
@@ -54,10 +54,9 @@ const HowItWorksSection = () => {
         {/* Right Column - Header and CTA */}
         <div className="lg:col-span-1 flex flex-col justify-center items-center text-center lg:text-left lg:items-start">
           <div className="mb-6">
-            {/* Glassmorphism Chip */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-dm-sans font-medium">
+            <SectionChip>
               How does this works?
-            </div>
+            </SectionChip>
             
             <h2 className="font-instrument text-3xl md:text-4xl font-medium text-white mb-8 leading-tight">
               Achieve Your Goals<br />in Three Simple Steps

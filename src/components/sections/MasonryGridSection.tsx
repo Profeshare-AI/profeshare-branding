@@ -1,5 +1,5 @@
 import Section from "../Section";
-import GlassmorphismChip from "../GlassmorphismChip";
+import SectionChip from "../SectionChip";
 import { Brain, Users, Target, Lightbulb, Zap, BookOpen, Network, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
@@ -389,9 +389,9 @@ const MasonryGridSection = () => {
     <Section background="transparent" className="bg-black">
       <div className="text-center mb-12">
         <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-dm-sans font-medium">
+          <SectionChip>
             Who is this for?
-          </div>
+          </SectionChip>
         </div>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           A Comprehensive Professional Ecosystem,<br />

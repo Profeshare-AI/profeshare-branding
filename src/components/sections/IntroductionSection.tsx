@@ -1,5 +1,6 @@
 import Section from "../Section";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import SectionChip from "../SectionChip";
 
 const IntroductionSection = () => {
   return (
@@ -18,10 +19,9 @@ const IntroductionSection = () => {
 
         {/* Right side - Content */}
         <div className="order-1 lg:order-2 space-y-6">
-          {/* Glassmorphism Chip */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-dm-sans font-medium">
+          <SectionChip>
             About Profeshare AI
-          </div>
+          </SectionChip>
 
           {/* Heading */}
           <h2 className="font-instrument text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">

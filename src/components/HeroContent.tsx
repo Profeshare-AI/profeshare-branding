@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import GlassCTAButton from "./ui/glass-cta-button";
-import GlassmorphismChip from "./GlassmorphismChip";
+import HeroChip from "./HeroChip";
 const HeroContent = () => {
   return <div className="flex flex-col items-center text-center px-4 relative z-10">
-      <GlassmorphismChip />
+      <HeroChip />
       
       <h1 className="font-instrument text-hero-text text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-4">
         <span className="block">The world's only</span>

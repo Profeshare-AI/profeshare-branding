@@ -71,6 +71,16 @@ export default {
 					border: 'hsl(var(--glass-border))',
 					text: 'hsl(var(--glass-text))'
 				},
+				'hero-chip': {
+					bg: 'hsl(var(--hero-chip-bg))',
+					border: 'hsl(var(--hero-chip-border))',
+					text: 'hsl(var(--hero-chip-text))'
+				},
+				'section-chip': {
+					bg: 'hsl(var(--section-chip-bg))',
+					border: 'hsl(var(--section-chip-border))',
+					text: 'hsl(var(--section-chip-text))'
+				},
 				'section-bg': {
 					primary: 'hsl(var(--section-bg-primary))',
 					secondary: 'hsl(var(--section-bg-secondary))',
