@@ -45,8 +45,10 @@ const secondRowFeatures = [
 // Chip to persona content mapping
 const chipToPersonaMapping: Record<string, any> = {
   "Profiles": {
-    title: "Student and Learner",
-    description: "Help me find summer internships in product design that accept beginners."
+    title: "Profiles",
+    description: "Find credible profiles that highlight experience, skills, affiliations, and work evidence.",
+    gradientColor: "from-cyan-500/20 via-cyan-500/40 to-cyan-500/80",
+    borderColor: "border-cyan-500/60"
   }
 };
 
