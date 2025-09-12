@@ -6,7 +6,7 @@ interface HeroChipProps {
 
 const HeroChip = ({ children }: HeroChipProps) => {
   return (
-    <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-hero-chip-bg/10 border border-hero-chip-border/20 text-hero-chip-text text-xs font-body font-medium mb-6">
+    <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-hero-chip-bg/10 border border-hero-chip-border/20 text-hero-chip-text text-xs font-body font-medium mb-6 animate-hero-chip-glow">
       {children || "Beta is rolling out soon • Signup for early access"}
     </div>
   );
