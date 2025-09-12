@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import GlassCTAButton from "./ui/glass-cta-button";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const HeroHeader = () => {
   return (
@@ -12,9 +12,10 @@ const HeroHeader = () => {
           className="h-auto w-32 sm:w-36 md:w-40 lg:w-[150px]"
         />
       </Link>
-      <GlassCTAButton size="md">
-        Get Early Access
-      </GlassCTAButton>
+      <Button variant="glass" size="md" className="group transition-all duration-300 hover:pr-10">
+        <span className="transition-transform duration-300 group-hover:-translate-x-1">Get Early Access</span>
+        <ArrowRight className="w-4 h-4 absolute right-3 opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+      </Button>
     </header>
   );
 };

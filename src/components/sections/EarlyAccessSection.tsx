@@ -1,6 +1,7 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
-import GlassCTAButton from "../ui/glass-cta-button";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const EarlyAccessSection = () => {
   return (
@@ -32,9 +33,10 @@ const EarlyAccessSection = () => {
           </div>
         </GlassCard>
         
-        <GlassCTAButton size="hero">
-          Request Early Access
-        </GlassCTAButton>
+        <Button variant="glass" size="hero" className="group transition-all duration-300 hover:pr-10">
+          <span className="transition-transform duration-300 group-hover:-translate-x-1">Request Early Access</span>
+          <ArrowRight className="w-5 h-5 absolute right-6 opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+        </Button>
       </div>
     </Section>
   );
