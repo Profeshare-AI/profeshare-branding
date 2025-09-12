@@ -135,7 +135,7 @@ const MasonryGridSection = () => {
     return (
       <div
         key={item.id}
-        className="backdrop-blur-md bg-white/5 border border-white/10 h-[248px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
+        className="backdrop-blur-md bg-white/5 border border-white/10 h-[280px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
       >
         <div className="text-left">
           <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight line-clamp-3">
