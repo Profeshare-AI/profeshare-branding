@@ -390,7 +390,7 @@ const MasonryGridSection = () => {
       <div className="text-center mb-12">
         <div className="flex justify-center mb-6">
           <SectionChip>
-            Who is this for?
+            What you can do inside?
           </SectionChip>
         </div>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
