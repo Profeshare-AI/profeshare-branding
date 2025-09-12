@@ -1,6 +1,6 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
-import { MessageSquare, Search, CheckCircle } from "lucide-react";
+import { MessageSquare, Search, CheckCircle, ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -29,50 +29,73 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <Section background="accent">
-      <div className="text-center mb-12">
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
-          Achieve Your Goals in Three Simple Steps
-        </h2>
-      </div>
-      
-      <div className="grid md:grid-cols-3 gap-8">
-        {steps.map((step, index) => (
-          <GlassCard key={index} hoverable className="relative">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 border border-white/30 mb-6 mx-auto">
-              <span className="text-xl font-bold text-white">{index + 1}</span>
-            </div>
-            
-            <div className="flex justify-center mb-4">
-              <step.icon className="w-6 h-6 text-white" />
-            </div>
-            
-            <h3 className="font-instrument text-xl font-medium text-white mb-2 text-center">
-              {step.title}
-            </h3>
-            
-            <p className="font-body text-white/70 text-center mb-4">
-              {step.subtitle}
-            </p>
-            
-            {step.examples && (
-              <div className="space-y-3">
-                {step.examples.map((example, idx) => (
-                  <div key={idx} className="bg-black/20 rounded-lg p-3">
-                    <span className="text-white/60 text-sm">{example.type}: </span>
-                    <span className="text-white/90 text-sm italic">"{example.text}"</span>
+    <Section background="primary">
+      <div className="grid lg:grid-cols-4 gap-8 lg:gap-12 items-start">
+        {/* Main Steps Section */}
+        <div className="lg:col-span-3">
+          <div className="mb-8">
+            <h2 className="font-instrument text-3xl md:text-4xl font-medium text-white mb-2">
+              Achieve Your Goals in Three Simple Steps
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {steps.map((step, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className={`flex items-center justify-center w-14 h-14 rounded-full mb-6 ${
+                  index === 0 ? 'bg-blue-500' : 'bg-white/20'
+                }`}>
+                  <step.icon className={`w-7 h-7 ${index === 0 ? 'text-white' : 'text-white/80'}`} />
+                </div>
+                
+                <h3 className="font-instrument text-xl font-medium text-white mb-3">
+                  {step.title}
+                </h3>
+                
+                <p className="font-body text-white/70 text-sm mb-4">
+                  {step.subtitle}
+                </p>
+                
+                {step.examples && (
+                  <div className="space-y-2">
+                    {step.examples.map((example, idx) => (
+                      <div key={idx} className="bg-white/5 rounded-lg p-3">
+                        <span className="text-white/60 text-xs font-medium">{example.type}: </span>
+                        <span className="text-white/80 text-xs italic">"{example.text}"</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
+                
+                {step.description && (
+                  <p className="font-body text-white/70 text-sm">
+                    {step.description}
+                  </p>
+                )}
               </div>
-            )}
-            
-            {step.description && (
-              <p className="font-body text-white/80 text-center">
-                {step.description}
-              </p>
-            )}
-          </GlassCard>
-        ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Feature Callout Section */}
+        <div className="lg:col-span-1 lg:mt-16">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+            <div className="text-white/60 text-xs uppercase tracking-wider mb-2 font-medium">
+              Feature
+            </div>
+            <h3 className="font-instrument text-xl font-medium text-white mb-4 leading-tight">
+              A high-end professional <span className="text-blue-400">ecosystem</span> offering verified services to support all your career needs.
+            </h3>
+            <div className="flex items-center gap-2">
+              <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+                Try Now
+              </button>
+              <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                <ArrowRight className="w-4 h-4 text-white/60" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Section>
   );
