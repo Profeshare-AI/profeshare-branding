@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Linkedin } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="bg-section-bg-primary/40 py-12 border-t border-white/10">
+    <footer className="bg-black/90 py-16 border-t border-white/20">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
           {/* Left side - Logo */}
@@ -13,7 +13,7 @@ const FooterSection = () => {
               <img 
                 src="/lovable-uploads/08e527f0-3e20-4103-9e34-24e0167b01c1.png" 
                 alt="Profeshare AI Logo"
-                className="h-auto w-32"
+                className="h-auto w-44"
               />
             </Link>
           </div>
@@ -21,8 +21,8 @@ const FooterSection = () => {
           {/* Right side - Content */}
           <div className="flex-1 lg:max-w-2xl">
             {/* First row - Tagline */}
-            <div className="mb-6">
-              <p className="font-body text-white text-lg lg:text-right">
+            <div className="mb-8">
+              <p className="font-body text-white text-base">
                 One Trusted Space for Your Professional Journey.
               </p>
             </div>
@@ -62,21 +62,21 @@ const FooterSection = () => {
               </div>
               
               {/* Connect Button */}
-              <div className="flex flex-col items-start md:items-end">
+              <div className="flex flex-col items-start">
                 <Button
                   variant="glass"
                   size="sm"
                   className="inline-flex items-center gap-2"
                   onClick={() => window.open('https://linkedin.com/in/arikax', '_blank')}
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4" />
                   Connect with Founder
                 </Button>
               </div>
             </div>
             
             {/* Third row - Copyright and Privacy */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 pt-4 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-2 pt-6 border-t border-white/20">
               <p className="font-body text-white/60 text-sm">
                 © 2025 Profeshare AI. All rights reserved.
               </p>
