@@ -25,8 +25,11 @@ const FooterSection = () => {
           </div>
         </div>
         
+        {/* Separator line */}
+        <div className="border-t border-white/10 mb-8"></div>
+        
         {/* Second row - Links and Button (5 columns grid) */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8 px-4 md:px-8">
           {/* Product Links */}
           <div>
             <h3 className="font-body text-white font-medium mb-3">Product</h3>
