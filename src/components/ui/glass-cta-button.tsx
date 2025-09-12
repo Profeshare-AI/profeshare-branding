@@ -14,7 +14,7 @@ const GlassCTAButton = ({ children, className, size = "md", onClick }: GlassCTAB
     <Button 
       variant="glass" 
       size={size} 
-      className={cn("group transition-all duration-300 hover:pr-10", className)}
+      className={cn("group transition-all duration-300 hover:pr-7", className)}
       onClick={onClick}
     >
       <span className="transition-transform duration-300 group-hover:-translate-x-1">
@@ -22,7 +22,7 @@ const GlassCTAButton = ({ children, className, size = "md", onClick }: GlassCTAB
       </span>
       <ArrowRight className={cn(
         "absolute opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0",
-        size === "hero" ? "w-5 h-5 right-6" : "w-4 h-4 right-3"
+        size === "hero" ? "w-5 h-5 right-4" : "w-4 h-4 right-2"
       )} />
     </Button>
   );
