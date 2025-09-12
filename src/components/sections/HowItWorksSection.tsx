@@ -24,21 +24,21 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <Section background="primary">
+    <Section background="primary" className="bg-black">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
         {/* Steps Cards - Left Column */}
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {steps.map((step, index) => (
-            <GlassCard key={index} className="flex flex-col justify-center min-h-[180px]">
-              <div className="flex items-start gap-4">
-                <div className={`flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0 ${
+            <GlassCard key={index} className="flex flex-col justify-center min-h-[320px] text-center">
+              <div className="flex flex-col items-center space-y-4 mt-16">
+                <div className={`flex items-center justify-center w-16 h-16 rounded-full flex-shrink-0 ${
                   index === 0 ? 'bg-blue-500' : 'bg-white/20'
                 }`}>
-                  <step.icon className={`w-6 h-6 ${index === 0 ? 'text-white' : 'text-white/80'}`} />
+                  <step.icon className={`w-8 h-8 ${index === 0 ? 'text-white' : 'text-white/80'}`} />
                 </div>
                 
-                <div className="flex-1">
-                  <h3 className="font-instrument text-xl font-medium text-white mb-3">
+                <div className="flex-1 px-4">
+                  <h3 className="font-instrument text-lg font-medium text-white mb-4">
                     {step.title}
                   </h3>
                   
@@ -59,7 +59,7 @@ const HowItWorksSection = () => {
             </div>
             
             <h2 className="font-instrument text-3xl md:text-4xl font-medium text-white mb-8 leading-tight">
-              Achieve Your Goals in Three Simple Steps
+              Achieve Your Goals in<br />Three Simple Steps
             </h2>
             
             <Button variant="glass" size="hero" className="group transition-all duration-300 hover:pr-10">
