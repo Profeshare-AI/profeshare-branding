@@ -37,8 +37,11 @@ const AudienceSection = () => {
       <div className="text-center mb-12">
         <SectionChip>Who is this for?</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
-          Built for Every Part of the Professional World
+          A Comprehensive Professional Ecosystem
         </h2>
+        <h3 className="font-instrument text-xl md:text-2xl font-medium text-white/90 mb-4">
+          Built for Every Part of the Professional World
+        </h3>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
