@@ -125,67 +125,31 @@ const MasonryGridSection = () => {
       large: "row-span-3"
     };
 
+    // Get title and subtitle based on card type
+    const getCardContent = () => {
+      if (item.type === "profile") {
+        return { title: item.name, subtitle: item.role };
+      }
+      return { title: item.title, subtitle: item.subtitle };
+    };
+
+    const { title, subtitle } = getCardContent();
+
     return (
       <div
         key={item.id}
-        className={`backdrop-blur-md bg-white/5 border border-white/10 ${sizeClasses[item.size]} text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden`}
+        className={`backdrop-blur-md bg-white/5 border border-white/10 ${sizeClasses[item.size]} text-white rounded-2xl p-4 flex flex-col justify-center shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden`}
       >
-        {item.type === "text" && (
-          <div className="flex flex-col h-full justify-between">
-            <div className="flex-1 flex flex-col justify-center">
-              <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight mb-1 line-clamp-3">
-                {item.title}
-              </h3>
-              {item.subtitle && (
-                <span className="text-xs text-white/80 font-body mt-1">
-                  {item.subtitle}
-                </span>
-              )}
-            </div>
-          </div>
-        )}
-
-        {item.type === "profile" && (
-          <div className="flex flex-col h-full">
-            <div className="flex-1 flex items-center justify-center mb-2">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden bg-white/10 border border-white/20">
-                <img 
-                  src={item.image} 
-                  alt={item.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            <div className="text-center">
-              <h4 className="font-instrument font-medium text-sm md:text-base text-white line-clamp-1">
-                {item.name}
-              </h4>
-              <p className="text-xs text-white/80 font-body line-clamp-1">
-                {item.role}
-              </p>
-            </div>
-          </div>
-        )}
-
-        {item.type === "feature" && (
-          <div className="flex flex-col h-full justify-between">
-            <div className="flex justify-center mb-2">
-              <div className="p-2 rounded-full bg-white/10 border border-white/20">
-                <item.icon className="w-4 h-4 md:w-5 md:h-5" />
-              </div>
-            </div>
-            <div className="text-center flex-1 flex flex-col justify-center">
-              <h3 className="font-instrument text-sm md:text-base font-medium leading-tight mb-1 text-white line-clamp-2">
-                {item.title}
-              </h3>
-              {item.subtitle && (
-                <span className="text-xs text-white/80 font-body line-clamp-1">
-                  {item.subtitle}
-                </span>
-              )}
-            </div>
-          </div>
-        )}
+        <div className="text-left">
+          <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight mb-1 line-clamp-3">
+            {title}
+          </h3>
+          {subtitle && (
+            <span className="text-xs text-white/80 font-body mt-1 block">
+              {subtitle}
+            </span>
+          )}
+        </div>
       </div>
     );
   };
