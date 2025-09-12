@@ -1,8 +1,8 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
 import GlassmorphismChip from "../GlassmorphismChip";
-import { Button } from "@/components/ui/button";
-import { MessageSquare, Search, CheckCircle, ArrowRight } from "lucide-react";
+import GlassCTAButton from "../ui/glass-cta-button";
+import { MessageSquare, Search, CheckCircle } from "lucide-react";
 
 const steps = [
   {
@@ -27,10 +27,10 @@ const HowItWorksSection = () => {
     <Section background="primary" className="bg-black">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
         {/* Steps Cards - Left Column */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
           {steps.map((step, index) => (
-            <GlassCard key={index} className="flex flex-col justify-center min-h-[320px] text-center">
-              <div className="flex flex-col items-center space-y-4 mt-16">
+            <GlassCard key={index} className="flex flex-col justify-center min-h-[320px] text-center w-full">
+              <div className="flex flex-col items-center space-y-4 mt-16 px-2">
                 <div className={`flex items-center justify-center w-16 h-16 rounded-full flex-shrink-0 ${
                   index === 0 ? 'bg-blue-500' : 'bg-white/20'
                 }`}>
@@ -62,10 +62,9 @@ const HowItWorksSection = () => {
               Achieve Your Goals in<br />Three Simple Steps
             </h2>
             
-            <Button variant="glass" size="hero" className="group transition-all duration-300 hover:pr-10">
-              <span className="transition-transform duration-300 group-hover:-translate-x-1">Try Now</span>
-              <ArrowRight className="w-5 h-5 absolute right-6 opacity-0 translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
-            </Button>
+            <GlassCTAButton size="md">
+              Try Now
+            </GlassCTAButton>
           </div>
         </div>
       </div>
