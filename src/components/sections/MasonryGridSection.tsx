@@ -1,4 +1,5 @@
 import Section from "../Section";
+import GlassmorphismChip from "../GlassmorphismChip";
 import { Brain, Users, Target, Lightbulb, Zap, BookOpen, Network, TrendingUp } from "lucide-react";
 
 const masonryItems = [
@@ -127,7 +128,7 @@ const MasonryGridSection = () => {
     return (
       <div
         key={item.id}
-        className={`${item.background} ${sizeClasses[item.size]} ${item.textColor} rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:scale-105 transition-transform duration-300`}
+        className={`backdrop-blur-md bg-white/5 border border-white/10 ${sizeClasses[item.size]} text-white rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 hover:scale-105 transition-all duration-300`}
       >
         {item.type === "text" && (
           <div className="flex flex-col h-full justify-between">
@@ -147,7 +148,7 @@ const MasonryGridSection = () => {
         {item.type === "profile" && (
           <div className="flex flex-col h-full">
             <div className="flex-1 flex items-center justify-center mb-4">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-white/20">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-white/10 border border-white/20">
                 <img 
                   src={item.image} 
                   alt={item.name}
@@ -156,10 +157,10 @@ const MasonryGridSection = () => {
               </div>
             </div>
             <div className="text-center">
-              <h4 className="font-instrument font-medium text-lg">
+              <h4 className="font-instrument font-medium text-lg text-white">
                 {item.name}
               </h4>
-              <p className="text-sm opacity-80 font-body">
+              <p className="text-sm text-white/80 font-body">
                 {item.role}
               </p>
             </div>
@@ -174,11 +175,11 @@ const MasonryGridSection = () => {
               </div>
             </div>
             <div className="text-center">
-              <h3 className="font-instrument text-lg md:text-xl font-medium leading-tight mb-1">
+              <h3 className="font-instrument text-lg md:text-xl font-medium leading-tight mb-1 text-white">
                 {item.title}
               </h3>
               {item.subtitle && (
-                <span className="text-sm opacity-80 font-body">
+                <span className="text-sm text-white/80 font-body">
                   {item.subtitle}
                 </span>
               )}
@@ -190,14 +191,15 @@ const MasonryGridSection = () => {
   };
 
   return (
-    <Section background="secondary">
+    <Section background="transparent" className="bg-black">
       <div className="text-center mb-12">
+        <div className="flex justify-center mb-6">
+          <GlassmorphismChip>Who is this for?</GlassmorphismChip>
+        </div>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
-          Explore Professional Insights
+          A Comprehensive Professional Ecosystem,<br />
+          Built for Every Part of the Professional World
         </h2>
-        <p className="font-body text-lg text-white/80 max-w-2xl mx-auto">
-          Discover stories, strategies, and insights from professionals across industries
-        </p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[100px] md:auto-rows-[120px]">
