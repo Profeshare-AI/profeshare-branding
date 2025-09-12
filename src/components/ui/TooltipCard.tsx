@@ -23,7 +23,7 @@ const TooltipCard = ({
           className
         )}
       >
-        <div className="h-full flex flex-col justify-center text-center">
+        <div className="h-full flex flex-col justify-between">
           <h3 className="font-instrument text-lg font-medium text-white mb-3">
             {title}
           </h3>
