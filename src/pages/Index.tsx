@@ -3,6 +3,7 @@ import HeroContent from "@/components/HeroContent";
 import IntroductionSection from "@/components/sections/IntroductionSection";
 import PillarsSection from "@/components/sections/PillarsSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import MasonryGridSection from "@/components/sections/MasonryGridSection";
 import CapabilitiesSection from "@/components/sections/CapabilitiesSection";
 import AudienceSection from "@/components/sections/AudienceSection";
 import UseCasesSection from "@/components/sections/UseCasesSection";
@@ -49,6 +50,9 @@ const Index = () => {
         <VisualSeparator />
         
         <HowItWorksSection />
+        <VisualSeparator />
+        
+        <MasonryGridSection />
         <VisualSeparator />
         
         <CapabilitiesSection />
