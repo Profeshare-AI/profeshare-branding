@@ -2,9 +2,6 @@ import Section from "../Section";
 import GlassCard from "../GlassCard";
 import SectionChip from "../SectionChip";
 import { Shield, Target, Network, Diamond } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import TooltipCard from "@/components/ui/TooltipCard";
 
 const pillars = [
   {
@@ -82,89 +79,94 @@ const PillarsSection = () => {
   const renderChip = (feature: any, index: number) => {
     const personaContent = chipToPersonaMapping[feature.name];
     
-    const chipElement = (
-      <div className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg`}>
-        <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium">
-          <Diamond className={`w-3 h-3 mr-2 ${feature.fillColor} fill-current`} />
-          <span>{feature.name}</span>
+    return (
+      <div key={index} className="relative">
+        <div className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg hover:z-50 transition-all duration-300 group cursor-pointer`}>
+          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium group-hover:opacity-0 transition-opacity duration-300">
+            <Diamond className={`w-3 h-3 mr-2 ${feature.fillColor} fill-current`} />
+            <span>{feature.name}</span>
+          </div>
+          
+          {personaContent && (
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-95 group-hover:scale-100">
+              <div className={`relative p-[1px] rounded-2xl bg-gradient-to-br ${personaContent.gradientColor}`}>
+                <div className={`w-48 h-64 backdrop-blur-md bg-black/70 ${personaContent.borderColor} border rounded-2xl p-4 text-white shadow-xl`}>
+                  <div className="h-full flex flex-col justify-between">
+                    <div className="flex items-center mb-3">
+                      <Diamond className={`w-4 h-4 mr-2 ${feature.fillColor} fill-current`} />
+                      <h3 className="font-instrument text-lg font-medium text-white">
+                        {personaContent.title}
+                      </h3>
+                    </div>
+                    <p className="font-body text-sm text-white/80 leading-relaxed">
+                      {personaContent.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );
-
-    if (personaContent) {
-      return (
-        <Tooltip key={index}>
-          <TooltipTrigger asChild>
-            {chipElement}
-          </TooltipTrigger>
-          <TooltipContent side="top" sideOffset={10} className="p-0 border-0 bg-transparent shadow-none z-50">
-            <TooltipCard {...personaContent} />
-          </TooltipContent>
-        </Tooltip>
-      );
-    }
-
-    return <div key={index}>{chipElement}</div>;
   };
 
   return (
-    <TooltipProvider delayDuration={200}>
-      <section className="relative py-16 md:py-20 lg:py-24 bg-black">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
-          <div className="text-center mb-12">
-            <SectionChip>
-              Why it actually matter?
-            </SectionChip>
-            
-            <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
-              A Network Built on Confidence, Clarity, and Value
-            </h2>
-          </div>
+    <section className="relative py-16 md:py-20 lg:py-24 bg-black">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
+        <div className="text-center mb-12">
+          <SectionChip>
+            Why it actually matter?
+          </SectionChip>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 md:[&>:nth-child(3)]:col-span-2 md:[&>:nth-child(3)]:max-w-md md:[&>:nth-child(3)]:mx-auto lg:[&>:nth-child(3)]:col-span-1 lg:[&>:nth-child(3)]:max-w-none">
-            {pillars.map((pillar, index) => (
-              <div key={index} className="bg-gradient-to-br from-blue-900/20 to-blue-800/10 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-center hover:border-blue-400/30 transition-all duration-300">
-                <div className="mb-6 flex justify-center">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
-                    <pillar.icon className="w-6 h-6 text-white" />
-                  </div>
+          <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
+            A Network Built on Confidence, Clarity, and Value
+          </h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 md:[&>:nth-child(3)]:col-span-2 md:[&>:nth-child(3)]:max-w-md md:[&>:nth-child(3)]:mx-auto lg:[&>:nth-child(3)]:col-span-1 lg:[&>:nth-child(3)]:max-w-none">
+          {pillars.map((pillar, index) => (
+            <div key={index} className="bg-gradient-to-br from-blue-900/20 to-blue-800/10 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 text-center hover:border-blue-400/30 transition-all duration-300">
+              <div className="mb-6 flex justify-center">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                  <pillar.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-instrument text-xl font-medium text-white mb-4">
-                  {pillar.title}
-                </h3>
-                <p className="font-body text-white/70 leading-relaxed">
-                  {pillar.description}
-                </p>
+              </div>
+              <h3 className="font-instrument text-xl font-medium text-white mb-4">
+                {pillar.title}
+              </h3>
+              <p className="font-body text-white/70 leading-relaxed">
+                {pillar.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="flex flex-col items-center gap-3">
+          {/* Mobile layout */}
+          <div className="md:hidden flex flex-col items-center gap-3">
+            {mobileFeatures.map((row, rowIndex) => (
+              <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
+                {row.map((feature, index) => renderChip(feature, index))}
               </div>
             ))}
           </div>
-          
-          <div className="flex flex-col items-center gap-3">
-            {/* Mobile layout */}
-            <div className="md:hidden flex flex-col items-center gap-3">
-              {mobileFeatures.map((row, rowIndex) => (
-                <div key={rowIndex} className="flex flex-wrap justify-center gap-3">
-                  {row.map((feature, index) => renderChip(feature, index))}
-                </div>
-              ))}
-            </div>
 
-            {/* Desktop layout */}
-            <div className="hidden md:flex flex-col items-center gap-3">
-              {/* First row for large screens */}
-              <div className="flex flex-wrap justify-center gap-3">
-                {firstRowFeatures.map((feature, index) => renderChip(feature, index))}
-              </div>
-              
-              {/* Second row for large screens */}
-              <div className="flex flex-wrap justify-center gap-3">
-                {secondRowFeatures.map((feature, index) => renderChip(feature, index))}
-              </div>
+          {/* Desktop layout */}
+          <div className="hidden md:flex flex-col items-center gap-3">
+            {/* First row for large screens */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {firstRowFeatures.map((feature, index) => renderChip(feature, index))}
+            </div>
+            
+            {/* Second row for large screens */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {secondRowFeatures.map((feature, index) => renderChip(feature, index))}
             </div>
           </div>
         </div>
-      </section>
-    </TooltipProvider>
+      </div>
+    </section>
   );
 };
 
