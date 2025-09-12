@@ -257,12 +257,12 @@ const MasonryGridSection = () => {
     return (
       <div
         key={item.id}
-        className="backdrop-blur-md bg-white/5 border border-white/10 h-[280px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden cursor-pointer"
+        className="backdrop-blur-md bg-white/5 border border-white/10 h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden cursor-pointer"
         onMouseEnter={() => setHoveredCard(item.id)}
         onMouseLeave={() => setHoveredCard(null)}
       >
         {isHovered ? (
-          <div className="flex items-start justify-start h-full px-2 py-2">
+          <div className="flex items-end justify-start h-full">
             <p className="font-body text-xs leading-relaxed text-white/90 text-left">
               {hoverDescription}
             </p>
