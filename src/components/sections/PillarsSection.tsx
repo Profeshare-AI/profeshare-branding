@@ -80,10 +80,10 @@ const PillarsSection = () => {
     const personaContent = chipToPersonaMapping[feature.name];
     
     return (
-      <div key={index} className="relative group">
+      <div key={index} className="relative">
         {/* Chip - visible by default, hidden on hover */}
         <div className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg transition-all duration-300 group-hover:opacity-0 cursor-pointer z-10`}>
-          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium">
+          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium group">
             <Diamond className={`w-3 h-3 mr-2 ${feature.fillColor} fill-current`} />
             <span>{feature.name}</span>
           </div>
@@ -96,7 +96,7 @@ const PillarsSection = () => {
               <div className={`w-48 h-64 backdrop-blur-md bg-black/70 ${personaContent.borderColor} border rounded-2xl p-4 text-white shadow-xl`}>
                 <div className="h-full flex flex-col justify-between">
                   <div className="flex items-center mb-3">
-                    <Diamond className={`w-4 h-4 mr-2 ${feature.fillColor} fill-current`} />
+                    <Diamond className={`w-3 h-3 mr-2 ${feature.fillColor} fill-current`} />
                     <h3 className="font-instrument text-lg font-medium text-white">
                       {personaContent.title}
                     </h3>
