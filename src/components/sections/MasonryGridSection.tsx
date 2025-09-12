@@ -117,6 +117,121 @@ const masonryItems = [
     background: "bg-gradient-to-br from-emerald-50 to-teal-100",
     size: "medium",
     textColor: "text-gray-800"
+  },
+  {
+    id: 13,
+    type: "text",
+    title: "Building authentic connections",
+    subtitle: "Networking Strategy",
+    background: "bg-gradient-to-br from-cyan-400 to-blue-500",
+    size: "medium",
+    textColor: "text-white"
+  },
+  {
+    id: 14,
+    type: "feature",
+    title: "Leadership in the digital age",
+    subtitle: "Modern Management",
+    icon: Users,
+    background: "bg-gradient-to-br from-lime-300 to-green-400",
+    size: "medium",
+    textColor: "text-gray-800"
+  },
+  {
+    id: 15,
+    type: "profile",
+    name: "Jordan Kim",
+    role: "Data Scientist",
+    image: "/lovable-uploads/082aa3e9-45fa-4106-8126-575aeeb1b153.png",
+    background: "bg-gradient-to-br from-purple-50 to-indigo-100",
+    size: "medium",
+    textColor: "text-gray-800"
+  },
+  {
+    id: 16,
+    type: "text",
+    title: "The future of remote collaboration",
+    subtitle: "Work Evolution",
+    background: "bg-gradient-to-br from-teal-500 to-cyan-600",
+    size: "medium",
+    textColor: "text-white"
+  },
+  {
+    id: 17,
+    type: "feature",
+    title: "Innovation mindset",
+    subtitle: "Creative Thinking",
+    icon: Lightbulb,
+    background: "bg-gradient-to-br from-yellow-300 to-orange-400",
+    size: "medium",
+    textColor: "text-gray-800"
+  },
+  {
+    id: 18,
+    type: "text",
+    title: "Mastering difficult conversations",
+    subtitle: "Communication Skills",
+    background: "bg-gradient-to-br from-red-400 to-pink-500",
+    size: "medium",
+    textColor: "text-white"
+  },
+  {
+    id: 19,
+    type: "profile",
+    name: "Taylor Chen",
+    role: "UX Researcher",
+    image: "/lovable-uploads/08e527f0-3e20-4103-9e34-24e0167b01c1.png",
+    background: "bg-gradient-to-br from-rose-50 to-pink-100",
+    size: "medium",
+    textColor: "text-gray-800"
+  },
+  {
+    id: 20,
+    type: "feature",
+    title: "Performance optimization",
+    subtitle: "Productivity Boost",
+    icon: TrendingUp,
+    background: "bg-gradient-to-br from-green-500 to-emerald-600",
+    size: "medium",
+    textColor: "text-white"
+  },
+  {
+    id: 21,
+    type: "text",
+    title: "Embracing change and uncertainty",
+    subtitle: "Adaptability Focus",
+    background: "bg-gradient-to-br from-indigo-300 to-purple-400",
+    size: "medium",
+    textColor: "text-white"
+  },
+  {
+    id: 22,
+    type: "feature",
+    title: "Strategic thinking frameworks",
+    subtitle: "Decision Making",
+    icon: Brain,
+    background: "bg-gradient-to-br from-amber-400 to-yellow-500",
+    size: "medium",
+    textColor: "text-gray-800"
+  },
+  {
+    id: 23,
+    type: "profile",
+    name: "Sam Rodriguez",
+    role: "Marketing Lead",
+    image: "/lovable-uploads/2784d252-c1b6-4ff9-ae34-370f82b38bb8.png",
+    background: "bg-gradient-to-br from-blue-50 to-indigo-100",
+    size: "medium",
+    textColor: "text-gray-800"
+  },
+  {
+    id: 24,
+    type: "text",
+    title: "Building resilient teams",
+    subtitle: "Team Dynamics",
+    background: "bg-gradient-to-br from-emerald-600 to-teal-700",
+    size: "medium",
+    textColor: "text-white"
   }
 ];
 
