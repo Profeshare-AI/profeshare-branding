@@ -394,8 +394,8 @@ const MasonryGridSection = () => {
           </SectionChip>
         </div>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
-          A Comprehensive Professional Ecosystem,<br />
-          Built for Every Part of the Professional World
+          We Are Working With Wide Range of Personas<br />
+          Explore What You Can Do Inside
         </h2>
       </div>
 
