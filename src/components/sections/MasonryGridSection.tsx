@@ -389,7 +389,9 @@ const MasonryGridSection = () => {
     <Section background="transparent" className="bg-black">
       <div className="text-center mb-12">
         <div className="flex justify-center mb-6">
-          <GlassmorphismChip>Who is this for?</GlassmorphismChip>
+          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-xs font-dm-sans font-medium">
+            Who is this for?
+          </div>
         </div>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           A Comprehensive Professional Ecosystem,<br />
