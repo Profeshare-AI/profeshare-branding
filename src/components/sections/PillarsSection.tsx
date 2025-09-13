@@ -1,7 +1,12 @@
 import Section from "../Section";
 import GlassCard from "../GlassCard";
 import SectionChip from "../SectionChip";
-import { Shield, Target, Network, Diamond } from "lucide-react";
+import { Shield, Target, Network, Diamond, User, Search, BookOpen, Briefcase, FolderOpen, FileText, Users, Calendar, MessageCircle, Plug, BarChart3 } from "lucide-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 const pillars = [
   {
@@ -38,6 +43,22 @@ const secondRowFeatures = [
   { name: "Integrations", color: "from-teal-500/20 via-teal-500/40 to-teal-500/80", border: "border-teal-500/60", fillColor: "text-teal-400" },
   { name: "Analytics & more...", color: "from-slate-500/20 via-slate-500/40 to-slate-500/80", border: "border-slate-500/60", fillColor: "text-slate-400" }
 ];
+
+// Icon mapping for features
+const featureIconMapping: Record<string, any> = {
+  "Profiles": User,
+  "Career Matching": Target,
+  "Talent Discovery": Search,
+  "Learning Space": BookOpen,
+  "Recruiter Studio": Briefcase,
+  "Projects Space": FolderOpen,
+  "Papers": FileText,
+  "Communities": Users,
+  "Events": Calendar,
+  "Collaborations and Messaging": MessageCircle,
+  "Integrations": Plug,
+  "Analytics & more...": BarChart3
+};
 
 // Chip to pillar card content mapping
 const chipToPillarCardMapping: Record<string, any> = {
@@ -144,38 +165,40 @@ const mobileFeatures = [
 const PillarsSection = () => {
   const renderChip = (feature: any, index: number) => {
     const pillarCardContent = chipToPillarCardMapping[feature.name];
+    const FeatureIcon = featureIconMapping[feature.name] || Diamond;
     
     return (
-      <div key={index} className="chip-container relative inline-block">
-        {/* Chip - visible by default, hidden on hover */}
-        <div className={`chip-content relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg cursor-pointer z-10`}>
-          <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium">
-            <Diamond className={`w-3 h-3 mr-2 ${feature.fillColor} fill-current`} />
-            <span>{feature.name}</span>
-          </div>
-        </div>
-        
-        {pillarCardContent && (
-          /* Card that appears exactly where the chip was, centered */
-          <div className="tooltip-card absolute top-0 left-0 w-full h-full flex items-center justify-center z-20 cursor-pointer">
-            <div className={`relative p-[1px] rounded-2xl bg-gradient-to-br ${pillarCardContent.gradientColor}`}>
-              <div className={`w-48 h-64 backdrop-blur-md bg-black/70 ${pillarCardContent.borderColor} border rounded-2xl p-4 text-white shadow-xl`}>
-                <div className="h-full flex flex-col justify-between">
-                  <div className="flex items-center mb-3">
-                    <Diamond className={`w-2.5 h-2.5 mr-2 ${feature.fillColor} fill-current`} />
-                    <h3 className="font-instrument text-lg font-medium text-white">
-                      {pillarCardContent.title}
-                    </h3>
-                  </div>
-                  <p className="font-body text-sm text-white/80 leading-relaxed">
-                    {pillarCardContent.description}
-                  </p>
-                </div>
-              </div>
+      <HoverCard key={index}>
+        <HoverCardTrigger asChild>
+          <div className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg cursor-pointer`}>
+            <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium hover:bg-black/80 transition-colors">
+              <Diamond className={`w-3 h-3 mr-2 ${feature.fillColor} fill-current`} />
+              <span>{feature.name}</span>
             </div>
           </div>
+        </HoverCardTrigger>
+        {pillarCardContent && (
+          <HoverCardContent 
+            className="w-80 bg-black/90 border-white/20 backdrop-blur-md" 
+            side="top"
+            sideOffset={8}
+          >
+            <div className="flex gap-4">
+              <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center flex-shrink-0`}>
+                <FeatureIcon className="w-6 h-6 text-white" />
+              </div>
+              <div className="space-y-2 flex-1">
+                <h4 className="font-instrument text-lg font-medium text-white">
+                  {pillarCardContent.title}
+                </h4>
+                <p className="font-body text-sm text-white/80 leading-relaxed">
+                  {pillarCardContent.description}
+                </p>
+              </div>
+            </div>
+          </HoverCardContent>
         )}
-      </div>
+      </HoverCard>
     );
   };
 
