@@ -179,15 +179,15 @@ const PillarsSection = () => {
         </HoverCardTrigger>
         {pillarCardContent && (
           <HoverCardContent 
-            className="w-80 bg-black/90 border-white/20 backdrop-blur-md" 
+            className={`w-64 bg-white/10 ${feature.border} backdrop-blur-md shadow-lg transition-all duration-300 p-3`}
             side="top"
             sideOffset={8}
           >
-            <div className="flex gap-4">
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center flex-shrink-0`}>
-                <FeatureIcon className="w-6 h-6 text-white" />
+            <div className="flex gap-3">
+              <div className="w-8 h-8 rounded-full bg-black/60 flex items-center justify-center flex-shrink-0">
+                <FeatureIcon className="w-4 h-4 text-white" />
               </div>
-              <div className="space-y-2 flex-1">
+              <div className="space-y-1 flex-1">
                 <h4 className="font-instrument text-lg font-medium text-white">
                   {pillarCardContent.title}
                 </h4>
