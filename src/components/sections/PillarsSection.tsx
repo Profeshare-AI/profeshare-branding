@@ -168,7 +168,7 @@ const PillarsSection = () => {
     const FeatureIcon = featureIconMapping[feature.name] || Diamond;
     
     return (
-      <HoverCard key={index}>
+      <HoverCard key={index} openDelay={0} closeDelay={0}>
         <HoverCardTrigger asChild>
           <div className={`relative p-[1px] rounded-full bg-gradient-to-r ${feature.color} shadow-lg cursor-pointer`}>
             <div className="inline-flex items-center px-4 py-2 rounded-full backdrop-blur-md bg-black/70 text-white text-xs font-body font-medium hover:bg-black/80 transition-colors">
