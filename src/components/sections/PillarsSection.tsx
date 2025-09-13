@@ -179,7 +179,7 @@ const PillarsSection = () => {
         </HoverCardTrigger>
         {pillarCardContent && (
           <HoverCardContent 
-            className={`w-64 bg-white/10 ${feature.border} backdrop-blur-md shadow-lg transition-all duration-300 p-3`}
+            className={`w-72 bg-gradient-to-r ${feature.color} border-white/20 backdrop-blur-md shadow-lg transition-all duration-300 p-4`}
             side="top"
             sideOffset={8}
           >
