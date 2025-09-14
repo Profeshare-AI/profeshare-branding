@@ -2,6 +2,7 @@ import Section from "../Section";
 import GlassCard from "../GlassCard";
 import SectionChip from "../SectionChip";
 import GlassCTAButton from "../ui/glass-cta-button";
+import { Button } from "@/components/ui/button";
 import { GraduationCap, Briefcase, UserCheck, Building2, TestTube, Code } from "lucide-react";
 
 const audiences = [
@@ -53,45 +54,43 @@ const AudienceSection = () => {
   };
 
   return (
-    <Section background="secondary" backgroundImage="/audience-section-bg.jpeg" className="min-h-[1080px] flex flex-col justify-center py-12 md:py-16 lg:py-20">
+    <Section background="secondary" backgroundImage="/audience-section-bg.jpeg">
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40 -z-10"></div>
       
-      <div className="flex flex-col justify-center flex-1">
-        <div className="text-center mb-8">
-          <SectionChip>Who is this for?</SectionChip>
-          <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight mb-8">
-            A Comprehensive Professional Ecosystem<br />
-            Built for Every Part of the Professional World
-          </h2>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {audiences.map((audience, index) => (
-            <GlassCard key={index} hoverable className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 rounded-full bg-white/10 border border-white/20">
-                  <audience.icon className="w-6 h-6 text-white" />
-                </div>
+      <div className="text-center mb-12">
+        <SectionChip>Who is this for?</SectionChip>
+        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
+          A Comprehensive Professional Ecosystem<br />
+          Built for Every Part of the Professional World
+        </h2>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {audiences.map((audience, index) => (
+          <GlassCard key={index} hoverable className="text-center max-w-sm mx-auto">
+            <div className="flex justify-center mb-4">
+              <div className="p-3 rounded-full bg-white/10 border border-white/20">
+                <audience.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-instrument text-lg font-medium text-white mb-3">
-                {audience.title}
-              </h3>
-              <p className="font-body text-white/80 leading-relaxed text-sm">
-                {audience.description}
-              </p>
-            </GlassCard>
-          ))}
-        </div>
+            </div>
+            <h3 className="font-instrument text-lg font-medium text-white mb-3">
+              {audience.title}
+            </h3>
+            <p className="font-body text-white/80 leading-relaxed text-sm">
+              {audience.description}
+            </p>
+          </GlassCard>
+        ))}
+      </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <GlassCTAButton onClick={handleLearnMoreClick}>
-            Learn More
-          </GlassCTAButton>
-          <GlassCTAButton onClick={handleEarlyAccessClick}>
-            Get Early Access
-          </GlassCTAButton>
-        </div>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <Button variant="hero-outline" size="md" onClick={handleLearnMoreClick}>
+          Learn More
+        </Button>
+        <GlassCTAButton onClick={handleEarlyAccessClick}>
+          Get Early Access
+        </GlassCTAButton>
       </div>
     </Section>
   );
