@@ -85,12 +85,12 @@ const AudienceSection = () => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Button variant="hero-outline" size="md" onClick={handleLearnMoreClick}>
-          Learn More
-        </Button>
-        <GlassCTAButton onClick={handleEarlyAccessClick}>
-          Get Early Access
+        <GlassCTAButton onClick={handleLearnMoreClick}>
+          Explore Personas
         </GlassCTAButton>
+        <Button variant="hero-outline" size="md" onClick={handleEarlyAccessClick}>
+          Get Early Access
+        </Button>
       </div>
     </Section>
   );
