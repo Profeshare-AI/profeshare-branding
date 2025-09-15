@@ -95,7 +95,7 @@ const HowItWorksSection = () => {
             <img src="/avatars/avatar-4.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
           </div>
           <div className="text-white font-instrument text-xl font-medium">
-            Join the verified professional ecosystem curated for you - with AI
+            Join the verified professional ecosystem curated for you, with AI.
           </div>
         </div>
         <GlassCTAButton size="md">
