@@ -35,7 +35,7 @@ const FooterSection = () => {
             <h3 className="font-body text-white font-medium mb-3">Product</h3>
             <div className="space-y-2">
               <a href="#introduction" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                About Profeshare AI
+                About
               </a>
               <a href="#pillars" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
                 Features
