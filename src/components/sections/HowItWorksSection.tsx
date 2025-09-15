@@ -6,17 +6,17 @@ import GlassCTAButton from "../ui/glass-cta-button";
 const steps = [
   {
     number: "1",
-    title: "💡State your intent",
+    title: "State your intent 💡",
     description: "Ask in plain language. We understand you better in any way!"
   },
   {
     number: "2",
-    title: "📑Review a curated set",
+    title: "Review a curated set 📑",
     description: "See relevant results, roles, mentors, courses, events, people, and organisations that fit your request."
   },
   {
     number: "3",
-    title: "🎯Act with confidence",
+    title: "Act with confidence 🎯",
     description: "Apply, publish, collaborate, or shortlist inside a verified space where signals are credible and next steps are clear."
   },
   {
