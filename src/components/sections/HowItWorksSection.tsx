@@ -20,7 +20,7 @@ const steps = [
     description: "Apply, publish, collaborate, or shortlist inside a verified space where signals are credible and next steps are clear."
   },
   {
-    number: null
+    number: null,
     title: "🔁 Play around",
     description: "Explore the platform, discover new connections, and engage with the community in a trusted professional environment."
   }
