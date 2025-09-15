@@ -20,7 +20,7 @@ const FooterSection = () => {
           
           <div className="lg:text-right">
             <p className="font-body text-white text-xs">
-              One Trusted Space for Your Professional Journey.
+              Only Trusted Space for Your Professional Journey.
             </p>
           </div>
         </div>
