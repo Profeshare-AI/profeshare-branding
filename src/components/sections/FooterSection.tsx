@@ -81,7 +81,7 @@ const FooterSection = () => {
           </div>
           
           {/* Connect Button */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-end">
             <Button
               variant="glass"
               size="sm"
