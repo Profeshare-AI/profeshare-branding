@@ -28,7 +28,11 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <Section background="primary" className="bg-black">
+    <Section 
+      background="primary" 
+      className="bg-black bg-cover bg-center bg-no-repeat" 
+      backgroundImage="/howitworks-section-background.jpeg"
+    >
       {/* Header Section - Left Aligned with Line */}
       <div className="mb-16">
         <div className="flex items-end mb-8">
