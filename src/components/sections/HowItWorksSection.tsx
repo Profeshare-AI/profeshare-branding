@@ -7,7 +7,7 @@ const steps = [
   {
     number: "1",
     title: "State your intent",
-    description: "Ask in plain language. We understand you better in any way!"
+    description: "Ask in plain language. \nWe understand you better in any way!"
   },
   {
     number: "2",
