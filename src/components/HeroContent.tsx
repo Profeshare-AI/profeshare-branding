@@ -21,7 +21,7 @@ const HeroContent = () => {
           Get Early Access
         </GlassCTAButton>
         <Button variant="hero-outline" size="md" className="min-w-0">
-          Learn more
+          Join Community
         </Button>
       </div>
     </div>;
