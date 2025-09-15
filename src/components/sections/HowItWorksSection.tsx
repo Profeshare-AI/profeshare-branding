@@ -17,7 +17,7 @@ const steps = [
   {
     number: "3",
     title: "Act with confidence",
-    description: "Apply, publish, collaborate, or shortlist inside a verified space where signals are credible and next steps are clear."
+    description: "Apply, publish, collaborate, or shortlist inside a verified space where signals are credible and next steps are clearer than ever."
   },
   {
     number: null,
