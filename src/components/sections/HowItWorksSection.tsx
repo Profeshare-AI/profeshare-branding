@@ -21,7 +21,7 @@ const steps = [
   },
   {
     number: null,
-    title: "🔁 Play around",
+    title: "Play around 🔁",
     description: "Explore the platform, discover new connections, and engage with the community in a trusted professional environment."
   }
 ];
