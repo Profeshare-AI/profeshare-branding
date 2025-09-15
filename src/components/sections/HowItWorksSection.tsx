@@ -6,22 +6,22 @@ import GlassCTAButton from "../ui/glass-cta-button";
 const steps = [
   {
     number: "1",
-    title: "State your intent 💡",
+    title: "State your intent",
     description: "Ask in plain language. We understand you better in any way!"
   },
   {
     number: "2",
-    title: "Review a curated set 📑",
+    title: "Review a curated set",
     description: "See relevant results, roles, mentors, courses, events, people, and organisations that fit your request."
   },
   {
     number: "3",
-    title: "Act with confidence 🎯",
+    title: "Act with confidence",
     description: "Apply, publish, collaborate, or shortlist inside a verified space where signals are credible and next steps are clear."
   },
   {
     number: null,
-    title: "Play around 🔁",
+    title: "Play around",
     description: "Explore the platform, discover new connections, and engage with the community in a trusted professional environment."
   }
 ];
@@ -30,9 +30,14 @@ const HowItWorksSection = () => {
   return (
     <Section 
       background="primary" 
-      className="bg-black bg-cover bg-center bg-no-repeat" 
+      className="bg-black bg-cover bg-center bg-no-repeat relative" 
       backgroundImage="/howitworks-section-background.jpeg"
     >
+      {/* Black overlay to reduce background brightness */}
+      <div className="absolute inset-0 bg-black/25 pointer-events-none"></div>
+      
+      {/* Content wrapper with relative positioning */}
+      <div className="relative z-10">
       {/* Header Section - Left Aligned with Line */}
       <div className="mb-16">
         <div className="flex items-end mb-8">
@@ -59,7 +64,7 @@ const HowItWorksSection = () => {
           <GlassCard key={index} className="flex flex-col justify-between min-h-[320px] w-full p-6 bg-black/20 hover:bg-white/15 transition-all duration-700 ease-in-out">
             <div className="flex flex-col">
               {step.number && (
-                <div className="text-white/60 font-instrument text-2xl font-bold mb-6">
+                <div className="text-white/60 font-instrument text-lg font-bold mb-6">
                   0{step.number}.
                 </div>
               )}
@@ -81,7 +86,7 @@ const HowItWorksSection = () => {
       </div>
 
       {/* Bottom Section with Avatars */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center backdrop-blur-md bg-glass-bg/10 border border-glass-border/20 rounded-2xl px-4 py-6">
+      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center backdrop-blur-md bg-black/20 border border-white/20 rounded-2xl px-2 py-6">
         <div className="flex items-center gap-4">
           <div className="flex -space-x-2">
             <img src="/avatars/avatar-1.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
@@ -89,13 +94,14 @@ const HowItWorksSection = () => {
             <img src="/avatars/avatar-3.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
             <img src="/avatars/avatar-4.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
           </div>
-          <div className="text-white/80 font-body text-sm font-bold">
+          <div className="text-white font-instrument text-xl font-medium">
             Join the verified professional ecosystem curated for you - with AI
           </div>
         </div>
         <GlassCTAButton size="md">
           Try Now
         </GlassCTAButton>
+      </div>
       </div>
     </Section>
   );
