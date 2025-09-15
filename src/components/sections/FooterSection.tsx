@@ -79,6 +79,14 @@ const FooterSection = () => {
               </Link>
             </div>
           </div>
+
+          {/* Survey Links */}
+          <div>
+            <h3 className="font-body text-white font-medium mb-3"></h3>
+            <div className="space-y-2">
+              
+            </div>
+          </div>
           
           {/* Connect Button */}
           <div className="flex flex-col items-end">
