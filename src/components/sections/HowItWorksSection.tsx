@@ -86,7 +86,7 @@ const HowItWorksSection = () => {
       </div>
 
       {/* Bottom Section with Avatars */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center backdrop-blur-md bg-black/20 border border-white/20 rounded-2xl px-2 py-8">
+      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center backdrop-blur-md bg-black/20 border border-white/20 rounded-2xl px-4 py-6">
         <div className="flex items-center gap-4">
           <div className="flex -space-x-2">
             <img src="/avatars/avatar-1.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
