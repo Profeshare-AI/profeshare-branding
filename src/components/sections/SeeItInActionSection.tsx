@@ -122,8 +122,8 @@ const SeeItInActionSection = () => {
             )}
             onMouseEnter={() => handleCardHover(index)}
           >
-            {/* Collapsed state - vertical text and icon (always visible) */}
-            <div className="absolute bottom-0 left-0 right-0 h-full flex flex-col items-center justify-end p-4 pb-6">
+            {/* Collapsed state - vertical text and icon at bottom left */}
+            <div className="absolute bottom-0 left-0 h-full flex flex-col items-start justify-end p-4 pb-6">
               <div 
                 className="text-white/90 font-source-serif font-medium text-sm whitespace-nowrap mb-4"
                 style={{
@@ -137,10 +137,10 @@ const SeeItInActionSection = () => {
               <journey.icon className="w-5 h-5 text-white/80" />
             </div>
             
-            {/* Expanded state - only description */}
+            {/* Expanded state - description to the right of title */}
             {isExpanded(index) && (
-              <div className="absolute top-0 left-0 right-0 h-full p-6 flex flex-col justify-start">
-                <div className={cn("transition-opacity duration-200 mt-6", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
+              <div className="absolute bottom-0 right-0 left-16 h-full p-4 pb-6 flex flex-col justify-end">
+                <div className={cn("transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
                   <p className="font-body text-white/70 text-sm leading-relaxed">
                     {journey.description}
                   </p>
