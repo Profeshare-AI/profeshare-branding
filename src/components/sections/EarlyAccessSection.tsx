@@ -6,14 +6,11 @@ import GlassCTAButton from "../ui/glass-cta-button";
 const EarlyAccessSection = () => {
   return (
     <Section background="primary">
-      <div className="text-center mb-12">
+      <div className="text-center">
         <SectionChip>Join Beta</SectionChip>
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
+        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-8">
           Be Among the First to Experience Profeshare AI
         </h2>
-      </div>
-      
-      <div className="text-center">
         
         <GlassCard className="max-w-3xl mx-auto mb-8">
           <div className="space-y-6">
