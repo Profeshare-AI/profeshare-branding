@@ -70,10 +70,6 @@ const SeeItInActionSection = () => {
     }
   };
 
-  const handleSectionLeave = () => {
-    setHoveredCard(null);
-    setActiveCard(0); // Reset to first card
-  };
 
   const isExpanded = (index: number) => {
     return activeCard === index;
@@ -88,7 +84,7 @@ const SeeItInActionSection = () => {
 
   return (
     <Section background="transparent" className="bg-black">
-      <div className="text-center mb-16">
+      <div className="text-center mb-12">
         <SectionChip>See it in Action</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           Explore Possible Use Cases and Common User Journeys
@@ -98,17 +94,16 @@ const SeeItInActionSection = () => {
       <div 
         ref={sectionRef}
         className="flex justify-center items-end h-96 gap-2"
-        onMouseLeave={handleSectionLeave}
       >
         {journeys.map((journey, index) => (
           <div
             key={index}
             className={cn(
-              "relative backdrop-blur-sm border rounded-2xl cursor-pointer overflow-hidden transition-all duration-300 ease-out",
-              "bg-white/10 border-white/20",
+              "relative backdrop-blur-md border rounded-2xl cursor-pointer overflow-hidden transition-all duration-300 ease-out",
+              "bg-white/5 border-white/10",
               isExpanded(index) 
                 ? "w-80 h-80" 
-                : "w-16 h-80 hover:bg-white/15"
+                : "w-16 h-80 hover:bg-white/10 hover:border-white/20"
             )}
             onMouseEnter={() => handleCardHover(index)}
           >
@@ -138,11 +133,7 @@ const SeeItInActionSection = () => {
                     <h3 className="font-source-serif text-lg font-medium text-white mb-3 leading-tight">
                       {journey.title}
                     </h3>
-                    <p className="font-body text-white/70 text-sm leading-relaxed opacity-0 animate-fade-in"
-                       style={{
-                         animationDelay: '150ms',
-                         animationFillMode: 'forwards'
-                       }}>
+                    <p className="font-body text-white/70 text-sm leading-relaxed transition-opacity duration-200">
                       {journey.description}
                     </p>
                   </div>
