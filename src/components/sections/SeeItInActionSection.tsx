@@ -61,18 +61,28 @@ const SeeItInActionSection = () => {
   const [activeCard, setActiveCard] = useState<number>(0); // First card active by default
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [expandedWidth, setExpandedWidth] = useState<boolean>(false);
+  const [textVisible, setTextVisible] = useState<number>(0); // Track which card should show text
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const handleCardHover = (index: number) => {
     if (index !== activeCard) {
       setHoveredCard(index);
       setActiveCard(index);
+      // Hide text immediately on hover
+      setTextVisible(-1);
+      // Show text after expansion completes (300ms matches transition duration)
+      setTimeout(() => {
+        setTextVisible(index);
+      }, 300);
     }
   };
 
-
   const isExpanded = (index: number) => {
     return activeCard === index;
+  };
+
+  const shouldShowText = (index: number) => {
+    return textVisible === index;
   };
 
   // Handle expansion animation timing
@@ -81,6 +91,11 @@ const SeeItInActionSection = () => {
       setExpandedWidth(true);
     }
   }, [activeCard]);
+
+  // Initialize text visibility for the first card
+  useEffect(() => {
+    setTextVisible(0);
+  }, []);
 
   return (
     <Section background="transparent" className="bg-black">
@@ -129,7 +144,7 @@ const SeeItInActionSection = () => {
               <div className="h-full p-6 flex flex-col justify-end">
                 <div className="flex items-start gap-3 mb-4">
                   <journey.icon className="w-5 h-5 text-white/80 flex-shrink-0 mt-1" />
-                  <div>
+                  <div className={cn("transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
                     <h3 className="font-source-serif text-lg font-medium text-white mb-3 leading-tight">
                       {journey.title}
                     </h3>
