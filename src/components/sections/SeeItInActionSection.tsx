@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Section from "../Section";
 import SectionChip from "../SectionChip";
-import { GraduationCap, RotateCcw, UserCheck, Building, Users } from "lucide-react";
+import { GraduationCap, RotateCcw, UserCheck, Building, Users, MessageSquare, RefreshCw, School, Lightbulb, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const journeys = [
@@ -29,31 +29,65 @@ const journeys = [
     icon: Users,
     title: "Researcher to collaborators",
     description: "Publish findings and project notes, discover aligned experts, and assemble a credible team."
+  },
+  {
+    icon: MessageSquare,
+    title: "Mentor to mentee cohort",
+    description: "A senior professional states mentoring intent in natural language. Profeshare AI suggests verified mentees, schedules events, and tracks assignments through Papers. Outcomes are visible to participants and recruiters."
+  },
+  {
+    icon: RefreshCw,
+    title: "Career switcher to validated portfolio",
+    description: "An experienced professional declares a transition goal. The system recommends learning paths, projects for Papers, and relevant roles. The profile gains credible signals that translate into targeted interviews."
+  },
+  {
+    icon: School,
+    title: "Employer to campus hiring drive",
+    description: "A company outlines entry-level needs. Institutes with verified cohorts are invited, candidates submit structured work, and Recruiter Tools produce a comparable shortlist with clear fit indicators."
+  },
+  {
+    icon: Lightbulb,
+    title: "Institute to industry capstone partnership",
+    description: "A university posts project briefs in natural language. Employers propose challenges, student teams publish results in Papers, and hiring interest flows from verified outcomes."
+  },
+  {
+    icon: Briefcase,
+    title: "Consultant to client engagement",
+    description: "A consultant publishes case studies and declares service focus. Profeshare AI surfaces aligned organisations and decision makers, enabling credential checks, scoped conversations, and follow-ups anchored in work evidence."
   }
 ];
 
 const SeeItInActionSection = () => {
-  const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [activeCard, setActiveCard] = useState<number>(0); // First card active by default
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
-  const handleCardClick = (index: number) => {
-    setActiveCard(activeCard === index ? null : index);
-  };
+  const [expandedWidth, setExpandedWidth] = useState<boolean>(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const handleCardHover = (index: number) => {
-    setHoveredCard(index);
+    if (index !== activeCard) {
+      setHoveredCard(index);
+      setActiveCard(index);
+    }
   };
 
-  const handleCardLeave = () => {
+  const handleSectionLeave = () => {
     setHoveredCard(null);
+    setActiveCard(0); // Reset to first card
   };
 
   const isExpanded = (index: number) => {
-    return activeCard === index || hoveredCard === index;
+    return activeCard === index;
   };
 
+  // Handle expansion animation timing
+  useEffect(() => {
+    if (activeCard !== null) {
+      setExpandedWidth(true);
+    }
+  }, [activeCard]);
+
   return (
-    <Section background="transparent" className="bg-black/90">
+    <Section background="transparent" className="bg-black">
       <div className="text-center mb-16">
         <SectionChip>See it in Action</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
@@ -61,26 +95,28 @@ const SeeItInActionSection = () => {
         </h2>
       </div>
       
-      <div className="flex justify-center items-end h-80 gap-2">
+      <div 
+        ref={sectionRef}
+        className="flex justify-center items-end h-96 gap-2"
+        onMouseLeave={handleSectionLeave}
+      >
         {journeys.map((journey, index) => (
           <div
             key={index}
             className={cn(
-              "relative bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl cursor-pointer transition-all duration-500 ease-out overflow-hidden",
+              "relative backdrop-blur-sm border rounded-2xl cursor-pointer overflow-hidden transition-all duration-300 ease-out",
+              "bg-white/10 border-white/20",
               isExpanded(index) 
-                ? "w-80 h-72" 
-                : "w-16 h-72 hover:bg-gray-700/60"
+                ? "w-80 h-80" 
+                : "w-16 h-80 hover:bg-white/15"
             )}
             onMouseEnter={() => handleCardHover(index)}
-            onMouseLeave={handleCardLeave}
-            onClick={() => handleCardClick(index)}
           >
             {/* Collapsed state - vertical text and icon */}
             {!isExpanded(index) && (
-              <div className="h-full flex flex-col items-center justify-center p-4">
-                <journey.icon className="w-6 h-6 text-white/80 mb-4" />
+              <div className="h-full flex flex-col items-center justify-end p-4 pb-6">
                 <div 
-                  className="text-white/90 font-medium text-sm whitespace-nowrap"
+                  className="text-white/90 font-source-serif font-medium text-sm whitespace-nowrap mb-4"
                   style={{
                     writingMode: 'vertical-rl',
                     textOrientation: 'mixed',
@@ -89,28 +125,28 @@ const SeeItInActionSection = () => {
                 >
                   {journey.title}
                 </div>
+                <journey.icon className="w-5 h-5 text-white/80" />
               </div>
             )}
             
             {/* Expanded state - horizontal content */}
             {isExpanded(index) && (
-              <div className="h-full p-6 flex flex-col justify-between">
+              <div className="h-full p-6 flex flex-col justify-end">
                 <div className="flex items-start gap-3 mb-4">
-                  <journey.icon className="w-6 h-6 text-white/80 flex-shrink-0 mt-1" />
+                  <journey.icon className="w-5 h-5 text-white/80 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-instrument text-lg font-medium text-white mb-3 leading-tight">
+                    <h3 className="font-source-serif text-lg font-medium text-white mb-3 leading-tight">
                       {journey.title}
                     </h3>
-                    <p className="font-body text-white/70 text-sm leading-relaxed">
+                    <p className="font-body text-white/70 text-sm leading-relaxed opacity-0 animate-fade-in"
+                       style={{
+                         animationDelay: '150ms',
+                         animationFillMode: 'forwards'
+                       }}>
                       {journey.description}
                     </p>
                   </div>
                 </div>
-                
-                <button className="w-fit px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white text-sm font-medium transition-all duration-200 hover:bg-white/20 hover:border-white/30 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-white/60 rounded-full"></span>
-                  Preview
-                </button>
               </div>
             )}
           </div>
