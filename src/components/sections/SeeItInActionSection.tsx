@@ -125,7 +125,7 @@ const SeeItInActionSection = () => {
             {/* Collapsed state - vertical text and icon at bottom left */}
             <div className="absolute bottom-0 left-0 h-full flex flex-col items-start justify-end p-4 pb-6">
               <div 
-                className="text-white/90 font-instrument font-medium text-base whitespace-nowrap mb-4"
+                className="text-white/90 font-instrument font-medium text-sm whitespace-nowrap mb-4"
                 style={{
                   writingMode: 'vertical-rl',
                   textOrientation: 'mixed',
