@@ -50,6 +50,7 @@ const CapabilitiesSection = () => {
   return (
     <Section background="primary">
       <div className="text-center mb-12">
+        <SectionChip>Platform Capabilities</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           A Comprehensive Professional Ecosystem
         </h2>

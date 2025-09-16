@@ -84,7 +84,7 @@ const SeeItInActionSection = () => {
 
   return (
     <Section background="transparent" className="bg-black">
-      <div className="text-center mb-8">
+      <div className="text-center mb-12">
         <SectionChip>See it in Action</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           Explore Possible Use Cases and Common User Journeys
@@ -133,7 +133,10 @@ const SeeItInActionSection = () => {
                     <h3 className="font-source-serif text-lg font-medium text-white mb-3 leading-tight">
                       {journey.title}
                     </h3>
-                    <p className="font-body text-white/70 text-sm leading-relaxed">
+                    <p className={cn(
+                      "font-body text-white/70 text-sm leading-relaxed transition-opacity duration-300",
+                      isExpanded(index) ? "opacity-100" : "opacity-0"
+                    )}>
                       {journey.description}
                     </p>
                   </div>
