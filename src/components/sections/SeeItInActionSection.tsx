@@ -40,61 +40,79 @@ const SeeItInActionSection = () => {
     setActiveCard(activeCard === index ? null : index);
   };
 
+  const handleCardHover = (index: number) => {
+    setHoveredCard(index);
+  };
+
+  const handleCardLeave = () => {
+    setHoveredCard(null);
+  };
+
   const isExpanded = (index: number) => {
-    return activeCard === index || (hoveredCard === index && activeCard !== index);
+    return activeCard === index || hoveredCard === index;
   };
 
   return (
-    <Section background="accent">
-      <div className="text-center mb-12">
-        <SectionChip>Interactive Preview</SectionChip>
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-glass-text mb-4">
-          See it in Action
+    <Section background="transparent" className="bg-black/90">
+      <div className="text-center mb-16">
+        <SectionChip>See it in Action</SectionChip>
+        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
+          Explore Possible Use Cases and Common User Journeys
         </h2>
       </div>
       
-      <div className="flex flex-wrap justify-center gap-6 lg:flex-nowrap lg:gap-4">
+      <div className="flex justify-center items-end h-80 gap-2">
         {journeys.map((journey, index) => (
           <div
             key={index}
             className={cn(
-              "relative backdrop-blur-md bg-glass-bg/10 border border-glass-border/20 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out flex-shrink-0",
-              "w-full sm:w-64 lg:w-60",
+              "relative bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl cursor-pointer transition-all duration-500 ease-out overflow-hidden",
               isExpanded(index) 
-                ? "h-80 bg-glass-bg/20 border-glass-border/30 shadow-xl" 
-                : "h-48 hover:bg-glass-bg/15 hover:border-glass-border/25"
+                ? "w-80 h-72" 
+                : "w-16 h-72 hover:bg-gray-700/60"
             )}
-            onMouseEnter={() => setHoveredCard(index)}
-            onMouseLeave={() => setHoveredCard(null)}
+            onMouseEnter={() => handleCardHover(index)}
+            onMouseLeave={handleCardLeave}
             onClick={() => handleCardClick(index)}
           >
-            <div className="p-6 flex flex-col items-center text-center h-full">
-              {/* Icon */}
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-glass-bg/20 border border-glass-border/30 flex-shrink-0 mb-4">
-                <journey.icon className="w-8 h-8 text-glass-text" />
+            {/* Collapsed state - vertical text and icon */}
+            {!isExpanded(index) && (
+              <div className="h-full flex flex-col items-center justify-center p-4">
+                <journey.icon className="w-6 h-6 text-white/80 mb-4" />
+                <div 
+                  className="text-white/90 font-medium text-sm whitespace-nowrap"
+                  style={{
+                    writingMode: 'vertical-rl',
+                    textOrientation: 'mixed',
+                    transform: 'rotate(180deg)'
+                  }}
+                >
+                  {journey.title}
+                </div>
               </div>
-              
-              {/* Title */}
-              <h3 className="font-instrument text-lg font-medium text-glass-text mb-3 leading-tight">
-                {journey.title}
-              </h3>
-              
-              {/* Expandable Content */}
-              <div className={cn(
-                "flex-1 flex flex-col justify-between transition-all duration-300 ease-in-out",
-                isExpanded(index) 
-                  ? "opacity-100 translate-y-0" 
-                  : "opacity-0 translate-y-4 pointer-events-none"
-              )}>
-                <p className="font-body text-glass-text/80 text-sm leading-relaxed mb-4 flex-1">
-                  {journey.description}
-                </p>
+            )}
+            
+            {/* Expanded state - horizontal content */}
+            {isExpanded(index) && (
+              <div className="h-full p-6 flex flex-col justify-between">
+                <div className="flex items-start gap-3 mb-4">
+                  <journey.icon className="w-6 h-6 text-white/80 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-instrument text-lg font-medium text-white mb-3 leading-tight">
+                      {journey.title}
+                    </h3>
+                    <p className="font-body text-white/70 text-sm leading-relaxed">
+                      {journey.description}
+                    </p>
+                  </div>
+                </div>
                 
-                <button className="px-4 py-2 rounded-lg bg-glass-bg/20 border border-glass-border/30 text-glass-text text-sm font-medium transition-all duration-200 hover:bg-glass-bg/30 hover:border-glass-border/40">
+                <button className="w-fit px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white text-sm font-medium transition-all duration-200 hover:bg-white/20 hover:border-white/30 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-white/60 rounded-full"></span>
                   Preview
                 </button>
               </div>
-            </div>
+            )}
           </div>
         ))}
       </div>
