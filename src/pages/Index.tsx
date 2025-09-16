@@ -6,6 +6,7 @@ import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import PersonasSection from "@/components/sections/PersonasSection";
 
 import AudienceSection from "@/components/sections/AudienceSection";
+import SeeItInActionSection from "@/components/sections/SeeItInActionSection";
 import UseCasesSection from "@/components/sections/UseCasesSection";
 import TrustDataSection from "@/components/sections/TrustDataSection";
 import EarlyAccessSection from "@/components/sections/EarlyAccessSection";
@@ -53,6 +54,9 @@ const Index = () => {
         <VisualSeparator />
         
         <HowItWorksSection />
+        <VisualSeparator />
+        
+        <SeeItInActionSection />
         <VisualSeparator />
         
         <UseCasesSection />
