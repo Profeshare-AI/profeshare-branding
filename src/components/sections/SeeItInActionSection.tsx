@@ -122,36 +122,28 @@ const SeeItInActionSection = () => {
             )}
             onMouseEnter={() => handleCardHover(index)}
           >
-            {/* Collapsed state - vertical text and icon */}
-            {!isExpanded(index) && (
-              <div className="h-full flex flex-col items-center justify-end p-4 pb-6">
-                <div 
-                  className="text-white/90 font-source-serif font-medium text-sm whitespace-nowrap mb-4"
-                  style={{
-                    writingMode: 'vertical-rl',
-                    textOrientation: 'mixed',
-                    transform: 'rotate(180deg)'
-                  }}
-                >
-                  {journey.title}
-                </div>
-                <journey.icon className="w-5 h-5 text-white/80" />
+            {/* Collapsed state - vertical text and icon (always visible) */}
+            <div className="absolute bottom-0 left-0 right-0 h-full flex flex-col items-center justify-end p-4 pb-6">
+              <div 
+                className="text-white/90 font-source-serif font-medium text-sm whitespace-nowrap mb-4"
+                style={{
+                  writingMode: 'vertical-rl',
+                  textOrientation: 'mixed',
+                  transform: 'rotate(180deg)'
+                }}
+              >
+                {journey.title}
               </div>
-            )}
+              <journey.icon className="w-5 h-5 text-white/80" />
+            </div>
             
-            {/* Expanded state - horizontal content */}
+            {/* Expanded state - only description */}
             {isExpanded(index) && (
-              <div className="h-full p-6 flex flex-col justify-end">
-                <div className="flex items-start gap-3 mb-4">
-                  <journey.icon className={cn("w-5 h-5 text-white/80 flex-shrink-0 mt-1 transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")} />
-                  <div className={cn("transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
-                    <h3 className="font-source-serif text-lg font-medium text-white mb-3 leading-tight">
-                      {journey.title}
-                    </h3>
-                    <p className="font-body text-white/70 text-sm leading-relaxed">
-                      {journey.description}
-                    </p>
-                  </div>
+              <div className="absolute top-0 left-0 right-0 h-full p-6 flex flex-col justify-start">
+                <div className={cn("transition-opacity duration-200 mt-6", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
+                  <p className="font-body text-white/70 text-sm leading-relaxed">
+                    {journey.description}
+                  </p>
                 </div>
               </div>
             )}
