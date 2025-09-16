@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Section from "../Section";
 import SectionChip from "../SectionChip";
-import { GraduationCap, RotateCcw, UserCheck, Building, Users, MessageSquare, RefreshCw, School, Lightbulb, Briefcase } from "lucide-react";
+import { GraduationCap, RotateCcw, UserCheck, Building, Users, MessageSquare, RefreshCw, School, Lightbulb, Briefcase, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const journeys = [
@@ -99,7 +99,7 @@ const SeeItInActionSection = () => {
 
   return (
     <Section background="transparent" className="bg-black">
-      <div className="text-center mb-8">
+      <div className="text-center mb-4">
         <SectionChip>See it in Action</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           Explore Possible Use Cases and Common User Journeys
@@ -125,7 +125,7 @@ const SeeItInActionSection = () => {
             {/* Collapsed state - vertical text and icon at bottom left */}
             <div className="absolute bottom-0 left-0 h-full flex flex-col items-start justify-end p-4 pb-6">
               <div 
-                className="text-white/90 font-source-serif font-medium text-sm whitespace-nowrap mb-4"
+                className="text-white/90 font-instrument font-medium text-sm whitespace-nowrap mb-4"
                 style={{
                   writingMode: 'vertical-rl',
                   textOrientation: 'mixed',
@@ -139,7 +139,7 @@ const SeeItInActionSection = () => {
             
             {/* Expanded state - description to the right of title */}
             {isExpanded(index) && (
-              <div className="absolute bottom-0 right-0 left-16 h-full p-4 pb-6 flex flex-col justify-end">
+              <div className="absolute bottom-6 right-0 left-16 p-4 flex flex-col justify-end">
                 <div className={cn("transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
                   <p className="font-body text-white/70 text-sm leading-relaxed">
                     {journey.description}
