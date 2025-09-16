@@ -143,7 +143,7 @@ const SeeItInActionSection = () => {
             {isExpanded(index) && (
               <div className="h-full p-6 flex flex-col justify-end">
                 <div className="flex items-start gap-3 mb-4">
-                  <journey.icon className="w-5 h-5 text-white/80 flex-shrink-0 mt-1" />
+                  <journey.icon className={cn("w-5 h-5 text-white/80 flex-shrink-0 mt-1 transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")} />
                   <div className={cn("transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
                     <h3 className="font-source-serif text-lg font-medium text-white mb-3 leading-tight">
                       {journey.title}
