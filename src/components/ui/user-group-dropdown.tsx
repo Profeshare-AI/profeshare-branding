@@ -60,7 +60,7 @@ export const UserGroupDropdown = ({ selectedGroup, onGroupSelect }: UserGroupDro
         <div
           className={cn(
             "absolute left-0 bottom-full mb-2 w-full rounded-xl overflow-hidden z-50",
-            "bg-slate-900/95 backdrop-blur-xl",
+            "bg-black/95 backdrop-blur-xl",
             "shadow-lg border border-white/20",
             "animate-fade-in"
           )}
