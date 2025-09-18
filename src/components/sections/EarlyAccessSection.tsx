@@ -64,9 +64,9 @@ const EarlyAccessSection = () => {
 
   return (
     <Section background="primary">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch min-h-[600px]">
         {/* Left Column - Background Image */}
-        <div className="relative h-64 lg:h-96 rounded-2xl overflow-hidden">
+        <div className="relative rounded-2xl overflow-hidden">
           <img 
             src={tryProfeshareImage}
             alt="Try Profeshare AI"
@@ -75,7 +75,7 @@ const EarlyAccessSection = () => {
         </div>
 
         {/* Right Column - Content */}
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-6 py-8">
           <div>
             <SectionChip>Join Beta</SectionChip>
             <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-6">
@@ -83,14 +83,21 @@ const EarlyAccessSection = () => {
             </h2>
           </div>
 
-          {/* Beta Features List */}
-          <div className="space-y-3">
-            {betaFeatures.map((feature, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-white/90 font-dm-sans">{feature}</span>
-              </div>
-            ))}
+          {/* What to expect subheading */}
+          <div>
+            <h3 className="font-dm-sans text-xl font-medium text-white mb-4">
+              What to expect in Profeshare Beta?
+            </h3>
+            
+            {/* Beta Features List */}
+            <div className="space-y-3">
+              {betaFeatures.map((feature, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-white/90 font-dm-sans">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Dropdown and CTA */}
