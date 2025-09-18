@@ -7,7 +7,7 @@ import PersonasSection from "@/components/sections/PersonasSection";
 
 import AudienceSection from "@/components/sections/AudienceSection";
 import SeeItInActionSection from "@/components/sections/SeeItInActionSection";
-import UseCasesSection from "@/components/sections/UseCasesSection";
+
 import TrustDataSection from "@/components/sections/TrustDataSection";
 import EarlyAccessSection from "@/components/sections/EarlyAccessSection";
 import FAQSection from "@/components/sections/FAQSection";
@@ -59,8 +59,6 @@ const Index = () => {
         <SeeItInActionSection />
         <VisualSeparator />
         
-        <UseCasesSection />
-        <VisualSeparator />
         
         <TrustDataSection />
         <VisualSeparator />
