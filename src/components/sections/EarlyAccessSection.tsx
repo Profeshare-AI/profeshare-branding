@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { ChevronDown, Check } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import tryProfeshareImage from "@/assets/try-profeshare.jpeg";
 
 const EarlyAccessSection = () => {
@@ -63,10 +63,10 @@ const EarlyAccessSection = () => {
   ];
 
   return (
-    <Section background="primary">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch min-h-[600px]">
+    <Section background="transparent" className="bg-black">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
         {/* Left Column - Background Image */}
-        <div className="relative rounded-2xl overflow-hidden">
+        <div className="relative">
           <img 
             src={tryProfeshareImage}
             alt="Try Profeshare AI"
@@ -75,7 +75,7 @@ const EarlyAccessSection = () => {
         </div>
 
         {/* Right Column - Content */}
-        <div className="flex flex-col space-y-6 py-8">
+        <div className="flex flex-col space-y-6 py-8 px-4 md:px-6 lg:px-8">
           <div>
             <SectionChip>Join Beta</SectionChip>
             <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-6">
@@ -89,19 +89,18 @@ const EarlyAccessSection = () => {
               What to expect in Profeshare Beta?
             </h3>
             
-            {/* Beta Features List */}
-            <div className="space-y-3">
+            {/* Beta Features List with bullet points */}
+            <ul className="space-y-3 list-disc list-inside">
               {betaFeatures.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-white/90 font-dm-sans">{feature}</span>
-                </div>
+                <li key={index} className="text-white/90 font-dm-sans">
+                  {feature}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Dropdown and CTA */}
-          <div className="flex flex-col gap-4 max-w-md">
+          {/* Dropdown and CTA - Reduced width */}
+          <div className="flex flex-col gap-4 max-w-xs">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-colors flex items-center justify-between backdrop-blur-sm">
