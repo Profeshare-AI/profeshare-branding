@@ -93,7 +93,8 @@ export default {
 				body: 'var(--font-body)',
 				'instrument': ['Instrument Serif', 'serif'],
 				'dm-sans': ['DM Sans', 'sans-serif'],
-				'source-serif': ['Source Serif 4', 'serif']
+				'source-serif': ['Source Serif 4', 'serif'],
+				'tiktok-sans': ['Inter', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

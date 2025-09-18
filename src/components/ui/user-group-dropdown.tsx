@@ -62,7 +62,7 @@ export const UserGroupDropdown = ({ selectedGroup, onGroupSelect }: UserGroupDro
             "absolute left-0 mt-2 w-full rounded-xl overflow-hidden z-50",
             "bg-gray-900/95 backdrop-blur-xl",
             "shadow-lg border border-white/20",
-            "animate-fade-in max-h-60 overflow-y-auto"
+            "animate-fade-in"
           )}
         >
           {userGroups.map((group) => (
@@ -73,7 +73,7 @@ export const UserGroupDropdown = ({ selectedGroup, onGroupSelect }: UserGroupDro
                 setOpen(false);
               }}
               className={cn(
-                "flex items-center gap-2 w-full px-3 py-2 text-sm text-left transition-colors",
+                "flex items-center gap-2 w-full px-3 py-2 text-sm text-left transition-colors font-tiktok-sans",
                 selectedGroup === group
                   ? "font-semibold text-white bg-white/10"
                   : "text-white/90 hover:bg-white/10"
