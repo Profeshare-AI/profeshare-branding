@@ -42,7 +42,7 @@ export const UserGroupDropdown = ({ selectedGroup, onGroupSelect }: UserGroupDro
       <button
         onClick={() => setOpen((o) => !o)}
         className={cn(
-          "flex items-center justify-between gap-2 rounded-lg border px-3 py-3 text-sm w-full",
+          "flex items-center justify-between gap-2 rounded-lg border px-3 py-3 text-sm w-full font-tiktok-sans",
           "bg-white/10 backdrop-blur-md shadow-sm",
           "border-white/20",
           "text-white",
@@ -59,8 +59,8 @@ export const UserGroupDropdown = ({ selectedGroup, onGroupSelect }: UserGroupDro
       {open && (
         <div
           className={cn(
-            "absolute left-0 mt-2 w-full rounded-xl overflow-hidden z-50",
-            "bg-gray-900/95 backdrop-blur-xl",
+            "absolute left-0 bottom-full mb-2 w-full rounded-xl overflow-hidden z-50",
+            "bg-slate-900/95 backdrop-blur-xl",
             "shadow-lg border border-white/20",
             "animate-fade-in"
           )}
