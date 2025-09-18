@@ -9,7 +9,6 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
-import abstractFigures from "@/assets/abstract-figures.png";
 
 const EarlyAccessSection = () => {
   const [selectedUserGroup, setSelectedUserGroup] = useState<string>("");
@@ -53,26 +52,25 @@ const EarlyAccessSection = () => {
   };
 
   return (
-    <Section background="primary" className="relative overflow-hidden">
-      <div className="text-center relative z-10">
+    <Section background="primary">
+      <div className="text-center">
         <SectionChip>Join Beta</SectionChip>
-        <h2 className="font-instrument text-4xl md:text-5xl lg:text-6xl font-medium text-white mb-16 max-w-4xl mx-auto leading-tight">
+        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-12">
           Be Among the First to Experience Profeshare AI
         </h2>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto mb-20">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button 
                 variant="outline" 
-                size="lg"
-                className="w-full sm:w-64 justify-between bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm"
+                className="w-full sm:w-64 justify-between bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white"
               >
                 {selectedUserGroup || "Select your role"}
                 <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-64 bg-gray-900/95 border-white/20 text-white backdrop-blur-md z-50">
+            <DropdownMenuContent className="w-64 bg-gray-900/95 border-white/20 text-white backdrop-blur-md">
               {userGroups.map((group) => (
                 <DropdownMenuItem
                   key={group}
@@ -89,20 +87,11 @@ const EarlyAccessSection = () => {
             variant="glass" 
             size="lg"
             onClick={handleGetEarlyAccess}
-            className="w-full sm:w-auto px-8 py-3 text-base font-medium"
+            className="w-full sm:w-auto"
           >
             Get Early Access
           </Button>
         </div>
-      </div>
-      
-      {/* Abstract figures at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 lg:h-48 overflow-hidden">
-        <img 
-          src={abstractFigures} 
-          alt="Abstract colorful 3D figures" 
-          className="w-full h-full object-cover object-center opacity-80"
-        />
       </div>
     </Section>
   );
