@@ -63,7 +63,7 @@ const EarlyAccessSection = () => {
   ];
 
   return (
-    <Section background="transparent" className="bg-black">
+    <Section background="transparent" className="bg-black py-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
         {/* Left Column - Background Image */}
         <div className="relative">
@@ -99,8 +99,8 @@ const EarlyAccessSection = () => {
             </ul>
           </div>
 
-          {/* Dropdown and CTA - Reduced width */}
-          <div className="flex flex-col gap-4 max-w-xs">
+          {/* Dropdown and CTA - Much smaller width */}
+          <div className="flex flex-col gap-4 max-w-32">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-colors flex items-center justify-between backdrop-blur-sm">
