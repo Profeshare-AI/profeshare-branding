@@ -188,4 +188,19 @@ All colors MUST be HSL.
   .animate-hero-chip-glow {
     animation: hero-chip-glow 3s ease-in-out infinite;
   }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out;
+  }
 }
