@@ -80,6 +80,9 @@ const EarlyAccessSection = () => {
 
           {/* Dropdown and CTA - Reduced width */}
           <div className="flex flex-col gap-4 max-w-xs">
+            <p className="text-white/60 text-sm font-dm-sans">
+              Share your experience with us in the survey to join the early access waitlist.
+            </p>
             <UserGroupDropdown
               selectedGroup={selectedUserGroup}
               onGroupSelect={setSelectedUserGroup}
