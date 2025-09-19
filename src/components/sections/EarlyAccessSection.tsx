@@ -93,7 +93,7 @@ const EarlyAccessSection = () => {
               onClick={handleGetEarlyAccess}
               className="w-full"
             >
-              Get Early Access
+              Take Me to the Survey
             </GlassCTAButton>
           </div>
         </div>
