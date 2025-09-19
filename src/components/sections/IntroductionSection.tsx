@@ -4,7 +4,7 @@ import SectionChip from "../SectionChip";
 
 const IntroductionSection = () => {
   return (
-    <Section background="transparent" className="bg-black">
+    <Section background="transparent">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left side - Image */}
         <div className="order-2 lg:order-1 flex justify-center">
