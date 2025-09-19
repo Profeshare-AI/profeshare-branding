@@ -54,10 +54,7 @@ const AudienceSection = () => {
   };
 
   return (
-    <Section background="secondary" backgroundImage="/audience-section-bg.jpeg">
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40 -z-10"></div>
-      
+    <Section background="transparent" className="relative">
       <div className="text-center mb-12">
         <SectionChip>Who is this for?</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">

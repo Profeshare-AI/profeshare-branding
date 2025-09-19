@@ -39,35 +39,55 @@ const Index = () => {
         </main>
       </div>
 
-      {/* Rest of the page with dark gradient background */}
+      {/* Introduction Section with gradient background */}
       <div className="bg-gradient-to-b from-section-bg-primary/30 via-section-bg-secondary/20 to-section-bg-accent/30">
         <IntroductionSection />
         <VisualSeparator />
+      </div>
+
+      {/* Parallax Background Container */}
+      <div 
+        className="relative"
+        style={{
+          backgroundImage: `url(/howitworks-section-background.jpeg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Dark overlay for content readability */}
+        <div className="absolute inset-0 bg-black/30 pointer-events-none z-0"></div>
         
-        <PillarsSection />
-        <VisualSeparator />
-        
-        <AudienceSection />
-        <VisualSeparator />
-        
-        <PersonasSection />
-        <VisualSeparator />
-        
-        <HowItWorksSection />
-        <VisualSeparator />
-        
-        <SeeItInActionSection />
-        <VisualSeparator />
-        
-        
-        <TrustDataSection />
-        <VisualSeparator />
-        
-        <EarlyAccessSection />
-        <VisualSeparator />
-        
-        <FAQSection />
-        
+        {/* Content with relative positioning */}
+        <div className="relative z-10">
+          <PillarsSection />
+          <VisualSeparator />
+          
+          <AudienceSection />
+          <VisualSeparator />
+          
+          <PersonasSection />
+          <VisualSeparator />
+          
+          <HowItWorksSection />
+          <VisualSeparator />
+          
+          <SeeItInActionSection />
+          <VisualSeparator />
+          
+          <TrustDataSection />
+          <VisualSeparator />
+          
+          <EarlyAccessSection />
+          <VisualSeparator />
+          
+          <FAQSection />
+        </div>
+      </div>
+
+      {/* Footer with gradient background */}
+      <div className="bg-gradient-to-b from-section-bg-primary/30 via-section-bg-secondary/20 to-section-bg-accent/30">
         <FooterSection />
       </div>
     </div>

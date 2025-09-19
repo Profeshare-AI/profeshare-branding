@@ -203,9 +203,8 @@ const PillarsSection = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-black">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-6xl">
-        <div className="text-center mb-12">
+    <Section background="transparent">
+      <div className="text-center mb-12">
           <SectionChip>
             Why it actually matter?
           </SectionChip>
@@ -256,8 +255,7 @@ const PillarsSection = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </Section>
   );
 };
 

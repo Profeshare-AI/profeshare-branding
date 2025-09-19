@@ -29,12 +29,9 @@ const steps = [
 const HowItWorksSection = () => {
   return (
     <Section 
-      background="primary" 
-      className="bg-black bg-cover bg-center bg-no-repeat relative" 
-      backgroundImage="/howitworks-section-background.jpeg"
+      background="transparent" 
+      className="relative"
     >
-      {/* Black overlay to reduce background brightness */}
-      <div className="absolute inset-0 bg-black/25 pointer-events-none"></div>
       
       {/* Content wrapper with relative positioning */}
       <div className="relative z-10">

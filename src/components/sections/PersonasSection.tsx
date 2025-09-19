@@ -386,7 +386,7 @@ const PersonasSection = () => {
   };
 
   return (
-    <Section id="personas-section" background="transparent" className="bg-black">
+    <Section id="personas-section" background="transparent">
       <div className="text-center mb-12">
         <div className="flex justify-center mb-6">
           <SectionChip>
