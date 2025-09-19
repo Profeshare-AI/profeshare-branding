@@ -98,7 +98,7 @@ const SeeItInActionSection = () => {
   }, []);
 
   return (
-    <Section background="transparent" className="bg-black">
+    <Section background="transparent">
       <div className="text-center mb-4">
         <SectionChip>See it in Action</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">

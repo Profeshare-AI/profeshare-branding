@@ -23,7 +23,7 @@ const trustTopics = [
 
 const TrustDataSection = () => {
   return (
-    <Section background="transparent" className="bg-black">
+    <Section background="transparent">
       <div className="text-center mb-12">
         <SectionChip>Trust & Security</SectionChip>
         <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">

@@ -42,7 +42,7 @@ const EarlyAccessSection = () => {
   ];
 
   return (
-    <Section background="transparent" className="bg-black">
+    <Section background="transparent">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
         {/* Left Column - Background Image */}
         <div className="relative">

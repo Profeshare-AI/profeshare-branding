@@ -39,12 +39,6 @@ const Index = () => {
         </main>
       </div>
 
-      {/* Introduction Section with gradient background */}
-      <div className="bg-gradient-to-b from-section-bg-primary/30 via-section-bg-secondary/20 to-section-bg-accent/30">
-        <IntroductionSection />
-        <VisualSeparator />
-      </div>
-
       {/* Parallax Background Container */}
       <div 
         className="relative"
@@ -61,6 +55,9 @@ const Index = () => {
         
         {/* Content with relative positioning */}
         <div className="relative z-10">
+          <IntroductionSection />
+          <VisualSeparator />
+          
           <PillarsSection />
           <VisualSeparator />
           
