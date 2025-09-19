@@ -43,13 +43,13 @@ const EarlyAccessSection = () => {
 
   return (
     <Section background="transparent" className="bg-black">
-      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
         {/* Left Column - Background Image */}
         <div className="relative">
           <img 
             src={tryProfeshareImage}
             alt="Try Profeshare AI"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg"
           />
         </div>
 
@@ -57,7 +57,7 @@ const EarlyAccessSection = () => {
         <div className="flex flex-col space-y-6 py-8 px-4 md:px-6 lg:px-8">
           <div>
             <SectionChip>Join Beta</SectionChip>
-            <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-6">
+            <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
               Be Among the First to Experience Profeshare AI
             </h2>
           </div>

@@ -65,7 +65,7 @@ export const UserGroupDropdown = ({ selectedGroup, onGroupSelect }: UserGroupDro
             "animate-fade-in"
           )}
         >
-          {userGroups.map((group) => (
+          {userGroups.map((group, index) => (
             <button
               key={group}
               onClick={() => {
@@ -76,7 +76,8 @@ export const UserGroupDropdown = ({ selectedGroup, onGroupSelect }: UserGroupDro
                 "flex items-center gap-2 w-full px-3 py-2 text-sm text-left transition-colors font-tiktok-sans",
                 selectedGroup === group
                   ? "font-semibold text-white bg-white/10"
-                  : "text-white/90 hover:bg-white/10"
+                  : "text-white/90 hover:bg-white/10",
+                index < userGroups.length - 1 ? "border-b border-white/10" : ""
               )}
             >
               <span className="flex-1">{group}</span>
