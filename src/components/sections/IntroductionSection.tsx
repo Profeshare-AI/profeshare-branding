@@ -43,15 +43,15 @@ const IntroductionSection = () => {
           <div className="flex items-center gap-3 pt-4">
             <div className="flex -space-x-2">
               <Avatar className="w-8 h-8 border-2 border-white">
-                <AvatarImage src="/lovable-uploads/08e527f0-3e20-4103-9e34-24e0167b01c1.png" />
+                <AvatarImage src="/avatars/avatar-professional-1.jpg" />
                 <AvatarFallback>U1</AvatarFallback>
               </Avatar>
               <Avatar className="w-8 h-8 border-2 border-white">
-                <AvatarImage src="/lovable-uploads/5f43cc85-57e6-40ba-b89e-dfda252b9e8d.png" />
+                <AvatarImage src="/avatars/avatar-professional-2.jpg" />
                 <AvatarFallback>U2</AvatarFallback>
               </Avatar>
               <Avatar className="w-8 h-8 border-2 border-white">
-                <AvatarImage src="/lovable-uploads/d091240a-a92c-451f-87f1-6c8d2770d714.png" />
+                <AvatarImage src="/avatars/avatar-professional-3.jpg" />
                 <AvatarFallback>U3</AvatarFallback>
               </Avatar>
             </div>

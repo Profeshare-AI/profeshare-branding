@@ -19,7 +19,7 @@ const FooterSection = () => {
           </div>
           
           <div className="lg:text-right">
-            <p className="font-body text-white text-xs">
+            <p className="font-body text-white/60 text-sm">
               Only Trusted Space for Your Professional Journey.
             </p>
           </div>
