@@ -44,11 +44,6 @@ const Index = () => {
         <IntroductionSection />
       </div>
 
-      {/* Personas Section with dark background */}
-      <div className="bg-black">
-        <PersonasSection />
-      </div>
-
       {/* Parallax Background Container */}
       <div 
         className="relative"
@@ -70,7 +65,30 @@ const Index = () => {
           
           <AudienceSection />
           <VisualSeparator />
-          
+        </div>
+      </div>
+
+      {/* Personas Section with dark background */}
+      <div className="bg-black">
+        <PersonasSection />
+      </div>
+
+      {/* Parallax Background Container continues */}
+      <div 
+        className="relative"
+        style={{
+          backgroundImage: `url(/howitworks-section-background.jpeg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Dark overlay for content readability */}
+        <div className="absolute inset-0 bg-black/30 pointer-events-none z-0"></div>
+        
+        {/* Content with relative positioning */}
+        <div className="relative z-10">
           <HowItWorksSection />
           <VisualSeparator />
           
