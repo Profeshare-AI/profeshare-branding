@@ -39,6 +39,16 @@ const Index = () => {
         </main>
       </div>
 
+      {/* Introduction Section with dark background */}
+      <div className="bg-black">
+        <IntroductionSection />
+      </div>
+
+      {/* Personas Section with dark background */}
+      <div className="bg-black">
+        <PersonasSection />
+      </div>
+
       {/* Parallax Background Container */}
       <div 
         className="relative"
@@ -55,16 +65,10 @@ const Index = () => {
         
         {/* Content with relative positioning */}
         <div className="relative z-10">
-          <IntroductionSection />
-          <VisualSeparator />
-          
           <PillarsSection />
           <VisualSeparator />
           
           <AudienceSection />
-          <VisualSeparator />
-          
-          <PersonasSection />
           <VisualSeparator />
           
           <HowItWorksSection />
