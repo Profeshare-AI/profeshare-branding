@@ -47,7 +47,7 @@ const journeys = [
   },
   {
     icon: Lightbulb,
-    title: "Institute to industry capstone partnership",
+    title: "Institute to industry partnership",
     description: "A university posts project briefs in natural language. Employers propose challenges, student teams publish results in Papers, and hiring interest flows from verified outcomes."
   },
   {
@@ -117,7 +117,7 @@ const SeeItInActionSection = () => {
               "relative backdrop-blur-md border rounded-2xl cursor-pointer overflow-hidden transition-all duration-300 ease-out",
               "bg-white/5 border-white/10",
               isExpanded(index) 
-                ? "w-80 h-80" 
+                ? "w-72 h-80" 
                 : "w-16 h-80 hover:bg-white/10 hover:border-white/20"
             )}
             onMouseEnter={() => handleCardHover(index)}
