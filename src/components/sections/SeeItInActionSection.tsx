@@ -125,7 +125,7 @@ const SeeItInActionSection = () => {
             {/* Collapsed state - vertical text and icon at bottom left */}
             <div className="absolute bottom-0 left-0 h-full flex flex-col items-start justify-end p-4 pb-6">
               <div 
-                className="text-white font-tiktok-sans font-medium text-base whitespace-nowrap mb-4"
+                className="text-white font-tiktok-sans font-medium text-sm whitespace-nowrap mb-4"
                 style={{
                   writingMode: 'vertical-rl',
                   textOrientation: 'mixed',
@@ -139,7 +139,7 @@ const SeeItInActionSection = () => {
             
             {/* Expanded state - description to the right of title */}
             {isExpanded(index) && (
-              <div className="absolute bottom-6 right-0 left-16 p-4 flex flex-col justify-end">
+              <div className="absolute bottom-6 right-0 left-12 p-4 flex flex-col justify-end">
                 <div className={cn("transition-opacity duration-200", shouldShowText(index) ? "opacity-100" : "opacity-0")}>
                   <p className="font-body text-white/70 text-sm leading-relaxed">
                     {journey.description}
