@@ -13,6 +13,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Interprets intent and returns curated internships, active mentors, and a learning path with three micro-courses. Sets up Papers for weekly micro-updates with a proof-of-work gallery and recommends relevant hackathons and portfolio review events. Guides the student toward a credible profile, mentor recommendation, and interview opportunities.",
     background: "bg-gradient-to-br from-pink-400 to-pink-600",
+    image: "/persona-images/student.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -339,13 +340,44 @@ const PersonasSection = () => {
     // Get title and subtitle for text cards
     const { title, subtitle } = { title: item.title, subtitle: item.subtitle };
 
+    // Determine if this card has an image background
+    const hasImage = item.image;
+    
+    // Base card styles
+    const baseCardClasses = "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
+    
+    // Background styles - image or gradient
+    const backgroundStyles = hasImage ? {
+      backgroundImage: `url(${item.image})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    } : {};
+    
+    // Background classes - different for image vs gradient cards
+    const backgroundClasses = hasImage 
+      ? "relative" 
+      : "backdrop-blur-md bg-white/5 hover:bg-white/10 hover:border-white/20";
+
     return (
       <div
         key={item.id}
-        className="backdrop-blur-md bg-white/5 border border-white/10 h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden cursor-pointer"
+        className={`${baseCardClasses} ${backgroundClasses}`}
+        style={backgroundStyles}
         onMouseEnter={() => setHoveredCard(item.id)}
         onMouseLeave={() => setHoveredCard(null)}
       >
+        {/* Image overlay - only for image cards */}
+        {hasImage && (
+          <div className={`absolute inset-0 rounded-2xl transition-all duration-300 ${
+            isHovered 
+              ? 'bg-black/70' 
+              : 'bg-gradient-to-b from-black/60 via-transparent to-black/60'
+          }`} />
+        )}
+        
+        {/* Content wrapper for image cards to ensure proper layering */}
+        <div className={`relative z-10 flex flex-col justify-between h-full ${hasImage ? '' : ''}`}>
         {isHovered ? (
           <div className="flex items-end justify-start h-full">
             <div className="text-left">
@@ -381,6 +413,7 @@ const PersonasSection = () => {
             </div>
           </>
         )}
+        </div>
       </div>
     );
   };
