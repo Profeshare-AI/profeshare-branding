@@ -393,8 +393,8 @@ const PersonasSection = () => {
         {hasImage && (
           <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
             isHovered 
-              ? 'bg-gradient-to-b from-black/65 via-black/35 to-black/65' 
-              : 'bg-gradient-to-b from-black/50 via-transparent to-black/50'
+              ? 'bg-gradient-to-b from-black/85 via-black/55 to-black/85' 
+              : 'bg-gradient-to-b from-black/70 via-transparent to-black/70'
           }`} />
         )}
         
