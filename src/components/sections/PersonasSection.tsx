@@ -343,8 +343,10 @@ const PersonasSection = () => {
     // Determine if this card has an image background
     const hasImage = item.image;
     
-    // Base card styles
-    const baseCardClasses = "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
+    // Base card styles (without border for image cards)
+    const baseCardClasses = hasImage 
+      ? "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
+      : "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
     
     // Background styles - image or gradient
     const backgroundStyles = hasImage ? {
@@ -371,7 +373,7 @@ const PersonasSection = () => {
         {hasImage && (
           <div className={`absolute inset-0 rounded-2xl transition-all duration-300 ${
             isHovered 
-              ? 'bg-black/70' 
+              ? 'bg-black/60' 
               : 'bg-gradient-to-b from-black/60 via-transparent to-black/60'
           }`} />
         )}
