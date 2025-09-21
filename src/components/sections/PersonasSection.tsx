@@ -13,7 +13,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Interprets intent and returns curated internships, active mentors, and a learning path with three micro-courses. Sets up Papers for weekly micro-updates with a proof-of-work gallery and recommends relevant hackathons and portfolio review events. Guides the student toward a credible profile, mentor recommendation, and interview opportunities.",
     background: "bg-gradient-to-br from-pink-400 to-pink-600",
-    image: "/persona-images/student.jpg",
+    image: "/persona-images/student-card.jpg",
     size: "medium",
     textColor: "text-white"
   },
