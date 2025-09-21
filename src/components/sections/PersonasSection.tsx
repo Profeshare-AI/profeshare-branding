@@ -371,10 +371,10 @@ const PersonasSection = () => {
       >
         {/* Image overlay - only for image cards */}
         {hasImage && (
-          <div className={`absolute inset-0 rounded-2xl transition-all duration-300 ${
+          <div className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
             isHovered 
-              ? 'bg-black/60' 
-              : 'bg-gradient-to-b from-black/60 via-transparent to-black/60'
+              ? 'bg-gradient-to-b from-black/65 via-black/15 to-black/65' 
+              : 'bg-gradient-to-b from-black/50 via-transparent to-black/50'
           }`} />
         )}
         
