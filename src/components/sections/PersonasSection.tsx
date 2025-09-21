@@ -38,6 +38,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Runs a gap analysis against role maps, highlighting missing architecture exposure, mentoring evidence, and cross-functional delivery. Builds a six-week growth plan, prompts a Paper series documenting a refactor project, and matches the user with a leadership cohort. Surfaces internal mobility and external roles with clear skill-to-role alignment.",
     background: "bg-gradient-to-br from-emerald-500 to-teal-600",
+    image: "/persona-images/mid-career-professional.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -158,6 +159,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Filters candidates by verified project Papers and peer endorsements referencing specific API work. Exposes commit-linked artifacts in candidate Papers and enables focused work trials through assessment partners. Compresses screening time by prioritizing signal over resumes.",
     background: "bg-gradient-to-br from-indigo-500 to-blue-700",
+    image: "/persona-images/hiring-manager.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -170,6 +172,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Sets up calibrated role templates and structured outreach with automated de-duplication across cohorts and communities. Ties shared evaluation rubrics to Papers for consistent feedback. Provides weekly dashboards on funnel health, signal quality, and blockers to increase hiring speed and reduce offer declines.",
     background: "bg-gradient-to-br from-fuchsia-500 to-pink-600",
+    image: "/persona-images/inhouse-recruiter.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -182,6 +185,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Tags verified companies and talent with relevant Papers and learning histories. Stands up a branded client portal inside Profeshare, runs expert-led events to attract candidates, and manages multi-client pipelines with compliance-ready documentation in Recruiter Studio. Improves placement rates via sharper fit.",
     background: "bg-gradient-to-br from-teal-500 to-cyan-700",
+    image: "/persona-images/agency-recruiter-hiring-partner.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -194,6 +198,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Imports verified cohorts, auto-screens by skill signals and Papers, and schedules interviews at scale. Sends tailored prep paths to students and produces a results summary Paper that university partners can share internally.",
     background: "bg-gradient-to-br from-orange-400 to-red-500",
+    image: "/persona-images/campus-recruiter.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -206,6 +211,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Aggregates anonymized signals from Papers, placements, and mentor feedback into a program dashboard. Supports capstone cohorts where students publish work in Papers, bringing transparency to outcomes. Enables recruiters to discover talent through the program's verified page.",
     background: "bg-gradient-to-br from-purple-400 to-violet-600",
+    image: "/persona-images/university-college.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -230,6 +236,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Runs the course as a curated cohort inside Profeshare. Prompts weekly Papers with data, code, and reflections. Uses peer review and calibrated rubrics for grading, highlights standout work to recruiters, and reduces faculty workload while improving assessment quality.",
     background: "bg-gradient-to-br from-green-500 to-emerald-600",
+    image: "/persona-images/project-director.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -254,6 +261,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Suggests mentees with relevant Papers and sets up a four-week challenge cohort. Schedules two events, routes internship leads, and enables endorsements gated by rigor thresholds. Records measurable community impact on the alumnus profile.",
     background: "bg-gradient-to-br from-sky-500 to-blue-600",
+    image: "/persona-images/alumni-community.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -266,6 +274,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Routes topic-matching Papers to the SME for structured review using calibrated rubrics that become visible signals on author profiles. Awards reputation credits that influence search ranking and cohort invitations, lifting topic-wide quality over time.",
     background: "bg-gradient-to-br from-amber-400 to-yellow-500",
+    image: "/persona-images/peer-review.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -278,6 +287,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Recommends high-signal speakers and designs a format that ends with specific actions such as drafting a Paper or joining a mentor group. Verifies attendance and captures outcomes in a shared Paper so the event compounds value beyond a single session.",
     background: "bg-gradient-to-br from-pink-500 to-rose-600",
+    image: "/persona-images/event-organizer-host.jpg",
     size: "medium",
     textColor: "text-white"
   },
