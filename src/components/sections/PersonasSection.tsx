@@ -1,5 +1,6 @@
 import Section from "../Section";
 import SectionChip from "../SectionChip";
+import GlassCTAButton from "../ui/glass-cta-button";
 import { Brain, Users, Target, Lightbulb, Zap, BookOpen, Network, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
@@ -304,50 +305,15 @@ const masonryItems = [
   {
     id: 24,
     type: "text",
-    title: "Cohort Lead / Group Admin",
-    subtitle: "Prompt:",
-    description: "Facilitate a 30-day systems-thinking sprint for product leaders.",
-    hoverTitle: "What Profeshare AI does:",
-    hoverDescription: "Provides a curriculum skeleton, weekly prompts, and a dashboard tracking participant momentum through Papers and peer feedback. Produces a collective Paper capturing frameworks and case studies and issues verifiable cohort credentials.",
-    background: "bg-gradient-to-br from-indigo-400 to-purple-600",
+    title: "And More...",
+    subtitle: "",
+    description: "",
+    hoverTitle: "",
+    hoverDescription: "",
+    background: "bg-gradient-to-br from-slate-500 to-gray-700",
     size: "medium",
-    textColor: "text-white"
-  },
-  {
-    id: 25,
-    type: "text",
-    title: "Verification / Compliance Partner",
-    subtitle: "Prompt:",
-    description: "Integrate a new identity check flow to reduce drop-offs.",
-    hoverTitle: "What Profeshare AI does:",
-    hoverDescription: "Co-designs a streamlined verification sequence, measures conversion and fraud reduction, and publishes compliance attestations in a public trust note. Improves user confidence without revealing sensitive implementation details.",
-    background: "bg-gradient-to-br from-emerald-400 to-green-500",
-    size: "medium",
-    textColor: "text-white"
-  },
-  {
-    id: 26,
-    type: "text",
-    title: "Assessment / Interview Partner",
-    subtitle: "Prompt:",
-    description: "Offer structured, role-aligned trials inside Profeshare.",
-    hoverTitle: "What Profeshare AI does:",
-    hoverDescription: "Integrates calibrated challenges that attach to candidate Papers. Lets hiring teams launch trials directly from profiles and receive structured evidence linked to the same identity. Reduces time-to-hire by keeping signals in one place.",
-    background: "bg-gradient-to-br from-violet-400 to-indigo-500",
-    size: "medium",
-    textColor: "text-white"
-  },
-  {
-    id: 27,
-    type: "text",
-    title: "Course / Employer Partner",
-    subtitle: "Prompt:",
-    description: "Co-create a pipeline for embedded firmware roles.",
-    hoverTitle: "What Profeshare AI does:",
-    hoverDescription: "Defines role maps, co-branded micro-courses, and a blended cohort for students and early professionals. Brings employers into reviews and routes top performers to conditional offers. Maintains a shared Paper as a living curriculum artifact.",
-    background: "bg-gradient-to-br from-teal-400 to-cyan-500",
-    size: "medium",
-    textColor: "text-white"
+    textColor: "text-white",
+    isAndMore: true
   }
 ];
 
@@ -400,7 +366,22 @@ const PersonasSection = () => {
         
         {/* Content wrapper for image cards to ensure proper layering */}
         <div className={`relative z-10 flex flex-col justify-between h-full ${hasImage ? '' : ''}`}>
-        {isHovered ? (
+        {(item as any).isAndMore ? (
+          // Special handling for "And More..." card
+          isHovered ? (
+            <div className="flex items-center justify-center h-full">
+              <GlassCTAButton size="md">
+                Join Waitlist
+              </GlassCTAButton>
+            </div>
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <h3 className="font-instrument text-lg md:text-xl lg:text-2xl font-medium text-center">
+                {title}
+              </h3>
+            </div>
+          )
+        ) : isHovered ? (
           <div className="flex items-end justify-start h-full">
             <div className="text-left">
               {item.hoverTitle && (
