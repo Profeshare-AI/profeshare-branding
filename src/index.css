@@ -218,17 +218,45 @@ All colors MUST be HSL.
     }
   }
 
+  @keyframes roll-down-short {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-672px);
+    }
+  }
+
+  @keyframes roll-up-short {
+    0% {
+      transform: translateY(-672px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   .animate-fade-in {
     animation: fade-in 0.2s ease-out;
   }
 
   .rolling-column-down {
-    animation: roll-down 20s linear infinite;
+    animation: roll-down 30s linear infinite;
     will-change: transform;
   }
 
   .rolling-column-up {
-    animation: roll-up 20s linear infinite;
+    animation: roll-up 30s linear infinite;
+    will-change: transform;
+  }
+
+  .rolling-column-down-short {
+    animation: roll-down-short 30s linear infinite;
+    will-change: transform;
+  }
+
+  .rolling-column-up-short {
+    animation: roll-up-short 30s linear infinite;
     will-change: transform;
   }
 

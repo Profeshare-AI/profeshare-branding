@@ -441,14 +441,16 @@ const PersonasSection = () => {
   };
 
   const renderColumn = (columnCards: (typeof masonryItems)[number][], columnIndex: number, isDownward: boolean, isDesktop = false) => {
-    const animationClass = isDownward ? 'rolling-column-down' : 'rolling-column-up';
+    const isLastColumn = columnIndex === 3;
+    const animationClass = isLastColumn 
+      ? (isDownward ? 'rolling-column-down-short' : 'rolling-column-up-short')
+      : (isDownward ? 'rolling-column-down' : 'rolling-column-up');
     const isPaused = hoveredColumn === columnIndex;
     const andMoreCard = columnCards.find(card => (card as any).isAndMore);
     const regularCards = columnCards.filter(card => !(card as any).isAndMore);
     
     // For desktop with animation
     if (isDesktop) {
-      const isLastColumn = columnIndex === 3;
       const containerHeight = isLastColumn ? 'h-[672px]' : 'h-full'; // 2 cards height for last column
       
       return (
@@ -460,17 +462,22 @@ const PersonasSection = () => {
         >
           {/* Rolling cards container */}
           <div className={`${animationClass} ${isPaused ? 'rolling-paused' : ''}`}>
-            {/* Triple content for seamless infinite loop */}
+            {/* Content for seamless infinite loop - reduced repetitions for last column */}
             <div className="space-y-4">
-              {[...regularCards, ...regularCards, ...regularCards].map((card, index) => 
-                renderCard(card, false)
-              )}
+              {isLastColumn 
+                ? [...regularCards, ...regularCards].map((card, index) => 
+                    renderCard(card, false)
+                  )
+                : [...regularCards, ...regularCards, ...regularCards].map((card, index) => 
+                    renderCard(card, false)
+                  )
+              }
             </div>
           </div>
           
           {/* Fixed "And More" card at bottom of last column */}
           {andMoreCard && (
-            <div className="absolute bottom-0 left-0 right-0 z-20 mt-4">
+            <div className="absolute bottom-6 left-0 right-0 z-20">
               {renderCard(andMoreCard, true)}
             </div>
           )}
