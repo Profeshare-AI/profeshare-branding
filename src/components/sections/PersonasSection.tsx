@@ -472,7 +472,7 @@ const PersonasSection = () => {
           
           {/* Fixed "And More" card at 3rd position in last column */}
           {andMoreCard && (
-            <div className="absolute top-[672px] left-0 right-0 z-20">
+            <div className="absolute bottom-0 left-0 right-0 z-20">
               {renderCard(andMoreCard, true)}
             </div>
           )}
