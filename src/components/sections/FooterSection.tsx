@@ -96,7 +96,7 @@ const FooterSection = () => {
               className="inline-flex items-center gap-2"
               onClick={() => window.open('https://www.linkedin.com/in/mohan-aditya-sadhanala/', '_blank')}
             >
-              Connect with Founder
+              Connect with Founder on LinkedIn
               <ExternalLink className="w-4 h-4" />
             </Button>
           </div>
@@ -112,6 +112,9 @@ const FooterSection = () => {
           </p>
           <Link to="#" className="font-body text-white/70 hover:text-white transition-colors text-sm">
             Privacy Policy
+          </Link>
+          <Link to="#" className="font-body text-white/70 hover:text-white transition-colors text-sm">
+            Careers
           </Link>
         </div>
       </div>
