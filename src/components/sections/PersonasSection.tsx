@@ -384,6 +384,9 @@ const PersonasSection = () => {
         ) : isHovered ? (
           <div className="flex items-end justify-start h-full">
             <div className="text-left">
+              <h3 className="font-instrument text-sm md:text-base font-medium leading-tight text-white mb-3">
+                {title}
+              </h3>
               {item.hoverTitle && (
                 <p className="font-body text-xs leading-relaxed text-white mb-2">
                   {item.hoverTitle}
