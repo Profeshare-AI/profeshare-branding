@@ -440,35 +440,48 @@ const PersonasSection = () => {
     );
   };
 
-  const renderColumn = (columnCards: (typeof masonryItems)[number][], columnIndex: number, isDownward: boolean) => {
+  const renderColumn = (columnCards: (typeof masonryItems)[number][], columnIndex: number, isDownward: boolean, isDesktop = false) => {
     const animationClass = isDownward ? 'rolling-column-down' : 'rolling-column-up';
     const isPaused = hoveredColumn === columnIndex;
     const andMoreCard = columnCards.find(card => (card as any).isAndMore);
     const regularCards = columnCards.filter(card => !(card as any).isAndMore);
     
-    return (
-      <div 
-        key={columnIndex} 
-        className="flex-1 relative overflow-hidden"
-        onMouseEnter={() => setHoveredColumn(columnIndex)}
-        onMouseLeave={() => setHoveredColumn(null)}
-      >
-        {/* Rolling cards container */}
-        <div className={`${animationClass} ${isPaused ? 'rolling-paused' : ''}`}>
-          {/* Duplicate content for seamless loop */}
-          <div className="space-y-4 pb-4">
-            {[...regularCards, ...regularCards].map((card, index) => 
-              renderCard(card, false)
-            )}
+    // For desktop with animation
+    if (isDesktop) {
+      const isLastColumn = columnIndex === 3;
+      const containerHeight = isLastColumn ? 'h-[672px]' : 'h-full'; // 2 cards height for last column
+      
+      return (
+        <div 
+          key={columnIndex} 
+          className={`flex-1 relative rolling-container ${containerHeight}`}
+          onMouseEnter={() => setHoveredColumn(columnIndex)}
+          onMouseLeave={() => setHoveredColumn(null)}
+        >
+          {/* Rolling cards container */}
+          <div className={`${animationClass} ${isPaused ? 'rolling-paused' : ''}`}>
+            {/* Triple content for seamless infinite loop */}
+            <div className="space-y-4">
+              {[...regularCards, ...regularCards, ...regularCards].map((card, index) => 
+                renderCard(card, false)
+              )}
+            </div>
           </div>
+          
+          {/* Fixed "And More" card at bottom of last column */}
+          {andMoreCard && (
+            <div className="absolute bottom-0 left-0 right-0 z-20">
+              {renderCard(andMoreCard, true)}
+            </div>
+          )}
         </div>
-        
-        {/* Fixed "And More" card if it exists in this column */}
-        {andMoreCard && (
-          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 z-20">
-            {renderCard(andMoreCard, true)}
-          </div>
-        )}
+      );
+    }
+    
+    // For tablet and mobile - static layout
+    return (
+      <div key={columnIndex} className="flex-1 space-y-4">
+        {columnCards.map((card) => renderCard(card, false))}
       </div>
     );
   };
@@ -488,28 +501,26 @@ const PersonasSection = () => {
       </div>
 
       <div className="space-y-4">
-        {/* Desktop: 4 columns */}
-        <div className="hidden lg:flex gap-6 h-[800px]">
+        {/* Desktop: 4 columns with animation - exactly 3 card rows height */}
+        <div className="hidden lg:flex gap-6 h-[1008px]">
           {distributeCards(masonryItems, 4).map((columnCards, columnIndex) => {
             const isDownward = columnIndex === 0 || columnIndex === 2;
-            return renderColumn(columnCards, columnIndex, isDownward);
+            return renderColumn(columnCards, columnIndex, isDownward, true);
           })}
         </div>
 
-        {/* Tablet: 3 columns */}
-        <div className="hidden md:flex lg:hidden gap-6 h-[600px]">
-          {distributeCards(masonryItems, 3).map((columnCards, columnIndex) => {
-            const isDownward = columnIndex !== 1;
-            return renderColumn(columnCards, columnIndex, isDownward);
-          })}
+        {/* Tablet: 3 columns - static masonry layout */}
+        <div className="hidden md:grid lg:hidden grid-cols-3 gap-6">
+          {distributeCards(masonryItems, 3).map((columnCards, columnIndex) => 
+            renderColumn(columnCards, columnIndex, false, false)
+          )}
         </div>
 
-        {/* Mobile: 2 columns */}
-        <div className="flex md:hidden gap-4 h-[500px]">
-          {distributeCards(masonryItems, 2).map((columnCards, columnIndex) => {
-            const isDownward = columnIndex === 0;
-            return renderColumn(columnCards, columnIndex, isDownward);
-          })}
+        {/* Mobile: 2 columns - static masonry layout */}
+        <div className="grid md:hidden grid-cols-2 gap-4">
+          {distributeCards(masonryItems, 2).map((columnCards, columnIndex) => 
+            renderColumn(columnCards, columnIndex, false, false)
+          )}
         </div>
       </div>
     </Section>

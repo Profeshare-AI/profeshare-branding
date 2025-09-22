@@ -205,13 +205,13 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-100%);
+      transform: translateY(-336px);
     }
   }
 
   @keyframes roll-up {
     0% {
-      transform: translateY(-100%);
+      transform: translateY(-336px);
     }
     100% {
       transform: translateY(0);
@@ -223,15 +223,22 @@ All colors MUST be HSL.
   }
 
   .rolling-column-down {
-    animation: roll-down 80s linear infinite;
+    animation: roll-down 20s linear infinite;
+    will-change: transform;
   }
 
   .rolling-column-up {
-    animation: roll-up 80s linear infinite;
+    animation: roll-up 20s linear infinite;
+    will-change: transform;
   }
 
   .rolling-paused {
-    animation-play-state: paused;
+    animation-play-state: paused !important;
+  }
+
+  .rolling-container {
+    height: 100%;
+    overflow: hidden;
   }
 
   /* Prevent animation on reduced motion */
