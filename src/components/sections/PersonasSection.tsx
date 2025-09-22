@@ -27,7 +27,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Filters verified employers, maps coursework and Papers to role requirements, and proposes a one-week SQL + capstone prep path. Enables applying inside Profeshare, schedules a practice interview via partner integration, and routes the user to a virtual career fair. Shares Paper history with interested recruiters as proof of skills.",
     background: "bg-gradient-to-br from-blue-500 to-blue-700",
-    image: "/persona-images/early-career-professional.jpg",
+    image: "/persona-images/early-career-professional-2.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -92,7 +92,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Builds a services page from Papers and testimonials, proposes pricing anchors, and targets relevant communities. Recommends events where the consultant can present Paper-based case studies. Uses Recruiter Studio's client view for pipeline tracking and generates compliant contracts via partners. Tracks wins against a verified project log.",
     background: "bg-gradient-to-br from-cyan-500 to-blue-600",
-    image: "/persona-images/freelancer.jpg",
+    image: "/persona-images/freelancer-2.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -235,6 +235,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Builds role-targeted prep tracks, standardizes profile signals, and hosts structured employer showcases through Events. Surfaces cohort-level and individual interview readiness. Delivers verified, role-aligned candidate lists to employers.",
     background: "bg-gradient-to-br from-yellow-500 to-orange-600",
+    image: "/persona-images/placement-cell.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -260,6 +261,7 @@ const masonryItems = [
     hoverTitle: "What Profeshare AI does:",
     hoverDescription: "Aligns curriculum with verified role maps and tracks learner progress via Papers and assessments. Issues signal-rich graduate profiles that employers trust. Runs alumni cohorts and hosts employer mixers through Events, reinforcing hiring partner confidence.",
     background: "bg-gradient-to-br from-red-500 to-rose-600",
+    image: "/persona-images/bootcamp-certificate-provider.jpg",
     size: "medium",
     textColor: "text-white"
   },
@@ -305,12 +307,13 @@ const masonryItems = [
   {
     id: 24,
     type: "text",
-    title: "And More...",
+    title: "And, We Have More...",
     subtitle: "",
     description: "",
     hoverTitle: "",
     hoverDescription: "",
     background: "bg-gradient-to-br from-slate-500 to-gray-700",
+    image: "/persona-images/and-more.jpg",
     size: "medium",
     textColor: "text-white",
     isAndMore: true
@@ -352,8 +355,8 @@ const PersonasSection = () => {
         key={item.id}
         className={`${baseCardClasses} ${backgroundClasses}`}
         style={backgroundStyles}
-        onMouseEnter={() => setHoveredCard(item.id)}
-        onMouseLeave={() => setHoveredCard(null)}
+        onMouseEnter={() => !(item as any).isAndMore && setHoveredCard(item.id)}
+        onMouseLeave={() => !(item as any).isAndMore && setHoveredCard(null)}
       >
         {/* Image overlay - only for image cards */}
         {hasImage && (
@@ -368,19 +371,14 @@ const PersonasSection = () => {
         <div className={`relative z-10 flex flex-col justify-between h-full ${hasImage ? '' : ''}`}>
         {(item as any).isAndMore ? (
           // Special handling for "And More..." card
-          isHovered ? (
-            <div className="flex items-center justify-center h-full">
-              <GlassCTAButton size="md">
-                Join Waitlist
-              </GlassCTAButton>
-            </div>
-          ) : (
-            <div className="flex items-center justify-center h-full">
-              <h3 className="font-instrument text-lg md:text-xl lg:text-2xl font-medium text-center">
-                {title}
-              </h3>
-            </div>
-          )
+          <div className="flex flex-col items-center justify-center h-full space-y-4">
+            <h3 className="font-instrument text-lg md:text-xl lg:text-2xl font-medium text-center leading-tight">
+              And,<br />We Have More...
+            </h3>
+            <GlassCTAButton size="md">
+              Join Waitlist
+            </GlassCTAButton>
+          </div>
         ) : isHovered ? (
           <div className="flex items-end justify-start h-full">
             <div className="text-left">
