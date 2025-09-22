@@ -322,8 +322,21 @@ const masonryItems = [
 
 const PersonasSection = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredColumn, setHoveredColumn] = useState<number | null>(null);
 
-  const renderCard = (item: typeof masonryItems[0]) => {
+  // Distribute cards across columns based on screen size
+  const distributeCards = (items: typeof masonryItems, numColumns: number) => {
+    const columns = Array(numColumns).fill(null).map(() => [] as (typeof masonryItems)[number][]);
+    
+    items.forEach((item, index) => {
+      const columnIndex = index % numColumns;
+      columns[columnIndex].push(item);
+    });
+    
+    return columns;
+  };
+
+  const renderCard = (item: typeof masonryItems[0], isFixed = false) => {
     const isHovered = hoveredCard === item.id;
     
     // Get title and subtitle for text cards
@@ -334,8 +347,8 @@ const PersonasSection = () => {
     
     // Base card styles (without border for image cards)
     const baseCardClasses = hasImage 
-      ? "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
-      : "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
+      ? `h-[280px] sm:h-[300px] lg:h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer ${isFixed ? 'relative z-20' : ''}`
+      : `h-[280px] sm:h-[300px] lg:h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10 ${isFixed ? 'relative z-20' : ''}`;
     
     // Background styles - image or gradient
     const backgroundStyles = hasImage ? {
@@ -352,7 +365,7 @@ const PersonasSection = () => {
 
     return (
       <div
-        key={item.id}
+        key={`${item.id}-${isFixed ? 'fixed' : 'normal'}`}
         className={`${baseCardClasses} ${backgroundClasses}`}
         style={backgroundStyles}
         onMouseEnter={() => !(item as any).isAndMore && setHoveredCard(item.id)}
@@ -427,6 +440,39 @@ const PersonasSection = () => {
     );
   };
 
+  const renderColumn = (columnCards: (typeof masonryItems)[number][], columnIndex: number, isDownward: boolean) => {
+    const animationClass = isDownward ? 'rolling-column-down' : 'rolling-column-up';
+    const isPaused = hoveredColumn === columnIndex;
+    const andMoreCard = columnCards.find(card => (card as any).isAndMore);
+    const regularCards = columnCards.filter(card => !(card as any).isAndMore);
+    
+    return (
+      <div 
+        key={columnIndex} 
+        className="flex-1 relative overflow-hidden"
+        onMouseEnter={() => setHoveredColumn(columnIndex)}
+        onMouseLeave={() => setHoveredColumn(null)}
+      >
+        {/* Rolling cards container */}
+        <div className={`${animationClass} ${isPaused ? 'rolling-paused' : ''}`}>
+          {/* Duplicate content for seamless loop */}
+          <div className="space-y-4 pb-4">
+            {[...regularCards, ...regularCards].map((card, index) => 
+              renderCard(card, false)
+            )}
+          </div>
+        </div>
+        
+        {/* Fixed "And More" card if it exists in this column */}
+        {andMoreCard && (
+          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 z-20">
+            {renderCard(andMoreCard, true)}
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <Section id="personas-section" background="transparent">
       <div className="text-center mb-12">
@@ -441,8 +487,30 @@ const PersonasSection = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-        {masonryItems.map(renderCard)}
+      <div className="space-y-4">
+        {/* Desktop: 4 columns */}
+        <div className="hidden lg:flex gap-6 h-[800px]">
+          {distributeCards(masonryItems, 4).map((columnCards, columnIndex) => {
+            const isDownward = columnIndex === 0 || columnIndex === 2;
+            return renderColumn(columnCards, columnIndex, isDownward);
+          })}
+        </div>
+
+        {/* Tablet: 3 columns */}
+        <div className="hidden md:flex lg:hidden gap-6 h-[600px]">
+          {distributeCards(masonryItems, 3).map((columnCards, columnIndex) => {
+            const isDownward = columnIndex !== 1;
+            return renderColumn(columnCards, columnIndex, isDownward);
+          })}
+        </div>
+
+        {/* Mobile: 2 columns */}
+        <div className="flex md:hidden gap-4 h-[500px]">
+          {distributeCards(masonryItems, 2).map((columnCards, columnIndex) => {
+            const isDownward = columnIndex === 0;
+            return renderColumn(columnCards, columnIndex, isDownward);
+          })}
+        </div>
       </div>
     </Section>
   );
