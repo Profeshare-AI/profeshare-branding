@@ -18,10 +18,10 @@ const HeroContent = () => {
       
       <div className="flex flex-row gap-2 sm:gap-3 justify-center items-center flex-wrap">
         <GlassCTAButton size="md" className="min-w-0">
-          Get Early Access
+          Explore
         </GlassCTAButton>
         <Button variant="hero-outline" size="md" className="min-w-0">
-          Join Community
+          Join Waitlist
         </Button>
       </div>
     </div>;
