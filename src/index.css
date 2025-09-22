@@ -223,13 +223,13 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-336px);
+      transform: translateY(-672px);
     }
   }
 
   @keyframes roll-up-short {
     0% {
-      transform: translateY(-336px);
+      transform: translateY(-672px);
     }
     100% {
       transform: translateY(0);
