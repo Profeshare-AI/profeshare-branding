@@ -205,13 +205,13 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-336px);
+      transform: translateY(-2016px);
     }
   }
 
   @keyframes roll-up {
     0% {
-      transform: translateY(-336px);
+      transform: translateY(-2016px);
     }
     100% {
       transform: translateY(0);
