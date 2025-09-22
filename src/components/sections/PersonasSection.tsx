@@ -451,27 +451,22 @@ const PersonasSection = () => {
     
     // For desktop with animation
     if (isDesktop) {
-      const containerHeight = isLastColumn ? 'h-[672px]' : 'h-full'; // 2 cards height for last column
+      const containerClass = isLastColumn ? 'rolling-container-short' : 'rolling-container';
       
       return (
         <div 
           key={columnIndex} 
-          className={`flex-1 relative rolling-container ${containerHeight}`}
+          className={`flex-1 relative ${containerClass}`}
           onMouseEnter={() => setHoveredColumn(columnIndex)}
           onMouseLeave={() => setHoveredColumn(null)}
         >
           {/* Rolling cards container */}
           <div className={`${animationClass} ${isPaused ? 'rolling-paused' : ''}`}>
-            {/* Content for seamless infinite loop - reduced repetitions for last column */}
+            {/* Content for seamless infinite loop */}
             <div className="space-y-4">
-              {isLastColumn 
-                ? [...regularCards, ...regularCards].map((card, index) => 
-                    renderCard(card, false)
-                  )
-                : [...regularCards, ...regularCards, ...regularCards].map((card, index) => 
-                    renderCard(card, false)
-                  )
-              }
+              {[...regularCards, ...regularCards, ...regularCards].map((card, index) => 
+                renderCard(card, false)
+              )}
             </div>
           </div>
           

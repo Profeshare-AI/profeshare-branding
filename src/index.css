@@ -223,13 +223,13 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-672px);
+      transform: translateY(-336px);
     }
   }
 
   @keyframes roll-up-short {
     0% {
-      transform: translateY(-672px);
+      transform: translateY(-336px);
     }
     100% {
       transform: translateY(0);
@@ -241,32 +241,37 @@ All colors MUST be HSL.
   }
 
   .rolling-column-down {
-    animation: roll-down 30s linear infinite;
+    animation: roll-down 45s linear infinite;
     will-change: transform;
   }
 
   .rolling-column-up {
-    animation: roll-up 30s linear infinite;
+    animation: roll-up 45s linear infinite;
     will-change: transform;
   }
 
   .rolling-column-down-short {
-    animation: roll-down-short 30s linear infinite;
+    animation: roll-down-short 45s linear infinite;
     will-change: transform;
   }
 
   .rolling-column-up-short {
-    animation: roll-up-short 30s linear infinite;
+    animation: roll-up-short 45s linear infinite;
     will-change: transform;
-  }
-
-  .rolling-paused {
-    animation-play-state: paused !important;
   }
 
   .rolling-container {
     height: 100%;
     overflow: hidden;
+  }
+
+  .rolling-container-short {
+    height: 672px !important;
+    overflow: hidden !important;
+  }
+
+  .rolling-paused {
+    animation-play-state: paused !important;
   }
 
   /* Prevent animation on reduced motion */
