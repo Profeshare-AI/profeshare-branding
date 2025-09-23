@@ -19,7 +19,7 @@ const Index = () => {
     <div className="min-h-screen w-full">
       {/* Hero Section with background image */}
       <div 
-        className="min-h-screen w-full relative flex flex-col"
+        className="h-[90vh] lg:min-h-screen w-full relative flex flex-col"
         style={{
           backgroundImage: `url(/lovable-uploads/41d57897-16f1-4d63-a4d9-8186b45ed768.png)`,
           backgroundSize: 'cover',
@@ -34,7 +34,7 @@ const Index = () => {
         <HeroHeader />
         
         {/* Main hero content - centered vertically and horizontally */}
-        <main className="flex-1 flex items-center md:items-end justify-center py-4 md:py-8">
+        <main className="flex-1 flex items-end justify-center py-4 md:py-8">
           <HeroContent />
         </main>
       </div>

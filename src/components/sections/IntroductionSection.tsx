@@ -39,10 +39,9 @@ const IntroductionSection = () => {
             </p>
           </div>
 
-          {/* Building for users section - Mobile: 3 rows, Desktop: original layout */}
-          <div className="flex flex-col md:flex-row md:items-center gap-3 pt-4 text-center md:text-left">
-            {/* Row 1: Avatars */}
-            <div className="flex -space-x-2 justify-center md:justify-start">
+          {/* Building for users section */}
+          <div className="flex items-center gap-3 pt-4">
+            <div className="flex -space-x-2">
               <Avatar className="w-8 h-8 border-2 border-white">
                 <AvatarImage src="/avatars/avatar-professional-1.jpg" />
                 <AvatarFallback>U1</AvatarFallback>
@@ -56,19 +55,9 @@ const IntroductionSection = () => {
                 <AvatarFallback>U3</AvatarFallback>
               </Avatar>
             </div>
-            {/* Row 2: Text */}
             <span className="text-white font-medium">
-              Join the verified professional ecosystem<br className="md:hidden" /> 
-              curated for you, with AI.
+              Building for 100M+ users
             </span>
-            {/* Row 3: Button - moved to separate div below for mobile */}
-          </div>
-          
-          {/* Try Now Button - Mobile: Row 3, Desktop: Hidden (keeping original button elsewhere if exists) */}
-          <div className="flex justify-center md:hidden pt-4">
-            <button className="px-6 py-2 bg-white/10 border border-white/20 rounded-full text-white font-medium hover:bg-white/20 transition-colors">
-              Try Now
-            </button>
           </div>
         </div>
       </div>

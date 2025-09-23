@@ -45,7 +45,7 @@ const EarlyAccessSection = () => {
     <Section background="transparent">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
         {/* Left Column - Background Image (Desktop), Right Column - Content (Mobile) */}
-        <div className="relative order-2 lg:order-1">
+        <div className="relative order-2 lg:order-1 p-4 md:p-6 lg:p-0">
           <img 
             src={tryProfeshareImage}
             alt="Try Profeshare AI"
@@ -54,7 +54,7 @@ const EarlyAccessSection = () => {
         </div>
 
         {/* Right Column - Content (Desktop), Left Column - Content (Mobile) */}
-        <div className="flex flex-col space-y-6 py-8 px-4 md:px-6 lg:px-8 order-1 lg:order-2">
+        <div className="flex flex-col space-y-6 py-8 px-4 md:px-6 lg:px-8 order-1 lg:order-2 text-center lg:text-left">
           <div>
             <SectionChip>Join Beta</SectionChip>
             <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
@@ -63,13 +63,13 @@ const EarlyAccessSection = () => {
           </div>
 
           {/* What to expect subheading */}
-          <div>
-            <h3 className="font-dm-sans text-xl font-medium text-white mb-4">
+          <div className="max-w-sm mx-auto lg:mx-0">
+            <h3 className="font-dm-sans text-xl font-medium text-white mb-4 text-left">
               What to expect in Profeshare Beta?
             </h3>
             
             {/* Beta Features List with bullet points */}
-            <ul className="space-y-3 list-disc list-inside">
+            <ul className="space-y-3 list-disc list-inside text-left">
               {betaFeatures.map((feature, index) => (
                 <li key={index} className="text-white/90 font-dm-sans">
                   {feature}
@@ -79,7 +79,7 @@ const EarlyAccessSection = () => {
           </div>
 
           {/* Dropdown and CTA - Reduced width */}
-          <div className="flex flex-col gap-4 max-w-xs">
+          <div className="flex flex-col gap-4 max-w-xs mx-auto lg:mx-0">
             <p className="text-white/60 text-sm font-dm-sans">
               Share your experience with us in the survey to join the early access waitlist.
             </p>

@@ -83,21 +83,43 @@ const HowItWorksSection = () => {
       </div>
 
       {/* Bottom Section with Avatars */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center backdrop-blur-md bg-black/20 border border-white/20 rounded-2xl px-4 py-6">
-        <div className="flex items-center gap-4">
+      <div className="backdrop-blur-md bg-black/20 border border-white/20 rounded-2xl px-4 py-6">
+        {/* Mobile/Tablet: Center-aligned 3 rows */}
+        <div className="flex flex-col lg:hidden gap-4 items-center text-center">
+          {/* Row 1: Avatars */}
           <div className="flex -space-x-2">
             <img src="/avatars/avatar-1.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
             <img src="/avatars/avatar-2.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
             <img src="/avatars/avatar-3.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
             <img src="/avatars/avatar-4.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
           </div>
+          {/* Row 2: Text */}
           <div className="text-white font-instrument text-xl font-medium">
             Join the verified professional ecosystem curated for you, with AI.
           </div>
+          {/* Row 3: Button */}
+          <GlassCTAButton size="md">
+            Try Now
+          </GlassCTAButton>
         </div>
-        <GlassCTAButton size="md">
-          Try Now
-        </GlassCTAButton>
+        
+        {/* Desktop: Original horizontal layout */}
+        <div className="hidden lg:flex gap-4 justify-between items-center">
+          <div className="flex items-center gap-4">
+            <div className="flex -space-x-2">
+              <img src="/avatars/avatar-1.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
+              <img src="/avatars/avatar-2.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
+              <img src="/avatars/avatar-3.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
+              <img src="/avatars/avatar-4.jpg" alt="User avatar" className="w-10 h-10 rounded-full border-2 border-white/20 object-cover" />
+            </div>
+            <div className="text-white font-instrument text-xl font-medium">
+              Join the verified professional ecosystem curated for you, with AI.
+            </div>
+          </div>
+          <GlassCTAButton size="md">
+            Try Now
+          </GlassCTAButton>
+        </div>
       </div>
       </div>
     </Section>

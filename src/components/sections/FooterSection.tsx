@@ -7,7 +7,7 @@ const FooterSection = () => {
     <footer className="bg-black/90 py-16 border-t border-white/20">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         {/* First row - Logo and Tagline */}
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center mb-8 lg:mb-12 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-center mb-8 lg:mb-12 text-center">
           <div className="flex items-center mb-4 lg:mb-0">
             <Link to="/" className="flex items-center">
               <img 
@@ -31,54 +31,56 @@ const FooterSection = () => {
         {/* Second row - Links and Button */}
         <div className="mb-8">
           {/* Mobile/Tablet: Two column layout for link groups */}
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 text-center md:text-left">
-            {/* Product Links */}
-            <div>
-              <h3 className="font-body text-white font-medium mb-3">Product</h3>
-              <div className="space-y-2">
-                <a href="#introduction" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  About
-                </a>
-                <a href="#pillars" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  Features
-                </a>
-                <a href="#personas" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  Personas
-                </a>
-                <a href="#trust-security" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  Trust & Security
-                </a>
-                <a href="#join-beta" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  Early Access
-                </a>
-                <a href="#faq" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  FAQ
-                </a>
+          <div className="flex justify-center lg:grid lg:grid-cols-4 mb-6">
+            <div className="grid grid-cols-2 gap-6 lg:col-span-2">
+              {/* Product Links */}
+              <div className="text-left">
+                <h3 className="font-body text-white font-medium mb-3">Product</h3>
+                <div className="space-y-2">
+                  <a href="#introduction" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    About
+                  </a>
+                  <a href="#pillars" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    Features
+                  </a>
+                  <a href="#personas" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    Personas
+                  </a>
+                  <a href="#trust-security" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    Trust & Security
+                  </a>
+                  <a href="#join-beta" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    Early Access
+                  </a>
+                  <a href="#faq" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    FAQ
+                  </a>
+                </div>
               </div>
-            </div>
-            
-            {/* Survey Links */}
-            <div>
-              <h3 className="font-body text-white font-medium mb-3">Survey</h3>
-              <div className="space-y-2">
-                <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  For Students
-                </Link>
-                <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  For Graduates
-                </Link>
-                <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  For Recruiters
-                </Link>
-                <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  For Companies
-                </Link>
-                <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  For Institutions
-                </Link>
-                <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                  For Agencies
-                </Link>
+              
+              {/* Survey Links */}
+              <div className="text-left">
+                <h3 className="font-body text-white font-medium mb-3">Survey</h3>
+                <div className="space-y-2">
+                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    For Students
+                  </Link>
+                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    For Graduates
+                  </Link>
+                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    For Recruiters
+                  </Link>
+                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    For Companies
+                  </Link>
+                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    For Institutions
+                  </Link>
+                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    For Agencies
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -102,7 +104,7 @@ const FooterSection = () => {
         </div>
         
         {/* Third row - Copyright and Privacy */}
-        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center pt-6 border-t border-white/20 gap-4 text-center">
+        <div className="flex flex-col md:flex-row justify-center items-center pt-6 border-t border-white/20 gap-4 text-center">
           <p className="font-body text-white/60 text-sm">
             © 2025 Profeshare AI. All rights reserved.
           </p>
