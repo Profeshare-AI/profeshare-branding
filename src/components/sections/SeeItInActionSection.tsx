@@ -106,9 +106,10 @@ const SeeItInActionSection = () => {
         </h2>
       </div>
       
+      {/* Desktop: Vertical cards layout */}
       <div 
         ref={sectionRef}
-        className="flex justify-center items-end h-96 gap-2"
+        className="hidden lg:flex justify-center items-end h-96 gap-2"
       >
         {journeys.map((journey, index) => (
           <div
@@ -147,6 +148,26 @@ const SeeItInActionSection = () => {
                 </div>
               </div>
             )}
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile/Tablet: Horizontal grid layout, 2 cards per row */}
+      <div className="grid grid-cols-2 gap-4 lg:hidden">
+        {journeys.map((journey, index) => (
+          <div
+            key={index}
+            className="backdrop-blur-md border rounded-2xl p-4 bg-white/5 border-white/10"
+          >
+            <div className="flex flex-col items-center text-center space-y-3">
+              <journey.icon className="w-6 h-6 text-white/80" />
+              <h3 className="text-white font-medium text-sm">
+                {journey.title}
+              </h3>
+              <p className="text-white/70 text-xs leading-relaxed">
+                {journey.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>

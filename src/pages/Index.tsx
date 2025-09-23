@@ -34,7 +34,7 @@ const Index = () => {
         <HeroHeader />
         
         {/* Main hero content - centered vertically and horizontally */}
-        <main className="flex-1 flex items-end justify-center py-8">
+        <main className="flex-1 flex items-center md:items-end justify-center py-4 md:py-8">
           <HeroContent />
         </main>
       </div>

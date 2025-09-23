@@ -44,8 +44,8 @@ const EarlyAccessSection = () => {
   return (
     <Section background="transparent">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
-        {/* Left Column - Background Image */}
-        <div className="relative">
+        {/* Left Column - Background Image (Desktop), Right Column - Content (Mobile) */}
+        <div className="relative order-2 lg:order-1">
           <img 
             src={tryProfeshareImage}
             alt="Try Profeshare AI"
@@ -53,8 +53,8 @@ const EarlyAccessSection = () => {
           />
         </div>
 
-        {/* Right Column - Content */}
-        <div className="flex flex-col space-y-6 py-8 px-4 md:px-6 lg:px-8">
+        {/* Right Column - Content (Desktop), Left Column - Content (Mobile) */}
+        <div className="flex flex-col space-y-6 py-8 px-4 md:px-6 lg:px-8 order-1 lg:order-2">
           <div>
             <SectionChip>Join Beta</SectionChip>
             <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
