@@ -35,9 +35,23 @@ const HowItWorksSection = () => {
       
       {/* Content wrapper with relative positioning */}
       <div className="relative z-10">
-      {/* Header Section - Left Aligned with Line */}
+      {/* Header Section - Center Aligned on Mobile/Tablet, Left Aligned with Line on Desktop */}
       <div className="mb-16">
-        <div className="flex items-end mb-8">
+        {/* Mobile/Tablet: Center aligned */}
+        <div className="text-center lg:hidden mb-8">
+          <div className="flex justify-center mb-4">
+            <SectionChip>
+              How does this work?
+            </SectionChip>
+          </div>
+          <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
+            Achieve Your Goals<br />
+            in Three Simple Steps
+          </h2>
+        </div>
+
+        {/* Desktop: Original left aligned with line */}
+        <div className="hidden lg:flex items-end mb-8">
           <div className="flex flex-col">
             <div className="w-fit">
               <SectionChip>

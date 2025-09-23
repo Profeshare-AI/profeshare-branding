@@ -18,10 +18,12 @@ const IntroductionSection = () => {
         </div>
 
         {/* Right side - Content */}
-        <div className="order-1 lg:order-2 space-y-6">
-          <SectionChip>
-            About Profeshare AI
-          </SectionChip>
+        <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
+          <div className="flex justify-center lg:justify-start">
+            <SectionChip>
+              About Profeshare AI
+            </SectionChip>
+          </div>
 
           {/* Heading */}
           <h2 className="font-instrument text-2xl md:text-3xl lg:text-4xl font-medium text-white leading-tight">
