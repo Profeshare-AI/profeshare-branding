@@ -19,7 +19,7 @@ const Index = () => {
     <div className="min-h-screen w-full">
       {/* Hero Section with background image */}
       <div 
-        className="h-screen w-full relative flex flex-col"
+        className="h-[90vh] md:h-[90vh] lg:h-screen w-full relative flex flex-col"
         style={{
           backgroundImage: `url(/lovable-uploads/41d57897-16f1-4d63-a4d9-8186b45ed768.png)`,
           backgroundSize: 'cover',

@@ -43,7 +43,7 @@ const EarlyAccessSection = () => {
 
   return (
     <Section background="transparent">
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:flex lg:items-stretch gap-6 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-stretch gap-6 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
         {/* Left Column - Background Image (Desktop), Right Column - Content (Mobile) */}
         <div className="relative order-2 lg:order-1">
           <div className="p-6 md:p-8 lg:h-full">
@@ -56,7 +56,7 @@ const EarlyAccessSection = () => {
         </div>
 
         {/* Right Column - Content (Desktop), Left Column - Content (Mobile) */}
-        <div className="flex flex-col space-y-6 py-8 px-4 md:px-6 lg:px-8 order-1 lg:order-2 text-center lg:text-left">
+        <div className="flex flex-col lg:justify-center space-y-6 lg:space-y-8 py-8 px-4 md:px-6 lg:px-8 order-1 lg:order-2 text-center lg:text-left">
           <div>
             <SectionChip>Join Beta</SectionChip>
             <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
@@ -65,7 +65,7 @@ const EarlyAccessSection = () => {
           </div>
 
           {/* What to expect subheading */}
-          <div className="max-w-sm mx-auto lg:mx-0">
+          <div className="max-w-sm mx-auto lg:mx-0 lg:max-w-none">
             <h3 className="font-dm-sans text-xl font-medium text-white mb-4 text-left">
               What to expect in Profeshare Beta?
             </h3>
@@ -81,7 +81,7 @@ const EarlyAccessSection = () => {
           </div>
 
           {/* Dropdown and CTA - Reduced width */}
-          <div className="flex flex-col gap-4 max-w-xs mx-auto lg:mx-0">
+          <div className="flex flex-col gap-4 max-w-xs mx-auto lg:mx-0 lg:max-w-sm">
             <p className="text-white/60 text-sm font-dm-sans">
               Share your experience with us in the survey to join the early access waitlist.
             </p>
