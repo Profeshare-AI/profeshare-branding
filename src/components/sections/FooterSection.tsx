@@ -32,74 +32,72 @@ const FooterSection = () => {
           
           {/* Second row - Links and Button */}
           <div className="mb-8">
-            {/* Original desktop layout with four columns */}
-            <div className="grid grid-cols-4 mb-6">
-              {/* Product Links */}
-              <div className="text-left">
-                <h3 className="font-body text-white font-medium mb-3">Product</h3>
-                <div className="space-y-2">
-                  <a href="#introduction" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    About
-                  </a>
-                  <a href="#pillars" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    Features
-                  </a>
-                  <a href="#personas" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    Personas
-                  </a>
-                  <a href="#trust-security" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    Trust & Security
-                  </a>
-                  <a href="#join-beta" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    Early Access
-                  </a>
-                  <a href="#faq" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    FAQ
-                  </a>
+            {/* Desktop layout with Product, Survey, and Button on same row */}
+            <div className="flex justify-between items-start mb-6">
+              <div className="flex gap-16">
+                {/* Product Links */}
+                <div className="text-left">
+                  <h3 className="font-body text-white font-medium mb-3">Product</h3>
+                  <div className="space-y-2">
+                    <a href="#introduction" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      About
+                    </a>
+                    <a href="#pillars" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      Features
+                    </a>
+                    <a href="#personas" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      Personas
+                    </a>
+                    <a href="#trust-security" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      Trust & Security
+                    </a>
+                    <a href="#join-beta" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      Early Access
+                    </a>
+                    <a href="#faq" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      FAQ
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Survey Links */}
+                <div className="text-left">
+                  <h3 className="font-body text-white font-medium mb-3">Survey</h3>
+                  <div className="space-y-2">
+                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      For Students
+                    </Link>
+                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      For Graduates
+                    </Link>
+                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      For Recruiters
+                    </Link>
+                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      For Companies
+                    </Link>
+                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      For Institutions
+                    </Link>
+                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                      For Agencies
+                    </Link>
+                  </div>
                 </div>
               </div>
               
-              {/* Survey Links */}
-              <div className="text-left">
-                <h3 className="font-body text-white font-medium mb-3">Survey</h3>
-                <div className="space-y-2">
-                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    For Students
-                  </Link>
-                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    For Graduates
-                  </Link>
-                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    For Recruiters
-                  </Link>
-                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    For Companies
-                  </Link>
-                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    For Institutions
-                  </Link>
-                  <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
-                    For Agencies
-                  </Link>
-                </div>
+              {/* Connect Button - Right aligned and top aligned */}
+              <div className="flex-shrink-0">
+                <Button
+                  variant="glass"
+                  size="sm"
+                  className="inline-flex items-center gap-2"
+                  onClick={() => window.open('https://www.linkedin.com/in/mohan-aditya-sadhanala/', '_blank')}
+                >
+                  Connect with Founder on LinkedIn
+                  <ExternalLink className="w-4 h-4" />
+                </Button>
               </div>
-
-              {/* Empty columns for spacing */}
-              <div></div>
-              <div></div>
-            </div>
-            
-            {/* Connect Button - Center aligned */}
-            <div className="flex justify-center">
-              <Button
-                variant="glass"
-                size="sm"
-                className="inline-flex items-center gap-2"
-                onClick={() => window.open('https://www.linkedin.com/in/mohan-aditya-sadhanala/', '_blank')}
-              >
-                Connect with Founder on LinkedIn
-                <ExternalLink className="w-4 h-4" />
-              </Button>
             </div>
           </div>
           

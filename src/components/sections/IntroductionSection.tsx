@@ -57,7 +57,7 @@ const IntroductionSection = () => {
                 <AvatarFallback>U3</AvatarFallback>
               </Avatar>
             </div>
-            <span className="text-white font-medium">
+            <span className="text-white font-medium font-dm-sans">
               Building for 100M+ users
             </span>
           </div>

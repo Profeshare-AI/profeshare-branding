@@ -17,9 +17,9 @@ const HeroContent = () => {
         <span className="block">Built for context and communicates in natural language!</span>
       </p>
       
-      {/* Desktop version - Original two lines */}
+      {/* Desktop version - Two lines */}
       <p className="hidden lg:block font-body text-hero-text text-base md:text-lg leading-relaxed mb-6 w-full opacity-90">
-        Designed for students, institutes, graduates, employers, experts, and researchers.
+        Designed for students, institutes, graduates, employers, experts, and researchers.<br />
         Built for context and communicates in natural language!
       </p>
       

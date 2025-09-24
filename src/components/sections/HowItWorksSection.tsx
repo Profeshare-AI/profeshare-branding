@@ -109,7 +109,8 @@ const HowItWorksSection = () => {
           </div>
           {/* Row 2: Text */}
           <div className="text-white font-instrument text-xl font-medium">
-            Join the verified professional ecosystem curated for you, with AI.
+            <span className="block">Join the verified professional ecosystem</span>
+            <span className="block">curated for you, with AI.</span>
           </div>
           {/* Row 3: Button */}
           <GlassCTAButton size="md">
