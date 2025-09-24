@@ -1,19 +1,13 @@
 import Section from "../Section";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import SectionChip from "../SectionChip";
-
 const IntroductionSection = () => {
-  return (
-    <Section background="transparent">
+  return <Section background="transparent">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left side - Image */}
         <div className="order-2 lg:order-1 flex justify-center">
           <div className="relative rounded-2xl overflow-hidden max-w-md">
-            <img 
-              src="/lovable-uploads/44412060-0f72-491c-b0a4-f2f0fece5ad8.png" 
-              alt="Professional walking on steps representing career growth" 
-              className="w-full h-auto rounded-lg"
-            />
+            <img src="/lovable-uploads/44412060-0f72-491c-b0a4-f2f0fece5ad8.png" alt="Professional walking on steps representing career growth" className="w-full h-auto rounded-lg" />
           </div>
         </div>
 
@@ -36,7 +30,7 @@ const IntroductionSection = () => {
             <p className="text-center lg:text-left">
               Profeshare AI is a verified public professional networking ecosystem that brings education, industry, and research into one trusted space. It serves students and graduates, early to senior professionals, experts and researchers, recruiters and employers, and institutes and cohorts that value credible profiles, real people, and relevant opportunities.
             </p>
-            <p className="text-center lg:text-justify">
+            <p className="text-center lg:text-left">
               The platform understands natural language and context. Users express intent in plain words and receive curated roles, mentors, collaborators, courses, events, communities, and candidates. The network supports credible profiles, Papers for structured work, career matching, learning paths, and recruiter tools. It reduces spam, elevates proof, and advances each professional journey.
             </p>
           </div>
@@ -63,8 +57,6 @@ const IntroductionSection = () => {
           </div>
         </div>
       </div>
-    </Section>
-  );
+    </Section>;
 };
-
 export default IntroductionSection;
