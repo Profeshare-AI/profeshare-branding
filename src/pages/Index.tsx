@@ -52,7 +52,7 @@ const Index = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundAttachment: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'fixed' : 'scroll'
+          backgroundAttachment: 'fixed'
         }}
       >
         {/* Dark overlay for content readability */}
@@ -81,7 +81,7 @@ const Index = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          backgroundAttachment: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'fixed' : 'scroll'
+          backgroundAttachment: 'fixed'
         }}
       >
         {/* Dark overlay for content readability */}
