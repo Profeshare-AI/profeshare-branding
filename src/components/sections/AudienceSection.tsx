@@ -57,7 +57,16 @@ const AudienceSection = () => {
     <Section background="transparent" className="relative">
       <div className="text-center mb-12">
         <SectionChip>Who is this for?</SectionChip>
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
+        
+        {/* Mobile/Tablet version - Three lines */}
+        <h2 className="lg:hidden font-instrument text-3xl md:text-4xl font-medium text-white leading-tight">
+          <span className="block">A Comprehensive</span>
+          <span className="block">Professional Ecosystem Built for</span>
+          <span className="block">Every Part of the Professional World</span>
+        </h2>
+        
+        {/* Desktop version - Original layout */}
+        <h2 className="hidden lg:block font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight">
           A Comprehensive Professional Ecosystem<br />
           Built for Every Part of the Professional World
         </h2>

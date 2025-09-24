@@ -435,7 +435,15 @@ const PersonasSection = () => {
             What you can do inside?
           </SectionChip>
         </div>
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
+        {/* Mobile/Tablet version - Three lines */}
+        <h2 className="lg:hidden font-instrument text-3xl md:text-4xl font-medium text-white mb-4">
+          <span className="block">We Are Working With</span>
+          <span className="block">A Wide Range of Personas</span>
+          <span className="block">Explore What You Can Do Inside</span>
+        </h2>
+        
+        {/* Desktop version - Original layout */}
+        <h2 className="hidden lg:block font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           We Are Working With Wide Range of Personas<br />
           Explore What You Can Do Inside
         </h2>

@@ -209,7 +209,14 @@ const PillarsSection = () => {
             Why it actually matter?
           </SectionChip>
           
-          <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
+          {/* Mobile/Tablet version - Two lines */}
+          <h2 className="lg:hidden font-instrument text-3xl md:text-4xl font-medium text-white mb-4">
+            <span className="block">A Network Built on Confidence,</span>
+            <span className="block">Clarity, and Value</span>
+          </h2>
+          
+          {/* Desktop version - Original single line */}
+          <h2 className="hidden lg:block font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
             A Network Built on Confidence, Clarity, and Value
           </h2>
         </div>

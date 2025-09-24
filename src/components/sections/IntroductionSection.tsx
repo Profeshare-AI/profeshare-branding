@@ -32,17 +32,17 @@ const IntroductionSection = () => {
           </h2>
 
           {/* Content */}
-          <div className="space-y-4 text-white/90 font-body text-base leading-relaxed">
-            <p>
+          <div className="space-y-4 text-white/90 font-body text-base leading-relaxed text-center lg:text-left">
+            <p className="text-center lg:text-left">
               Profeshare AI is a verified public professional networking ecosystem that brings education, industry, and research into one trusted space. It serves students and graduates, early to senior professionals, experts and researchers, recruiters and employers, and institutes and cohorts that value credible profiles, real people, and relevant opportunities.
             </p>
-            <p className="text-justify">
+            <p className="text-center lg:text-justify">
               The platform understands natural language and context. Users express intent in plain words and receive curated roles, mentors, collaborators, courses, events, communities, and candidates. The network supports credible profiles, Papers for structured work, career matching, learning paths, and recruiter tools. It reduces spam, elevates proof, and advances each professional journey.
             </p>
           </div>
 
           {/* Building for users section */}
-          <div className="flex items-center gap-3 pt-4">
+          <div className="flex items-center justify-center lg:justify-start gap-3 pt-4">
             <div className="flex -space-x-2">
               <Avatar className="w-8 h-8 border-2 border-white">
                 <AvatarImage src="/avatars/avatar-professional-1.jpg" />

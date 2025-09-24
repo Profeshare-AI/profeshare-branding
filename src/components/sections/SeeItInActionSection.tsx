@@ -101,7 +101,15 @@ const SeeItInActionSection = () => {
     <Section background="transparent">
       <div className="text-center mb-4">
         <SectionChip>See it in Action</SectionChip>
-        <h2 className="font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
+        
+        {/* Mobile/Tablet version - Two lines */}
+        <h2 className="lg:hidden font-instrument text-3xl md:text-4xl font-medium text-white mb-4">
+          <span className="block">Explore Possible Use Cases</span>
+          <span className="block">and Common User Journeys</span>
+        </h2>
+        
+        {/* Desktop version - Original single line */}
+        <h2 className="hidden lg:block font-instrument text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4">
           Explore Possible Use Cases and Common User Journeys
         </h2>
       </div>
