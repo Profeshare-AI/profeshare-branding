@@ -403,7 +403,7 @@ const PersonasSection = () => {
         ) : (
           <>
             <div className="text-left">
-              <h3 className="font-instrument text-sm md:text-base lg:text-lg font-bold leading-tight line-clamp-3">
+              <h3 className="font-instrument text-base md:text-lg lg:text-xl font-medium leading-tight line-clamp-3">
                 {title}
               </h3>
             </div>
