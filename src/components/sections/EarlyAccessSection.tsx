@@ -45,12 +45,14 @@ const EarlyAccessSection = () => {
     <Section background="transparent">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-[600px] -mx-4 md:-mx-6 lg:-mx-8">
         {/* Left Column - Background Image (Desktop), Right Column - Content (Mobile) */}
-        <div className="relative order-2 lg:order-1 p-6 md:p-8 lg:p-0">
-          <img 
-            src={tryProfeshareImage}
-            alt="Try Profeshare AI"
-            className="w-full h-full object-cover rounded-3xl"
-          />
+        <div className="relative order-2 lg:order-1">
+          <div className="p-6 md:p-8">
+            <img 
+              src={tryProfeshareImage}
+              alt="Try Profeshare AI"
+              className="w-full h-full object-cover rounded-3xl"
+            />
+          </div>
         </div>
 
         {/* Right Column - Content (Desktop), Left Column - Content (Mobile) */}

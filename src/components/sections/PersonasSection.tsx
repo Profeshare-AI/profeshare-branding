@@ -384,18 +384,18 @@ const PersonasSection = () => {
         ) : isHovered ? (
           <>
             <div className="text-left">
-              <h3 className="font-instrument text-sm md:text-base lg:text-lg font-medium leading-tight line-clamp-3">
+              <h3 className="font-instrument text-base md:text-lg lg:text-xl font-medium leading-tight line-clamp-3">
                 {title}
               </h3>
             </div>
             
             <div className="text-left">
               {item.hoverTitle && (
-                <p className="font-body text-xs leading-tight md:leading-snug lg:leading-relaxed text-white mb-2">
+                <p className="font-body text-xs leading-tight md:leading-snug lg:leading-snug text-white mb-2">
                   {item.hoverTitle}
                 </p>
               )}
-              <p className="font-body text-xs leading-tight md:leading-snug lg:leading-relaxed text-white/90">
+              <p className="font-body text-xs leading-tight md:leading-snug lg:leading-snug text-white/90">
                 {item.hoverDescription}
               </p>
             </div>
