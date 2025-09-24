@@ -391,11 +391,11 @@ const PersonasSection = () => {
             
             <div className="text-left">
               {item.hoverTitle && (
-                <p className="font-body text-xs leading-relaxed text-white mb-2">
+                <p className="font-body text-xs leading-tight md:leading-snug lg:leading-relaxed text-white mb-2">
                   {item.hoverTitle}
                 </p>
               )}
-              <p className="font-body text-xs leading-relaxed text-white/90">
+              <p className="font-body text-xs leading-tight md:leading-snug lg:leading-relaxed text-white/90">
                 {item.hoverDescription}
               </p>
             </div>
