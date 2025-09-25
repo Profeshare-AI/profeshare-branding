@@ -4,6 +4,7 @@ import SectionChip from "../SectionChip";
 import GlassCTAButton from "../ui/glass-cta-button";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Briefcase, UserCheck, Building2, TestTube, Code } from "lucide-react";
+import { smoothScrollToSection } from "@/utils/smoothScroll";
 
 const audiences = [
   {
@@ -39,20 +40,6 @@ const audiences = [
 ];
 
 const AudienceSection = () => {
-  const handleLearnMoreClick = () => {
-    const personasSection = document.getElementById('personas-section');
-    if (personasSection) {
-      personasSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleEarlyAccessClick = () => {
-    const earlyAccessSection = document.getElementById('early-access-section');
-    if (earlyAccessSection) {
-      earlyAccessSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <Section background="transparent" className="relative">
       <div className="text-center mb-12">
@@ -91,10 +78,10 @@ const AudienceSection = () => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <GlassCTAButton onClick={handleLearnMoreClick}>
+        <GlassCTAButton onClick={() => smoothScrollToSection('personas-section')}>
           Explore Personas
         </GlassCTAButton>
-        <Button variant="hero-outline" size="md" onClick={handleEarlyAccessClick}>
+        <Button variant="hero-outline" size="md" onClick={() => smoothScrollToSection('early-access-section')}>
           Get Early Access
         </Button>
       </div>

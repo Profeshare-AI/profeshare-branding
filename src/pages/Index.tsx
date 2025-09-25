@@ -40,7 +40,7 @@ const Index = () => {
       </div>
 
       {/* Introduction Section with dark background */}
-      <div className="bg-black">
+      <div id="introduction-section" className="bg-black">
         <IntroductionSection />
       </div>
 
@@ -60,7 +60,9 @@ const Index = () => {
         
         {/* Content with relative positioning */}
         <div className="relative z-10">
-          <PillarsSection />
+          <div id="pillars-section">
+            <PillarsSection />
+          </div>
           <VisualSeparator />
           
           <AudienceSection />
@@ -69,7 +71,7 @@ const Index = () => {
       </div>
 
       {/* Personas Section with dark background */}
-      <div className="bg-black">
+      <div id="personas-section" className="bg-black">
         <PersonasSection />
       </div>
 
@@ -95,13 +97,19 @@ const Index = () => {
           <SeeItInActionSection />
           <VisualSeparator />
           
-          <TrustDataSection />
+          <div id="trust-security-section">
+            <TrustDataSection />
+          </div>
           <VisualSeparator />
           
-          <EarlyAccessSection />
+          <div id="early-access-section">
+            <EarlyAccessSection />
+          </div>
           <VisualSeparator />
           
-          <FAQSection />
+          <div id="faq-section">
+            <FAQSection />
+          </div>
         </div>
       </div>
 

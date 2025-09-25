@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import GlassCTAButton from "./ui/glass-cta-button";
 import { Link } from "react-router-dom";
+import { smoothScrollToSection } from "@/utils/smoothScroll";
 
 const HeroHeader = () => {
   return (
@@ -12,7 +13,7 @@ const HeroHeader = () => {
           className="h-auto w-32 sm:w-36 md:w-40 lg:w-[150px]"
         />
       </Link>
-      <GlassCTAButton size="md">
+      <GlassCTAButton size="md" onClick={() => smoothScrollToSection('early-access-section')}>
         Get Early Access
       </GlassCTAButton>
     </header>

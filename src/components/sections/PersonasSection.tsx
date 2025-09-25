@@ -3,6 +3,7 @@ import SectionChip from "../SectionChip";
 import GlassCTAButton from "../ui/glass-cta-button";
 import { Brain, Users, Target, Lightbulb, Zap, BookOpen, Network, TrendingUp } from "lucide-react";
 import { useState } from "react";
+import { smoothScrollToSection } from "@/utils/smoothScroll";
 
 const masonryItems = [
   {
@@ -377,7 +378,7 @@ const PersonasSection = () => {
             <h3 className="font-instrument text-lg md:text-xl lg:text-2xl font-medium text-center leading-tight">
               And,<br />We Have More...
             </h3>
-            <GlassCTAButton size="md">
+            <GlassCTAButton size="md" onClick={() => smoothScrollToSection('early-access-section')}>
               Join Waitlist
             </GlassCTAButton>
           </div>

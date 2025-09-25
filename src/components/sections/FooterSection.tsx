@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { smoothScrollToSection } from "@/utils/smoothScroll";
 
 const FooterSection = () => {
   return (
@@ -39,24 +40,24 @@ const FooterSection = () => {
                 <div className="text-left">
                   <h3 className="font-body text-white font-medium mb-3">Product</h3>
                   <div className="space-y-2">
-                    <a href="#introduction" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    <button onClick={() => smoothScrollToSection('introduction-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       About
-                    </a>
-                    <a href="#pillars" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('pillars-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Features
-                    </a>
-                    <a href="#personas" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('personas-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Personas
-                    </a>
-                    <a href="#trust-security" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('trust-security-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Trust & Security
-                    </a>
-                    <a href="#join-beta" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('early-access-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Early Access
-                    </a>
-                    <a href="#faq" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('faq-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       FAQ
-                    </a>
+                    </button>
                   </div>
                 </div>
                 
@@ -64,24 +65,24 @@ const FooterSection = () => {
                 <div className="text-left">
                   <h3 className="font-body text-white font-medium mb-3">Survey</h3>
                   <div className="space-y-2">
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    <button onClick={() => window.open('https://forms.gle/KDij7GVnUQpt1Rh9A', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Students
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/KDij7GVnUQpt1Rh9A', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Graduates
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Recruiters
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Companies
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Institutions
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Agencies
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -107,12 +108,12 @@ const FooterSection = () => {
               © 2025 Profeshare AI. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link to="#" className="font-body text-white/70 hover:text-white transition-colors text-sm">
+              <span className="font-body text-white/40 text-sm cursor-not-allowed">
                 Privacy Policy
-              </Link>
-              <Link to="#" className="font-body text-white/70 hover:text-white transition-colors text-sm">
+              </span>
+              <span className="font-body text-white/40 text-sm cursor-not-allowed">
                 Careers
-              </Link>
+              </span>
             </div>
           </div>
         </div>
@@ -150,24 +151,24 @@ const FooterSection = () => {
                 <div className="text-left">
                   <h3 className="font-body text-white font-medium mb-3">Product</h3>
                   <div className="space-y-2">
-                    <a href="#introduction" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    <button onClick={() => smoothScrollToSection('introduction-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       About
-                    </a>
-                    <a href="#pillars" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('pillars-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Features
-                    </a>
-                    <a href="#personas" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('personas-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Personas
-                    </a>
-                    <a href="#trust-security" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('trust-security-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Trust & Security
-                    </a>
-                    <a href="#join-beta" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('early-access-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       Early Access
-                    </a>
-                    <a href="#faq" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => smoothScrollToSection('faq-section')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       FAQ
-                    </a>
+                    </button>
                   </div>
                 </div>
                 
@@ -175,24 +176,24 @@ const FooterSection = () => {
                 <div className="text-left">
                   <h3 className="font-body text-white font-medium mb-3">Survey</h3>
                   <div className="space-y-2">
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    <button onClick={() => window.open('https://forms.gle/KDij7GVnUQpt1Rh9A', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Students
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/KDij7GVnUQpt1Rh9A', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Graduates
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Recruiters
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Companies
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Institutions
-                    </Link>
-                    <Link to="#" className="block font-body text-white/70 hover:text-white transition-colors text-sm">
+                    </button>
+                    <button onClick={() => window.open('https://forms.gle/5AofD6H8uga7MrKj7', '_blank')} className="block font-body text-white/70 hover:text-white transition-colors text-sm cursor-pointer">
                       For Agencies
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -218,12 +219,12 @@ const FooterSection = () => {
               © 2025 Profeshare AI. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <Link to="#" className="font-body text-white/70 hover:text-white transition-colors text-sm">
+              <span className="font-body text-white/40 text-sm cursor-not-allowed">
                 Privacy Policy
-              </Link>
-              <Link to="#" className="font-body text-white/70 hover:text-white transition-colors text-sm">
+              </span>
+              <span className="font-body text-white/40 text-sm cursor-not-allowed">
                 Careers
-              </Link>
+              </span>
             </div>
           </div>
         </div>
