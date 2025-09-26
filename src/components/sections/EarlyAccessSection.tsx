@@ -4,6 +4,7 @@ import SectionChip from "../SectionChip";
 import GlassCTAButton from "../ui/glass-cta-button";
 import { UserGroupDropdown } from "../ui/user-group-dropdown";
 import tryProfeshareImage from "@/assets/try-profeshare.jpeg";
+import { trackSurveyClick } from "@/utils/analytics";
 const EarlyAccessSection = () => {
   const [selectedUserGroup, setSelectedUserGroup] = useState<string>("");
   const jobDiscoveryGroups = ["Student (Undergraduate)", "Postgraduate Student", "Recent Graduate (0–2 years experience)", "Early-Career Professional (2–5 years experience)", "Mid-Career or Senior Professional (5+ years experience)", "Freelancer / Independent Consultant", "Mentor / Advisor"];
@@ -13,6 +14,9 @@ const EarlyAccessSection = () => {
       return;
     }
     const surveyUrl = jobDiscoveryGroups.includes(selectedUserGroup) ? "https://forms.gle/KDij7GVnUQpt1Rh9A" : "https://forms.gle/5AofD6H8uga7MrKj7";
+    const surveyType = jobDiscoveryGroups.includes(selectedUserGroup) ? "Job Discovery Survey" : "Talent Discovery Survey";
+    
+    trackSurveyClick(surveyType, selectedUserGroup);
     window.open(surveyUrl, "_blank");
   };
   const betaFeatures = ["Verified Profiles", "AI Career Copilot", "Job Discovery", "Talent Discovery (Recruiter Studio Lite)", "Papers", "Learn Space & Events", "Privacy & Trust"];

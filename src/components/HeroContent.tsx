@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import GlassCTAButton from "./ui/glass-cta-button";
 import HeroChip from "./HeroChip";
 import { smoothScrollToSection } from "@/utils/smoothScroll";
+import { trackCTAClick } from "@/utils/analytics";
 const HeroContent = () => {
   return <div className="flex flex-col items-center text-center px-4 relative z-10 lg:pb-2">
       <HeroChip />
@@ -25,10 +26,16 @@ const HeroContent = () => {
       </p>
       
       <div className="flex flex-row gap-2 sm:gap-3 justify-center items-center flex-wrap">
-        <GlassCTAButton size="md" className="min-w-0" onClick={() => smoothScrollToSection('introduction-section')}>
+        <GlassCTAButton size="md" className="min-w-0" onClick={() => {
+          trackCTAClick('Hero Explore');
+          smoothScrollToSection('introduction-section');
+        }}>
           Explore
         </GlassCTAButton>
-        <Button variant="hero-outline" size="md" className="min-w-0" onClick={() => smoothScrollToSection('early-access-section')}>
+        <Button variant="hero-outline" size="md" className="min-w-0" onClick={() => {
+          trackCTAClick('Hero Join Waitlist');
+          smoothScrollToSection('early-access-section');
+        }}>
           Join Waitlist
         </Button>
       </div>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroHeader from "@/components/HeroHeader";
 import HeroContent from "@/components/HeroContent";
 import IntroductionSection from "@/components/sections/IntroductionSection";
@@ -13,8 +14,27 @@ import EarlyAccessSection from "@/components/sections/EarlyAccessSection";
 import FAQSection from "@/components/sections/FAQSection";
 import FooterSection from "@/components/sections/FooterSection";
 import VisualSeparator from "@/components/VisualSeparator";
+import { trackScrollDepth } from "@/utils/analytics";
 
 const Index = () => {
+  useEffect(() => {
+    let hasTracked75 = false;
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      if (scrollPercent >= 75 && !hasTracked75) {
+        trackScrollDepth(75);
+        hasTracked75 = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section with background image */}

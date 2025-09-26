@@ -5,6 +5,7 @@ import GlassCTAButton from "../ui/glass-cta-button";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Briefcase, UserCheck, Building2, TestTube, Code } from "lucide-react";
 import { smoothScrollToSection } from "@/utils/smoothScroll";
+import { trackCTAClick } from "@/utils/analytics";
 
 const audiences = [
   {
@@ -78,10 +79,16 @@ const AudienceSection = () => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <GlassCTAButton onClick={() => smoothScrollToSection('personas-section')}>
+        <GlassCTAButton onClick={() => {
+          trackCTAClick('Audience Explore Personas');
+          smoothScrollToSection('personas-section');
+        }}>
           Explore Personas
         </GlassCTAButton>
-        <Button variant="hero-outline" size="md" onClick={() => smoothScrollToSection('early-access-section')}>
+        <Button variant="hero-outline" size="md" onClick={() => {
+          trackCTAClick('Audience Get Early Access');
+          smoothScrollToSection('early-access-section');
+        }}>
           Get Early Access
         </Button>
       </div>

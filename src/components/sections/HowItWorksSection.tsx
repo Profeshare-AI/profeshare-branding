@@ -3,6 +3,7 @@ import GlassCard from "../GlassCard";
 import SectionChip from "../SectionChip";
 import GlassCTAButton from "../ui/glass-cta-button";
 import { smoothScrollToSection } from "@/utils/smoothScroll";
+import { trackCTAClick } from "@/utils/analytics";
 
 const steps = [
   {
@@ -114,7 +115,10 @@ const HowItWorksSection = () => {
             <span className="block">curated for you, with AI.</span>
           </div>
           {/* Row 3: Button */}
-          <GlassCTAButton size="md" onClick={() => smoothScrollToSection('early-access-section')}>
+          <GlassCTAButton size="md" onClick={() => {
+            trackCTAClick('How It Works Try Now');
+            smoothScrollToSection('early-access-section');
+          }}>
             Try Now
           </GlassCTAButton>
         </div>
@@ -132,7 +136,10 @@ const HowItWorksSection = () => {
               Join the verified professional ecosystem curated for you, with AI.
             </div>
           </div>
-          <GlassCTAButton size="md" onClick={() => smoothScrollToSection('early-access-section')}>
+          <GlassCTAButton size="md" onClick={() => {
+            trackCTAClick('How It Works Try Now');
+            smoothScrollToSection('early-access-section');
+          }}>
             Try Now
           </GlassCTAButton>
         </div>
