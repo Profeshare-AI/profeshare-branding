@@ -335,8 +335,8 @@ const PersonasSection = () => {
     
     // Base card styles (without border for image cards)
     const baseCardClasses = hasImage 
-      ? "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
-      : "h-[320px] text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
+      ? "h-[320px] max-w-sm mx-auto text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
+      : "h-[320px] max-w-sm mx-auto text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
     
     // Background styles - image or gradient
     const backgroundStyles = hasImage ? {
@@ -450,7 +450,7 @@ const PersonasSection = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
         {masonryItems.map(renderCard)}
       </div>
     </Section>
