@@ -375,7 +375,7 @@ const PersonasSection = () => {
         {(item as any).isAndMore ? (
           // Special handling for "And More..." card
           <div className="flex flex-col items-center justify-center h-full space-y-4">
-            <h3 className="font-instrument text-lg md:text-xl lg:text-2xl font-medium text-center leading-tight">
+            <h3 className="font-instrument text-lg md:text-xl lg:text-3xl font-medium text-center leading-tight">
               And,<br />We Have More...
             </h3>
             <GlassCTAButton size="md" onClick={() => smoothScrollToSection('early-access-section')}>
@@ -385,18 +385,18 @@ const PersonasSection = () => {
         ) : isHovered ? (
           <>
             <div className="text-left">
-              <h3 className="font-instrument text-base md:text-lg lg:text-xl font-medium leading-tight line-clamp-3">
+              <h3 className="font-instrument text-base md:text-lg lg:text-2xl font-medium leading-tight line-clamp-3">
                 {title}
               </h3>
             </div>
             
             <div className="text-left">
               {item.hoverTitle && (
-                <p className="font-body text-xs leading-tight md:leading-snug lg:leading-snug text-white mb-2">
+                <p className="font-body text-xs leading-tight md:leading-snug lg:text-sm lg:leading-snug text-white mb-2">
                   {item.hoverTitle}
                 </p>
               )}
-              <p className="font-body text-xs leading-tight md:leading-snug lg:leading-snug text-white/90">
+              <p className="font-body text-xs leading-tight md:leading-snug lg:text-sm lg:leading-snug text-white/90">
                 {item.hoverDescription}
               </p>
             </div>
@@ -404,19 +404,19 @@ const PersonasSection = () => {
         ) : (
           <>
             <div className="text-left">
-              <h3 className="font-instrument text-base md:text-lg lg:text-xl font-medium leading-tight line-clamp-3">
+              <h3 className="font-instrument text-base md:text-lg lg:text-2xl font-medium leading-tight line-clamp-3">
                 {title}
               </h3>
             </div>
             
             <div className="text-left">
               {subtitle && (
-                <span className="text-xs text-white font-body block mb-1">
+                <span className="text-xs lg:text-sm text-white font-body block mb-1">
                   {subtitle}
                 </span>
               )}
               {item.description && (
-                <span className="text-xs text-white/80 font-body block">
+                <span className="text-xs lg:text-sm text-white/80 font-body block">
                   {item.description}
                 </span>
               )}
@@ -450,7 +450,7 @@ const PersonasSection = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
         {masonryItems.map(renderCard)}
       </div>
     </Section>
