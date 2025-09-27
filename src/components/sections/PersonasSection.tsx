@@ -335,8 +335,8 @@ const PersonasSection = () => {
     
     // Base card styles (without border for image cards)
     const baseCardClasses = hasImage 
-      ? "h-[320px] max-w-sm mx-auto text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
-      : "h-[320px] max-w-sm mx-auto text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
+      ? "h-[320px] lg:h-[400px] max-w-sm mx-auto text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
+      : "h-[320px] lg:h-[400px] max-w-sm mx-auto text-white rounded-2xl p-4 flex flex-col justify-between shadow-lg transition-all duration-300 overflow-hidden cursor-pointer border border-white/10";
     
     // Background styles - image or gradient
     const backgroundStyles = hasImage ? {
